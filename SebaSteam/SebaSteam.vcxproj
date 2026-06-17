@@ -139,11 +139,21 @@
     <ResourceCompile Include="app.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Controlador.h" />
+    <ClInclude Include="DatosGPelicula.h" />
+    <ClInclude Include="Dependencias.h" />
+    <ClInclude Include="ListaSimple.h" />
+    <ClInclude Include="Nodo.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Pelicula.h" />
     <ClInclude Include="Programa.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="RepositorioPelicula.h" />
+    <ClInclude Include="RepositorioUsuario.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="TablaHash.h" />
+    <ClInclude Include="Usuario.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />

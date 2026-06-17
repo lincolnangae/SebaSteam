@@ -19,6 +19,21 @@
     <Filter Include="Source Files\Externos">
       <UniqueIdentifier>{8ae7d965-9330-4b06-948f-8f97cae6dbf5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Usuario">
+      <UniqueIdentifier>{945b32f3-f9d6-4869-b4ef-26da3e06a893}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\EstructurasNecesarias">
+      <UniqueIdentifier>{c2ed776f-0afc-4baf-aa5f-ff2dfe77b24d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Principal">
+      <UniqueIdentifier>{dcdbcf29-aad2-48b0-872b-eaa285158406}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Pelicula">
+      <UniqueIdentifier>{c742d1c3-e6d8-41d8-b852-0d38477931a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ExtructurasSecundarias">
+      <UniqueIdentifier>{b537bc36-ccab-4174-98f2-0e0bd6546f83}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc">
@@ -34,6 +49,36 @@
     </ClInclude>
     <ClInclude Include="Resource.h">
       <Filter>Header Files\Externos</Filter>
+    </ClInclude>
+    <ClInclude Include="Usuario.h">
+      <Filter>Header Files\Usuario</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencias.h">
+      <Filter>Header Files\Externos</Filter>
+    </ClInclude>
+    <ClInclude Include="TablaHash.h">
+      <Filter>Header Files\EstructurasNecesarias</Filter>
+    </ClInclude>
+    <ClInclude Include="Nodo.h">
+      <Filter>Header Files\EstructurasNecesarias</Filter>
+    </ClInclude>
+    <ClInclude Include="RepositorioUsuario.h">
+      <Filter>Header Files\Usuario</Filter>
+    </ClInclude>
+    <ClInclude Include="Controlador.h">
+      <Filter>Header Files\Principal</Filter>
+    </ClInclude>
+    <ClInclude Include="ListaSimple.h">
+      <Filter>Header Files\EstructurasNecesarias</Filter>
+    </ClInclude>
+    <ClInclude Include="Pelicula.h">
+      <Filter>Header Files\Pelicula</Filter>
+    </ClInclude>
+    <ClInclude Include="DatosGPelicula.h">
+      <Filter>Header Files\ExtructurasSecundarias</Filter>
+    </ClInclude>
+    <ClInclude Include="RepositorioPelicula.h">
+      <Filter>Header Files\Pelicula</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

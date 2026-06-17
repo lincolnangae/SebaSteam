@@ -1,0 +1,10 @@
+1,Pelicula Uno,img1,Accion|Sci-Fi|Aventura|Drama,Sinopsis de la pelicula uno de prueba sin caracteres especiales
+2,Pelicula Dos,img1,Comedia|Romance|Drama|Familia,Sinopsis de la pelicula dos de prueba sin caracteres especiales
+3,Pelicula Tres,img1,Terror|Misterio|Suspenso|Thriller,Sinopsis de la pelicula tres de prueba sin caracteres especiales
+4,Pelicula Cuatro,img1,Documental|Historia|Biografia|Crimen,Sinopsis de la pelicula cuatro de prueba sin caracteres especiales
+5,Pelicula Cinco,img1,Animacion|Fantasia|Aventura|Familia,Sinopsis de la pelicula cinco de prueba sin caracteres especiales
+6,Pelicula Seis,img1,Accion|Crimen|Thriller|Misterio,Sinopsis de la pelicula seis de prueba sin caracteres especiales
+7,Pelicula Siete,img1,Drama|Romance|Musical|Historia,Sinopsis de la pelicula siete de prueba sin caracteres especiales
+8,Pelicula Ocho,img1,Sci-Fi|Aventura|Accion|Fantasia,Sinopsis de la pelicula ocho de prueba sin caracteres especiales
+9,Pelicula Nueve,img1,Comedia|Accion|Crimen|Familia,Sinopsis de la pelicula nueve de prueba sin caracteres especiales
+10,Pelicula Diez,img1,Terror|Sci-Fi|Suspenso|Thriller,Sinopsis de la pelicula diez de prueba sin caracteres especiales
