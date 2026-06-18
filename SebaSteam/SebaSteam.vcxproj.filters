@@ -80,6 +80,9 @@
     <ClInclude Include="RepositorioPelicula.h">
       <Filter>Header Files\Pelicula</Filter>
     </ClInclude>
+    <ClInclude Include="ListaDobleCircular.h">
+      <Filter>Header Files\EstructurasNecesarias</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SebaSteam.cpp">

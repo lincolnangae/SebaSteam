@@ -33,15 +33,14 @@ public:
         delete tablaPeliculas;
     }
 
-    // Carga de peliculas y asignacion de metricas iniciales
-    void cargarDesdeArchivo() {
+    void cargarDesdeArchivo(vector<Pelicula>* vecDestino = nullptr) {
         ifstream archivo(rutaArchivo);
         if (!archivo.is_open()) return;
 
         string linea;
         while (getline(archivo, linea)) {
             stringstream ss(linea);
-            string id, nombre, idImagen, catsStr, sinopsis  ;
+            string id, nombre, idImagen, catsStr, sinopsis;
 
             if (getline(ss, id, ',') &&
                 getline(ss, nombre, ',') &&
@@ -53,10 +52,8 @@ public:
                 float calificacion = 0.0f;
                 int anio = 2026;
 
-                // DataSetGenerador para asignar metricas dinamicas a cada pelicula cargada
                 DatasetGenerador::inicializarMetricasPelicula(vistas, calificacion, anio);
-
-                // Procesamiento de sub-argumentos para el listado de categorias
+ 
                 vector<string> categorias;
                 stringstream ssCats(catsStr);
                 string cat;
@@ -64,9 +61,12 @@ public:
                     categorias.push_back(cat);
                 }
 
-                // Insercion de la clave fija de imagen img1 en el constructor
                 Pelicula p(id, nombre, idImagen, categorias, sinopsis, vistas, calificacion, anio);
                 tablaPeliculas->insertar(id, p);
+
+                if (vecDestino != nullptr) {
+                    vecDestino->push_back(p);
+                }
             }
         }
         archivo.close();

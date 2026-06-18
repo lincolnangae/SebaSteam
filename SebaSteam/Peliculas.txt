@@ -1,10 +1,99 @@
-1,Pelicula Uno,img1,Accion|Sci-Fi|Aventura|Drama,Sinopsis de la pelicula uno de prueba sin caracteres especiales
-2,Pelicula Dos,img1,Comedia|Romance|Drama|Familia,Sinopsis de la pelicula dos de prueba sin caracteres especiales
-3,Pelicula Tres,img1,Terror|Misterio|Suspenso|Thriller,Sinopsis de la pelicula tres de prueba sin caracteres especiales
-4,Pelicula Cuatro,img1,Documental|Historia|Biografia|Crimen,Sinopsis de la pelicula cuatro de prueba sin caracteres especiales
-5,Pelicula Cinco,img1,Animacion|Fantasia|Aventura|Familia,Sinopsis de la pelicula cinco de prueba sin caracteres especiales
-6,Pelicula Seis,img1,Accion|Crimen|Thriller|Misterio,Sinopsis de la pelicula seis de prueba sin caracteres especiales
-7,Pelicula Siete,img1,Drama|Romance|Musical|Historia,Sinopsis de la pelicula siete de prueba sin caracteres especiales
-8,Pelicula Ocho,img1,Sci-Fi|Aventura|Accion|Fantasia,Sinopsis de la pelicula ocho de prueba sin caracteres especiales
-9,Pelicula Nueve,img1,Comedia|Accion|Crimen|Familia,Sinopsis de la pelicula nueve de prueba sin caracteres especiales
-10,Pelicula Diez,img1,Terror|Sci-Fi|Suspenso|Thriller,Sinopsis de la pelicula diez de prueba sin caracteres especiales
+1,El Padrino,img1,Drama|Crimen,Un poderoso jefe de la mafia transmite el control de su imperio clandestino a su hijo renuente
+2,Cadena Perpetua,img1,Drama|Crimen,Dos hombres encarcelados entablan una fuerte amistad a lo largo de los anos y encuentran redencion
+3,El Caballero de la Noche,img1,Accion|Crimen|Drama,Batman se enfrenta al Guason un genio criminal que desata el caos en Ciudad Gotica
+4,La Lista de Schindler,img1,Drama|Historia|Guerra,Un empresario aleman salva a mas de mil judios del holocausto empleandolos en sus fabricas
+5,El Senor de los Anillos El Retorno del Rey,img1,Aventura|Fantasia|Drama,Las fuerzas del bien se unen para la batalla final por la Tierra Media mientras Frodo llega al Monte del Destino
+6,Tiempos Violentos,img1,Crimen|Drama,Las vidas de dos asesinos a sueldo un boxeador y una pareja de bandidos se entrelazan en historias de violencia
+7,El Club de la Pelea,img1,Drama|Suspenso,Un oficinista insomne y un desapegado vendedor de jabon forman un club de lucha clandestino y radical
+8,El Origen,img1,Accion|Sci-Fi|Aventura,Un ladron que roba secretos corporativos a traves del uso de la tecnologia de compartir suenos recibe una tarea inversa
+9,Forrest Gump,img1,Drama|Romance,Un hombre con bajo coeficiente intelectual presencia y fluye a traves de los eventos mas cruciales de la historia de su pais
+10,Matrix,img1,Accion|Sci-Fi,Un programador de computadoras descubre que la realidad que conoce es una simulacion creada por maquinas ciberneticas
+11,Buenos Muchachos,img1,Biografia|Crimen|Drama,La historia de un joven que crece en la mafia y lucha por ascender en las filas del crimen organizado
+12,El Senor de los Anillos Las Dos Torres,img1,Aventura|Fantasia|Drama,La comunidad se divide mientras Aragorn lucha por los hombres y Frodo continua su peligroso viaje con Sam
+13,Guerra de las Galaxias El Imperio Contraataca,img1,Accion|Aventura|Sci-Fi,Darth Vader busca incansablemente a Luke Skywalker mientras los rebeldes sufren una gran derrota en el planeta helado
+14,Atrapado sin Salida,img1,Drama,Un criminal simula locura para ser trasladado a un hospital psiquitrico donde lidera una rebelion contra la estricta enfermera jefe
+15,Los Siete Samurais,img1,Accion|Drama,Un pueblo de campesinos indefensos contrata a siete guerreros para defenderse de una banda de implacables saqueadores
+16,Siete Pecados Capitales,img1,Crimen|Drama|Misterio,Dos detectives investigan una serie de asesinatos basados sadicamente en los siete pecados capitales de la biblia
+17,El Silencio de los Inocentes,img1,Crimen|Drama|Thriller,Una joven agente del FBI busca la ayuda de un brillante psiquiatra y asesino canibal encarcelado para atrapar a otro criminal
+18,La Vida es Bella,img1,Drama|Comedia|Guerra,Un padre judio usa su imaginacion y humor para proteger a su pequeno hijo de los horrores de un campo de concentracion nazi
+19,Ciudad de Dios,img1,Crimen|Drama,Dos ninos crecen en un barrio violento de Rio de Janeiro y toman caminos opuestos uno fotografo y el otro narcotraficante
+20,Rescatando al Soldado Ryan,img1,Drama|Guerra,Un grupo de soldados arriesga sus vidas detras de las lineas enemigas para encontrar y traer de vuelta sano a un paracaidista
+21,Interstellar,img1,Aventura|Drama|Sci-Fi,Un equipo de exploradores viaja a traves de un agujero de gusano en el espacio para asegurar la supervivencia de la humanidad
+22,Milagros Inesperados,img1,Drama|Fantasia|Misterio,Los guardias del corredor de la muerte descubren que uno de sus prisioneros tiene un don milagroso y misterioso para sanar
+23,El Viaje de Chihiro,img1,Animacion|Aventura|Fantasia,Una nina de diez anos se adentra en un mundo gobernado por dioses y espiritus donde sus padres son transformados en animales
+24,Gladiador,img1,Accion|Aventura|Drama,Un general romano traicionado busca venganza contra el corrupto emperador que asesino a su familia y lo convirtio en esclavo
+25,Leon El Profesional,img1,Accion|Crimen|Drama,Un asesino a sueldo acoge a una nina de doce anos cuya familia fue asesinada por agentes corruptos de la ley
+26,Volver al Futuro,img1,Aventura|Comedia|Sci-Fi,Un adolescente es enviado accidentalmente a los anos cincuenta en un automovil modificado para viajar en el tiempo
+27,Terminator 2 El Juicio Final,img1,Accion|Sci-Fi,Un cyborg reprogramado es enviado al pasado para proteger al joven John Connor de un modelo de exterminador mas avanzado
+28,El Pianista,img1,Biografia|Drama|Guerra,Un musico judio polaco lucha por sobrevivir a la destruccion del gueto de Varsovia durante la segunda guerra mundial
+29,El Rey Leon,img1,Animacion|Aventura|Drama,Un joven principe leon huye de su reino tras la muerte de su padre y aprende el verdadero significado de la responsabilidad
+30,Psicosis,img1,Terror|Misterio|Thriller,Una secretaria se esconde en un motel aislado dirigido por un joven timido que vive bajo el control absoluto de su madre
+31,Luces de la Ciudad,img1,Comedia|Drama|Romance,Un vagabundo se enamora de una florista ciega y pasa por mil peripecias para conseguir el dinero que necesita para su operacion
+32,Casablanca,img1,Drama|Romance|Guerra,Un cinico expatriado estadounidense se debate entre el amor de su vida y el deber de ayudarla a escapar de los nazis
+33,Tiempos Modernos,img1,Comedia|Drama|Romance,Un obrero de fabrica sufre las consecuencias de la industrializacion y la gran depresion intentando sobrevivir junto a una joven huerfana
+34,Whiplash Musica y Obsesion,img1,Drama|Musica,Un joven y ambicioso baterista de jazz es llevado al limite de sus capacidades por un instructor implacable y abusivo
+35,Intocables,img1,Biografia|Comedia|Drama,Un millonario que ha quedado tetraplejico contrata a un joven de los suburbios recien salido de prision como su cuidador principal
+36,Los Infiltrados,img1,Crimen|Drama|Thriller,Un policia encubierto y un topo en la policia intentan identificarse mutuamente mientras se infiltran en una mafia irlandesa
+37,Atrapame si Puedes,img1,Biografia|Crimen|Drama,Un agente del FBI persigue de forma obsesiva a un joven estafador experto en falsificar cheques y asumir multiples identidades
+38,Alien El Octavo Pasajero,img1,Terror|Sci-Fi,La tripulacion de una nave espacial comercial investiga una senal de auxilio y descubre una forma de vida letal y parasitaria
+39,Cinema Paradiso,img1,Drama,Un cineasta recuerda su infancia y la profunda amistad que entablo con el proyeccionista del cine de su pequeno pueblo natal
+40,Memento,img1,Misterio|Thriller,Un hombre con perdida de memoria a corto plazo utiliza fotografias y tatuajes para cazar al asesino de su esposa
+41,Apocalipsis Ahora,img1,Drama|Guerra,Un capitan del ejercito estadounidense es enviado a Camboya en una mision secreta para asesinar a un coronel renegado y demente
+42,Bastardos Sin Gloria,img1,Aventura|Drama|Guerra,Un grupo de soldados judios americanos planea un atentado para asesinar a los lideres de la Alemania nazi en Paris
+43,Django Sin Cadenas,img1,Drama|Western,Un esclavo liberado se une a un cazarrecompensas aleman para rescatar a su esposa de las manos de un despiadado terrateniente
+44,Wall-E,img1,Animacion|Aventura|Familia,Un pequeno robot compactador de basura abandonado en la Tierra emprende un viaje espacial que cambiara el destino de la humanidad
+45,El Gran Truco,img1,Drama|Misterio|Sci-Fi,Dos ilusionistas rivales en el Londres de finales del siglo diecinueve se obsesionan con crear el truco definitivo de teletransportacion
+46,El Resplandor,img1,Terror|Drama,Un escritor se traslada con su familia a un hotel aislado para cuidarlo durante el invierno sin saber que fuerzas oscuras lo habitan
+47,Avengers Infinity War,img1,Accion|Aventura|Sci-Fi,Los superheroes se unen en una batalla colosal para evitar que el titan Thanos recolecte las gemas del infinito y destruya el universo
+48,Batman Inicia,img1,Accion|Aventura,Tras entrenar con una liga secreta de guerreros Bruce Wayne regresa a Ciudad Gotica para combatir la corrupcion y el crimen
+49,Toy Story,img1,Animacion|Aventura|Comedia,Un muneco vaquero se siente amenazado cuando un moderno astronauta de juguete llega a la habitacion y se convierte en el favorito
+50,Caracortada,img1,Crimen|Drama,Un refugiado cubano llega a Miami y asciende de forma implacable hasta convertirse en el jefe de un poderoso imperio de narcotrafico
+51,Perros de Reserva,img1,Crimen|Thriller,Seis criminales profesionales que no se conocen entre si son contratados para un robo que sale mal sospechando de un traidor encubierto
+52,Amadeus,img1,Biografia|Drama|Musica,El compositor Antonio Salieri relata su amarga rivalidad y obsesion con el genio musical de Wolfgang Amadeus Mozart
+53,El Show de Truman,img1,Comedia|Drama,Un agente de seguros descubre que toda su vida es en realidad un programa de television transmitido en vivo las veinticuatro horas
+54,Gran Torino,img1,Drama,Un veterano de la guerra de Corea cascarrabias decide reformar a su joven vecino adolescente despues de que intentara robar su auto
+55,La Isla Siniestra,img1,Misterio|Thriller,Dos agentes federales viajan a una isla remota para investigar la desaparicion de una paciente de un hospital psiquitrico criminal
+56,Mad Max Furia en el Camino,img1,Accion|Aventura|Sci-Fi,Una mujer rebelde y un vagabundo unen sus fuerzas para escapar de un tiranico lider de culto a traves de un desierto postapocaliptico
+57,Buscando a Nemo,img1,Animacion|Aventura|Familia,Un pez payaso excesivamente protector viaja por todo el oceano para rescatar a su hijo capturado por un buzo en un arrecife
+58,Kill Bill Volumen 1,img1,Accion|Crimen,Una antigua asesina profesional despierta de un coma y jura vengarse de sus antiguos companeros que intentaron matarla
+59,Jurassic Park,img1,Aventura|Sci-Fi|Suspenso,Un grupo de cientificos visita un parque de atracciones con dinosaurios clonados que escapan de sus recintos debido a un sabotaje
+60,El Gran Hotel Budapest,img1,Comedia|Drama,Un conserje de un famoso hotel europeo entabla una amistad con un joven botones mientras se involucran en el robo de una pintura valiosa
+61,La La Land Ciudad de Suenos,img1,Comedia|Drama|Musical,Un pianista de jazz y una aspirante a actriz se enamoran en Los Angeles mientras luchan por alcanzar sus ambiciones profesionales
+62,La Llegada,img1,Drama|Sci-Fi|Misterio,Una linguista es contratada por el ejercito para comunicarse con una raza alienigena que ha llegado a la Tierra en doce naves gigantes
+63,Logan,img1,Accion|Drama|Sci-Fi,Un envejecido y debilitado Wolverine cuida de un enfermo Profesor X mientras intenta proteger a una nina mutante perseguida por mercenarios
+64,Blade Runner 2049,img1,Accion|Sci-Fi|Misterio,Un nuevo replicante de la policia descubre un secreto enterrado desde hace mucho tiempo que podria sumir a la sociedad en el caos completo
+65,Un Lugar en Silencio,img1,Terror|Sci-Fi|Drama,Una familia lucha por sobrevivir en un mundo invadido por criaturas ciegas con un oido ultra sensible que cazan al menor sonido
+66,El Lobo de Wall Street,img1,Biografia|Comedia|Drama,La historia de un corredor de bolsa de Nueva York que se enriquece rapidamente mediante fraudes financieros viviendo una vida de excesos
+67,1917,img1,Drama|Guerra,Dos jovenes soldados britanicos reciben la mision casi imposible de entregar un mensaje cruzando el territorio enemigo durante la gran guerra
+68,Parasitos,img1,Comedia|Drama|Thriller,Una familia de escasos recursos economicos disena un plan para infiltrarse y trabajar en el hogar de una adinerada familia de clase alta
+69,Joker,img1,Crimen|Drama|Thriller,Un comediante con problemas mentales es rechazado y maltratado por la sociedad cayendo en una espiral de locura y crimen urbano
+70,Ford contra Ferrari,img1,Biografia|Accion|Drama,Un disenador de autos estadounidense y un intrepido piloto britanico construyen un vehiculo revolucionario para derrotar a Ferrari en Le Mans
+71,Duna,img1,Aventura|Sci-Fi,El hijo de una familia noble se involucra en una guerra por el control del planeta desertico que posee el recurso mas valioso del universo
+72,Sin Tiempo para Morir,img1,Accion|Aventura|Thriller,James Bond interrumpe su retiro en Jamaica para rescatar a un cientifico secuestrado enfrentando a un misterioso villano armado con tecnologia peligrosa
+73,Top Gun Maverick,img1,Accion|Drama,Despues de treinta anos de servicio un veterano piloto de la marina entrena a un grupo de jovenes graduados para una mision especializada y suicida
+74,Todo en Todas Partes al Mismo Tiempo,img1,Accion|Aventura|Comedia,Una inmigrante china se ve envuelta en una aventura salvaje al descubrir que puede acceder a las habilidades de sus versiones de universos paralelos
+75,Avatar El Camino del Agua,img1,Accion|Aventura|Sci-Fi,Jake Sully y su familia buscan refugio con un clan acuatico de Pandora cuando los humanos regresan para colonizar el planeta de nuevo
+76,Spider-Man Sin Camino a Casa,img1,Accion|Aventura|Sci-Fi,Peter Parker busca la ayuda del Doctor Strange para restaurar su identidad secreta abriendo accidentalmente brechas en el multiverso entero
+77,Batman de Matt Reeves,img1,Accion|Crimen|Drama,En su segundo ano de lucha contra el crimen Batman investiga la corrupcion profunda de Ciudad Gotica siguiendo los acertijos de un asesino en serie
+78,La Red Social,img1,Biografia|Drama,Un estudiante de Harvard crea un sitio web de redes sociales que se convierte en un fenomeno global enfrentando demandas de sus antiguos amigos
+79,Zootopia,img1,Animacion|Aventura|Comedia,Una coneja policia y un astuto zorro estafador se unen para resolver el misterio de la desaparicion de multiples depredadores en la ciudad
+80,Rango,img1,Animacion|Aventura|Comedia,Un camaleon mascota termina atrapado por accidente en un pueblo del lejano oeste que sufre por la escasez de agua convirtiendose en alguacil
+81,El Orfanato,img1,Misterio|Terror|Thriller,Una mujer regresa con su familia al antiguo orfanato donde crecio para reabrirlo pero su hijo comienza a jugar con amigos invisibles
+82,El Laberinto del Fauno,img1,Drama|Fantasia|Guerra,En la Espana de la posguerra una nina escapa de su cruel padrastro militar conociendo a un fauno que le revela su destiny mistico
+83,Los Otros,img1,Misterio|Terror|Thriller,Una madre devota protege a sus dos hijos fotosensibles en una enorme mansion aislada descubriendo indicios de que la casa esta habitada por extranos
+84,Rec,img1,Terror|Misterio,Una reportera y su camarografo acompanan a los bomberos a un edificio donde los residentes muestran un comportamiento violento y canibal
+85,El Secreto de sus Ojos,img1,Drama|Misterio|Romance,Un agente judicial retirado escribe una novela sobre un asesinato no resuelto del pasado que aun obsesiona su mente y corazon
+86,Nueve Reinas,img1,Crimen|Drama|Thriller,Dos estafadores de poca monta se conocen por azar y se involucran en un negocio multimillonario con una coleccion de estampillas falsificadas
+87,Relatos Salvajes,img1,Comedia|Drama|Thriller,Seis historias independientes que exploran los limites de la perdida de control y la venganza humana ante situaciones cotidianas conflictivas
+88,El Renacido,img1,Accion|Aventura|Drama,Un trampero es atacado por un oso y abandonado por sus companeros luchando por sobrevivir en el crudo invierno para buscar vengeance
+89,Gravedad,img1,Sci-Fi|Thriller,Dos astronautas quedan flotando a la deriva en el espacio exterior despues de que su transbordador sufriera una destruccion total por basura espacial
+90,Argo,img1,Biografia|Drama|Thriller,Un especialista de la CIA finge la produccion de una pelicula de ciencia ficcion para rescatar a seis estadounidenses en Iran
+91,Ex Machina,img1,Drama|Sci-Fi|Thriller,Un programador es invitado a la residencia de su jefe millonario para realizar el test de Turing a un robot humanoide con inteligencia avanzada
+92,Her,img1,Drama|Romance|Sci-Fi,Un escritor profesonista desarrolla una relacion amorosa profunda con un sistema operativo avanzado disenado para satisfacer todas sus necesidades
+93,Perdida,img1,Drama|Misterio|Thriller,Un hombre se convierte en el sospechoso principal de la policia cuando su esposa desaparece misteriosamente en su aniversario de bodas
+94,Prisioneros,img1,Crimen|Drama|Misterio,Un padre desesperado toma la justicia por sus propias manos cuando su pequena hija desaparece y la policia libera al sospechoso principal
+95,Apolo 13,img1,Aventura|Drama|Historia,La tripulacion de una nave espacial sufre danos internos masivos rumbo a la Luna luchando contra el tiempo para regresar a salvo
+96,Rescate en el Barrio Chino,img1,Accion|Aventura|Comedia,Un camionero se ve envuelto en una batalla mistica subterranea en el barrio chino de San Francisco para rescatar a una joven
+97,Malditos Vecinos,img1,Comedia,Una pareja con un bebe recien nacido entra en una guerra de bromas destructivas cuando una ruidosa fraternidad universitaria se muda al lado
+98,Que Paso Ayer,img1,Comedia,Tres amigos despiertan de una despedida de soltero en Las Vegas sin recordar nada de la noche anterior perdiendo por completo al novio
+99,Supercool,img1,Comedia,Dos adolescentes dependientes intentan comprar alcohol para una fiesta de graduacion de la secundaria viviendo una noche desastrosa de peripecias

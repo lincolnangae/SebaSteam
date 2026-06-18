@@ -142,6 +142,7 @@
     <ClInclude Include="Controlador.h" />
     <ClInclude Include="DatosGPelicula.h" />
     <ClInclude Include="Dependencias.h" />
+    <ClInclude Include="ListaDobleCircular.h" />
     <ClInclude Include="ListaSimple.h" />
     <ClInclude Include="Nodo.h" />
     <ClInclude Include="pch.h" />
