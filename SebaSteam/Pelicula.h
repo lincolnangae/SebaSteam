@@ -1,9 +1,7 @@
 #pragma once
 #include "Dependencias.h"
 #include "ListaSimple.h"
-
 using namespace std;
-
 class Pelicula {
 private:
     string peliculaID;
@@ -15,10 +13,8 @@ private:
     float calificacion;
     int lanzamiento;
     ListaSimple<string> comentarios;
-
 public:
     Pelicula() : peliculaID(""), nombre(""), idImagen(""), sinopsis(""), vistas(0), calificacion(0.0f), lanzamiento(2026) {}
-
     Pelicula(string id, string nom, string idImg, vector<string> cats, string sin, int vis, float cal, int an) {
         peliculaID = id;
         nombre = nom;
@@ -29,7 +25,6 @@ public:
         calificacion = cal;
         lanzamiento = an;
     }
-
 	// Getters y setters
     string getPeliculaID() const { return peliculaID; }
     string getNombre() const { return nombre; }
@@ -40,14 +35,11 @@ public:
     int getAnio() const { return lanzamiento; }
     vector<string> getCategorias() const { return categorias; }
     ListaSimple<string>& getComentarios() { return comentarios; }
-
     void incrementarVistas() { vistas++; }
     void actualizarCalificacion(float nuevaNota) { calificacion = nuevaNota; }
-
     bool operator==(const Pelicula& otra) const {
         return peliculaID == otra.peliculaID;
     }
-
     bool operator==(const string& id) const {
         return peliculaID == id;
     }

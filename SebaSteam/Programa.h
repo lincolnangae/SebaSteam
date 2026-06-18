@@ -1,15 +1,12 @@
 #pragma once
 #include "Controlador.h"
-
 namespace SebaSteam {
-
 	using namespace System;
 	using namespace System::ComponentModel;
 	using namespace System::Collections;
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
-
 	public ref class Programa : public System::Windows::Forms::Form
 	{
 	public:
@@ -17,15 +14,11 @@ namespace SebaSteam {
 		{
 			InitializeComponent();
 			controlador = gcnew ControladoraPrincipal();
-
 			this->DoubleBuffered = true;
 			mostrarCatalogo = false;
-
 			imagenFondoCatalogo = System::Drawing::Image::FromFile("Imagenes/Menus/MenuPrincipal.png");
-
 			this->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Programa::Programa_Paint);
 		}
-
 	protected:
 		~Programa()
 		{
@@ -34,7 +27,6 @@ namespace SebaSteam {
 				delete components;
 			}
 		}
-
 	private:
 		System::ComponentModel::Container^ components;
 		System::Windows::Forms::Button^ BotonIniciarSesion;
@@ -42,88 +34,53 @@ namespace SebaSteam {
 		System::Windows::Forms::TextBox^ IDUsuario;
 		System::Windows::Forms::TextBox^ ClaveUsuario;
 		System::Drawing::Image^ imagenFondoCatalogo;
-
 		ControladoraPrincipal^ controlador;
 	private: System::Windows::Forms::Panel^ P7;
 	private: System::Windows::Forms::Button^ B7;
-
 	private: System::Windows::Forms::Panel^ P2;
 	private: System::Windows::Forms::Button^ B2;
-
 	private: System::Windows::Forms::Panel^ P1;
 	private: System::Windows::Forms::Button^ B1;
-
 	private: System::Windows::Forms::Panel^ P3;
 	private: System::Windows::Forms::Button^ B3;
-
 	private: System::Windows::Forms::Panel^ P4;
 	private: System::Windows::Forms::Button^ B4;
-
 	private: System::Windows::Forms::Panel^ P5;
 	private: System::Windows::Forms::Button^ B5;
-
 	private: System::Windows::Forms::Panel^ P6;
 	private: System::Windows::Forms::Button^ B6;
 	private: System::Windows::Forms::Panel^ P13;
 	private: System::Windows::Forms::Button^ B13;
-
-
-
 	private: System::Windows::Forms::Panel^ P12;
 	private: System::Windows::Forms::Button^ B12;
-
-
 	private: System::Windows::Forms::Panel^ P11;
 	private: System::Windows::Forms::Button^ B11;
-
-
 	private: System::Windows::Forms::Panel^ P10;
 	private: System::Windows::Forms::Button^ B10;
-
-
 	private: System::Windows::Forms::Panel^ P9;
 	private: System::Windows::Forms::Button^ B9;
-
-
 	private: System::Windows::Forms::Panel^ P14;
-
-
 	private: System::Windows::Forms::Button^ B8;
-
 	private: System::Windows::Forms::Panel^ P8;
 	private: System::Windows::Forms::Panel^ P20;
 	private: System::Windows::Forms::Button^ B20;
-
-
 	private: System::Windows::Forms::Panel^ P19;
 	private: System::Windows::Forms::Button^ B19;
-
-
 	private: System::Windows::Forms::Panel^ P18;
 	private: System::Windows::Forms::Button^ B18;
-
-
 	private: System::Windows::Forms::Panel^ P17;
 	private: System::Windows::Forms::Button^ B17;
-
-
 	private: System::Windows::Forms::Panel^ P16;
 	private: System::Windows::Forms::Button^ B16;
-
-
 	private: System::Windows::Forms::Panel^ P21;
 	private: System::Windows::Forms::Button^ B21;
 	private: System::Windows::Forms::Button^ B15;
-
-
-
 	private: System::Windows::Forms::Panel^ P15;
 	private: System::Windows::Forms::Button^ B14;
 	private: System::Windows::Forms::Button^ R1;
 	private: System::Windows::Forms::Button^ R2;
 	private: System::Windows::Forms::Button^ R3;
 	private: System::Windows::Forms::Button^ L3;
-
 	private: System::Windows::Forms::Button^ L1;
 	private: System::Windows::Forms::Button^ L2;
 	private: System::Windows::Forms::Button^ TopPCalificadas;
@@ -137,10 +94,8 @@ namespace SebaSteam {
 	private: System::Windows::Forms::PictureBox^ ImgPelicula;
 	private: System::Windows::Forms::Label^ TituloPelicula;
 	private: System::Windows::Forms::Button^ SalirVista;
-
 		   Pelicula* peliculaActualEnVista;
 		   bool mostrarCatalogo;
-
 #pragma region Windows Form Designer generated code
 		   void InitializeComponent(void)
 		   {
@@ -1298,13 +1253,10 @@ namespace SebaSteam {
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->ImgPelicula))->EndInit();
 			   this->ResumeLayout(false);
 			   this->PerformLayout();
-
 		   }
 #pragma endregion
-
 		   void LimpiarElementosInicio() {
 			   this->SuspendLayout();
-
 			   this->BotonIniciarSesion->Visible = false;
 			   this->BotonIniciarSesion->Enabled = false;
 			   this->BotonRegirtar->Visible = false;
@@ -1313,13 +1265,10 @@ namespace SebaSteam {
 			   this->IDUsuario->Enabled = false;
 			   this->ClaveUsuario->Visible = false;
 			   this->ClaveUsuario->Enabled = false;
-
 			   this->BackgroundImage = nullptr;
-
 			   this->TopAlfabetico->Visible = true;  this->TopAlfabetico->Enabled = true;
 			   this->TopPVistas->Visible = true;    this->TopPVistas->Enabled = true;
 			   this->TopPCalificadas->Visible = true; this->TopPCalificadas->Enabled = true;
-
 			   this->P1->Visible = true;  this->P1->Enabled = true;
 			   this->P2->Visible = true;  this->P2->Enabled = true;
 			   this->P3->Visible = true;  this->P3->Enabled = true;
@@ -1329,7 +1278,6 @@ namespace SebaSteam {
 			   this->P7->Visible = true;  this->P7->Enabled = true;
 			   this->L1->Visible = true;  this->L1->Enabled = true;
 			   this->R1->Visible = true;  this->R1->Enabled = true;
-
 			   this->P8->Visible = true;  this->P8->Enabled = true;
 			   this->P9->Visible = true;  this->P9->Enabled = true;
 			   this->P10->Visible = true; this->P10->Enabled = true;
@@ -1339,7 +1287,6 @@ namespace SebaSteam {
 			   this->P14->Visible = true; this->P14->Enabled = true;
 			   this->L2->Visible = true;  this->L2->Enabled = true;
 			   this->R2->Visible = true;  this->R2->Enabled = true;
-
 			   this->P15->Visible = true; this->P15->Enabled = true;
 			   this->P16->Visible = true; this->P16->Enabled = true;
 			   this->P17->Visible = true; this->P17->Enabled = true;
@@ -1349,26 +1296,18 @@ namespace SebaSteam {
 			   this->P21->Visible = true; this->P21->Enabled = true;
 			   this->L3->Visible = true;  this->L3->Enabled = true;
 			   this->R3->Visible = true;  this->R3->Enabled = true;
-
 			   this->ActualizarFilaMasVistos();
-
 			   mostrarCatalogo = true;
-
 			   this->ResumeLayout(false);
 			   this->Refresh();
 		   }
-
 		   void MostrarDetallePelicula(Pelicula* p) {
 			   if (p == nullptr) return;
-
 			   this->peliculaActualEnVista = p;
-
 			   this->TituloPelicula->Text = gcnew String(p->getNombre().c_str());
 			   this->SinopsisP->Text = gcnew String(p->getSinopsis().c_str());
-
 			   int vistas = p->getVistas();
 			   String^ textoVistas;
-
 			   if (vistas >= 1000000) {
 				   textoVistas = (vistas / 1000000.0).ToString("F1") + "M";
 			   }
@@ -1378,9 +1317,7 @@ namespace SebaSteam {
 			   else {
 				   textoVistas = vistas.ToString();
 			   }
-
 			   this->VistasTotalesP->Text = textoVistas;
-
 			   String^ cadenaCategorias = "";
 			   std::vector<std::string> cats = p->getCategorias();
 			   for (size_t i = 0; i < cats.size(); ++i) {
@@ -1388,10 +1325,8 @@ namespace SebaSteam {
 				   if (i < cats.size() - 1) cadenaCategorias += " | ";
 			   }
 			   this->CategoriaP->Text = cadenaCategorias;
-
 			   float nota = p->getCalificacion();
 			   this->CalificacionP->Text = nota.ToString("F1") + " / 5.0";
-
 			   if (nota >= 4.5f) {
 				   this->CalificacionP->ForeColor = System::Drawing::Color::LimeGreen;  // Verde brillante (Excelente)
 			   }
@@ -1401,7 +1336,6 @@ namespace SebaSteam {
 			   else {
 				   this->CalificacionP->ForeColor = System::Drawing::Color::OrangeRed;  // Naranja/Rojo (Baja calificacion)
 			   }
-
 			   try {
 				   String^ rutaImg = gcnew String(p->getIdImagen().c_str()) + ".png";
 				   if (System::IO::File::Exists(rutaImg)) {
@@ -1409,23 +1343,18 @@ namespace SebaSteam {
 				   }
 			   }
 			   catch (Exception^) {
-
 			   }
-
 			   this->VistaPelicula->Visible = true;
 			   this->VistaPelicula->Enabled = true;
 			   this->VistaPelicula->BringToFront();
 		   }
-
 		   void ActualizarFilaMasVistos() {
 			   // Agruparlos para un trabajo mas limpio
 			   cli::array<System::Windows::Forms::Button^>^ botonesFila2 = {
 				   B8, B9, B10, B11, B12, B13, B14
 			   };
-
 			   for (int i = 0; i < 7; ++i) {
 				   Pelicula* p = controlador->ObtenerPeliculaFilaMasVistos(i);
-
 				   if (p != nullptr) {
 					   botonesFila2[i]->Parent->Visible = true;
 				   }
@@ -1433,22 +1362,17 @@ namespace SebaSteam {
 				   }
 			   }
 		   }
-
 	private: System::Void Programa_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
-
 	private: System::Void BotonIniciarSesion_Click(System::Object^ sender, System::EventArgs^ e) {
 		String^ id = IDUsuario->Text;
 		String^ clave = ClaveUsuario->Text;
-
 		try {
 			if (id->Trim()->Length == 0 || clave->Trim()->Length == 0) {
 				MessageBox::Show("Campos vacios");
 				return;
 			}
-
 			bool accesoConcedido = controlador->autenticarUsuario(id, clave);
-
 			if (accesoConcedido) {
 				this->LimpiarElementosInicio();
 			}
@@ -1460,19 +1384,15 @@ namespace SebaSteam {
 			MessageBox::Show("Error en el inicio de sesion: " + ex->Message);
 		}
 	}
-
 	private: System::Void BotonRegirtar_Click(System::Object^ sender, System::EventArgs^ e) {
 		String^ id = IDUsuario->Text;
 		String^ clave = ClaveUsuario->Text;
-
 		try {
 			if (id->Trim()->Length == 0 || clave->Trim()->Length == 0) {
 				MessageBox::Show("Campos vacios");
 				return;
 			}
-
 			bool registroExitoso = controlador->agregarUsuario(id, clave);
-
 			if (registroExitoso) {
 				MessageBox::Show("Usuario creado");
 				IDUsuario->Clear();
@@ -1486,18 +1406,13 @@ namespace SebaSteam {
 			MessageBox::Show("Error en el registro: " + ex->Message);
 		}
 	}
-
 		   // Manejador del espacio de dibujado principal del sistema
 	private: System::Void Programa_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 		if (!mostrarCatalogo) return;
-
 		Graphics^ g = e->Graphics;
-
 		try {
 			if (imagenFondoCatalogo != nullptr) {
 				g->DrawImage(imagenFondoCatalogo, this->ClientRectangle);
-
-
 			}
 		}
 		catch (Exception^ ex) {
@@ -1506,13 +1421,9 @@ namespace SebaSteam {
 	private: System::Void SalirVista_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->VistaPelicula->Visible = false;
 		this->VistaPelicula->Enabled = false;
-
 		this->peliculaActualEnVista = nullptr;
-
 		this->Refresh();
 	}
-
-
 		   //Vista de Pelicula mas vistos de la segunda fila (aun no completo)
 	private: System::Void B8_Click(System::Object^ sender, System::EventArgs^ e) {
 		Pelicula* p = controlador->ObtenerPeliculaFilaMasVistos(0);
@@ -1563,7 +1474,6 @@ namespace SebaSteam {
 			this->MostrarDetallePelicula(p);
 		}
 	}
-
 		   // Cambios de pivote segun la direccio
 	private: System::Void R1_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
@@ -1571,7 +1481,6 @@ namespace SebaSteam {
 		controlador->AvanzarCarruselMasVistos();
 		this->ActualizarFilaMasVistos();
 	}
-
 	private: System::Void L1_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void L2_Click(System::Object^ sender, System::EventArgs^ e) {

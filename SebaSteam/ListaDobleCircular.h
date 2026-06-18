@@ -1,15 +1,12 @@
 #pragma once
 #include "Nodo.h"
-
 template <typename T>
 class ListaDobleCircular {
 private:
     Nodo<T>* cabeza;
     int cantidad;
-
 public:
     ListaDobleCircular() : cabeza(nullptr), cantidad(0) {}
-
     ~ListaDobleCircular() {
         if (cabeza == nullptr) return;
         Nodo<T>* actual = cabeza;
@@ -19,7 +16,6 @@ public:
             actual = siguiente;
         }
     }
-
     void insertar(T valor) {
         Nodo<T>* nuevo = new Nodo<T>(valor);
         if (cabeza == nullptr) {
@@ -36,7 +32,6 @@ public:
         }
         cantidad++;
     }
-
     Nodo<T>* getCabeza() { return cabeza; }
     int getCantidad() const { return cantidad; }
 };
