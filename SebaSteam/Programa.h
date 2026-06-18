@@ -1074,8 +1074,10 @@ namespace SebaSteam {
 			   // 
 			   // TopPCalificadas
 			   // 
+			   this->TopPCalificadas->BackColor = System::Drawing::Color::Transparent;
 			   this->TopPCalificadas->Enabled = false;
 			   this->TopPCalificadas->FlatAppearance->BorderSize = 0;
+			   this->TopPCalificadas->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			   this->TopPCalificadas->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
 			   this->TopPCalificadas->Location = System::Drawing::Point(449, 21);
@@ -1083,13 +1085,15 @@ namespace SebaSteam {
 			   this->TopPCalificadas->Size = System::Drawing::Size(142, 29);
 			   this->TopPCalificadas->TabIndex = 31;
 			   this->TopPCalificadas->Text = L"MEJOR CALIFICADOS";
-			   this->TopPCalificadas->UseVisualStyleBackColor = true;
+			   this->TopPCalificadas->UseVisualStyleBackColor = false;
 			   this->TopPCalificadas->Visible = false;
 			   // 
 			   // TopPVistas
 			   // 
+			   this->TopPVistas->BackColor = System::Drawing::Color::Transparent;
 			   this->TopPVistas->Enabled = false;
 			   this->TopPVistas->FlatAppearance->BorderSize = 0;
+			   this->TopPVistas->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			   this->TopPVistas->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
 			   this->TopPVistas->Location = System::Drawing::Point(697, 21);
@@ -1097,13 +1101,15 @@ namespace SebaSteam {
 			   this->TopPVistas->Size = System::Drawing::Size(142, 29);
 			   this->TopPVistas->TabIndex = 32;
 			   this->TopPVistas->Text = L"TOP VISTOS";
-			   this->TopPVistas->UseVisualStyleBackColor = true;
+			   this->TopPVistas->UseVisualStyleBackColor = false;
 			   this->TopPVistas->Visible = false;
 			   // 
 			   // TopAlfabetico
 			   // 
+			   this->TopAlfabetico->BackColor = System::Drawing::Color::Transparent;
 			   this->TopAlfabetico->Enabled = false;
 			   this->TopAlfabetico->FlatAppearance->BorderSize = 0;
+			   this->TopAlfabetico->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			   this->TopAlfabetico->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
 			   this->TopAlfabetico->Location = System::Drawing::Point(961, 21);
@@ -1111,7 +1117,7 @@ namespace SebaSteam {
 			   this->TopAlfabetico->Size = System::Drawing::Size(142, 29);
 			   this->TopAlfabetico->TabIndex = 33;
 			   this->TopAlfabetico->Text = L"A - Z";
-			   this->TopAlfabetico->UseVisualStyleBackColor = true;
+			   this->TopAlfabetico->UseVisualStyleBackColor = false;
 			   this->TopAlfabetico->Visible = false;
 			   // 
 			   // VistaPelicula
@@ -1127,7 +1133,7 @@ namespace SebaSteam {
 			   this->VistaPelicula->Controls->Add(this->ImgPelicula);
 			   this->VistaPelicula->Controls->Add(this->TituloPelicula);
 			   this->VistaPelicula->Enabled = false;
-			   this->VistaPelicula->Location = System::Drawing::Point(3, 0);
+			   this->VistaPelicula->Location = System::Drawing::Point(3, 2);
 			   this->VistaPelicula->Name = L"VistaPelicula";
 			   this->VistaPelicula->Size = System::Drawing::Size(1232, 762);
 			   this->VistaPelicula->TabIndex = 34;
