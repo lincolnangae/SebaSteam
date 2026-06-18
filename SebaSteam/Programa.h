@@ -1020,6 +1020,7 @@ private: System::Windows::Forms::Button^ SalirVista;
 			   this->L1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			   this->L1->Cursor = System::Windows::Forms::Cursors::Default;
 			   this->L1->Enabled = false;
+			   this->L1->FlatAppearance->BorderSize = 0;
 			   this->L1->FlatAppearance->MouseDownBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				   static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)));
 			   this->L1->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Black;
@@ -1039,6 +1040,7 @@ private: System::Windows::Forms::Button^ SalirVista;
 			   this->L2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			   this->L2->Cursor = System::Windows::Forms::Cursors::Default;
 			   this->L2->Enabled = false;
+			   this->L2->FlatAppearance->BorderSize = 0;
 			   this->L2->FlatAppearance->MouseDownBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				   static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)));
 			   this->L2->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Black;
@@ -1058,6 +1060,7 @@ private: System::Windows::Forms::Button^ SalirVista;
 			   this->L3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			   this->L3->Cursor = System::Windows::Forms::Cursors::Default;
 			   this->L3->Enabled = false;
+			   this->L3->FlatAppearance->BorderSize = 0;
 			   this->L3->FlatAppearance->MouseDownBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				   static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)));
 			   this->L3->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Black;
@@ -1496,8 +1499,6 @@ private: System::Windows::Forms::Button^ SalirVista;
 			this->Refresh();
 		}
 
-	// Cambios de pivote segun la direccion
-
 	
 	//Vista de Pelicula mas vistos de la segunda fila (aun no completo)
 		private: System::Void B8_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1549,21 +1550,19 @@ private: System::Windows::Forms::Button^ SalirVista;
 				this->MostrarDetallePelicula(p);
 			}
 		}
-	//Botones para ir al derecha de una fila (aun no completo)
+
+	// Cambios de pivote segun la direccio
 	private: System::Void R1_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void R2_Click(System::Object^ sender, System::EventArgs^ e) {
 		controlador->AvanzarCarruselMasVistos();
-		// Refresca los nombres en las tarjetas
 		this->ActualizarFilaMasVistos();
 	}
 
-	//Botones para ir al izquierda de una fila (aun no completo)
 	private: System::Void L1_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void L2_Click(System::Object^ sender, System::EventArgs^ e) {
 		controlador->RetrocederCarruselMasVistos();
-		// Refresca los nombres en las tarjetas
 		this->ActualizarFilaMasVistos();
 	}
 };
