@@ -1334,6 +1334,8 @@ private: System::Windows::Forms::Button^ SalirVista;
 				   this->L3->Visible = true;  this->L3->Enabled = true;
 				   this->R3->Visible = true;  this->R3->Enabled = true;
 
+				   this->ActualizarFilaMasVistos();
+
 				   mostrarCatalogo = true;
 
 				   this->ResumeLayout(false);
