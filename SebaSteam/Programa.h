@@ -126,20 +126,20 @@ namespace SebaSteam {
 
 	private: System::Windows::Forms::Button^ L1;
 	private: System::Windows::Forms::Button^ L2;
-private: System::Windows::Forms::Button^ TopPCalificadas;
-private: System::Windows::Forms::Button^ TopPVistas;
-private: System::Windows::Forms::Button^ TopAlfabetico;
-private: System::Windows::Forms::Panel^ VistaPelicula;
-private: System::Windows::Forms::Label^ CalificacionP;
-private: System::Windows::Forms::Label^ VistasTotalesP;
-private: System::Windows::Forms::Label^ SinopsisP;
-private: System::Windows::Forms::Label^ CategoriaP;
-private: System::Windows::Forms::PictureBox^ ImgPelicula;
-private: System::Windows::Forms::Label^ TituloPelicula;
-private: System::Windows::Forms::Button^ SalirVista;
+	private: System::Windows::Forms::Button^ TopPCalificadas;
+	private: System::Windows::Forms::Button^ TopPVistas;
+	private: System::Windows::Forms::Button^ TopAlfabetico;
+	private: System::Windows::Forms::Panel^ VistaPelicula;
+	private: System::Windows::Forms::Label^ CalificacionP;
+	private: System::Windows::Forms::Label^ VistasTotalesP;
+	private: System::Windows::Forms::Label^ SinopsisP;
+	private: System::Windows::Forms::Label^ CategoriaP;
+	private: System::Windows::Forms::PictureBox^ ImgPelicula;
+	private: System::Windows::Forms::Label^ TituloPelicula;
+	private: System::Windows::Forms::Button^ SalirVista;
 
-	   Pelicula* peliculaActualEnVista;
-	   bool mostrarCatalogo;
+		   Pelicula* peliculaActualEnVista;
+		   bool mostrarCatalogo;
 
 #pragma region Windows Form Designer generated code
 		   void InitializeComponent(void)
@@ -1075,6 +1075,7 @@ private: System::Windows::Forms::Button^ SalirVista;
 			   // TopPCalificadas
 			   // 
 			   this->TopPCalificadas->Enabled = false;
+			   this->TopPCalificadas->FlatAppearance->BorderSize = 0;
 			   this->TopPCalificadas->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
 			   this->TopPCalificadas->Location = System::Drawing::Point(449, 21);
@@ -1088,6 +1089,7 @@ private: System::Windows::Forms::Button^ SalirVista;
 			   // TopPVistas
 			   // 
 			   this->TopPVistas->Enabled = false;
+			   this->TopPVistas->FlatAppearance->BorderSize = 0;
 			   this->TopPVistas->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
 			   this->TopPVistas->Location = System::Drawing::Point(697, 21);
@@ -1101,6 +1103,7 @@ private: System::Windows::Forms::Button^ SalirVista;
 			   // TopAlfabetico
 			   // 
 			   this->TopAlfabetico->Enabled = false;
+			   this->TopAlfabetico->FlatAppearance->BorderSize = 0;
 			   this->TopAlfabetico->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
 			   this->TopAlfabetico->Location = System::Drawing::Point(961, 21);
@@ -1124,7 +1127,7 @@ private: System::Windows::Forms::Button^ SalirVista;
 			   this->VistaPelicula->Controls->Add(this->ImgPelicula);
 			   this->VistaPelicula->Controls->Add(this->TituloPelicula);
 			   this->VistaPelicula->Enabled = false;
-			   this->VistaPelicula->Location = System::Drawing::Point(8, 1);
+			   this->VistaPelicula->Location = System::Drawing::Point(3, 0);
 			   this->VistaPelicula->Name = L"VistaPelicula";
 			   this->VistaPelicula->Size = System::Drawing::Size(1232, 762);
 			   this->VistaPelicula->TabIndex = 34;
@@ -1291,267 +1294,271 @@ private: System::Windows::Forms::Button^ SalirVista;
 			   this->PerformLayout();
 
 		   }
-	#pragma endregion
+#pragma endregion
 
-			   void LimpiarElementosInicio() {
-				   this->SuspendLayout();
+		   void LimpiarElementosInicio() {
+			   this->SuspendLayout();
 
-				   this->BotonIniciarSesion->Visible = false;
-				   this->BotonIniciarSesion->Enabled = false;
-				   this->BotonRegirtar->Visible = false;
-				   this->BotonRegirtar->Enabled = false;
-				   this->IDUsuario->Visible = false;
-				   this->IDUsuario->Enabled = false;
-				   this->ClaveUsuario->Visible = false;
-				   this->ClaveUsuario->Enabled = false;
+			   this->BotonIniciarSesion->Visible = false;
+			   this->BotonIniciarSesion->Enabled = false;
+			   this->BotonRegirtar->Visible = false;
+			   this->BotonRegirtar->Enabled = false;
+			   this->IDUsuario->Visible = false;
+			   this->IDUsuario->Enabled = false;
+			   this->ClaveUsuario->Visible = false;
+			   this->ClaveUsuario->Enabled = false;
 
-				   this->BackgroundImage = nullptr;
+			   this->BackgroundImage = nullptr;
 
-				   this->P1->Visible = true;  this->P1->Enabled = true;
-				   this->P2->Visible = true;  this->P2->Enabled = true;
-				   this->P3->Visible = true;  this->P3->Enabled = true;
-				   this->P4->Visible = true;  this->P4->Enabled = true;
-				   this->P5->Visible = true;  this->P5->Enabled = true;
-				   this->P6->Visible = true;  this->P6->Enabled = true;
-				   this->P7->Visible = true;  this->P7->Enabled = true;
-				   this->L1->Visible = true;  this->L1->Enabled = true;
-				   this->R1->Visible = true;  this->R1->Enabled = true;
+			   this->TopAlfabetico->Visible = true;  this->TopAlfabetico->Enabled = true;
+			   this->TopPVistas->Visible = true;    this->TopPVistas->Enabled = true;
+			   this->TopPCalificadas->Visible = true; this->TopPCalificadas->Enabled = true;
 
-				   this->P8->Visible = true;  this->P8->Enabled = true;
-				   this->P9->Visible = true;  this->P9->Enabled = true;
-				   this->P10->Visible = true; this->P10->Enabled = true;
-				   this->P11->Visible = true; this->P11->Enabled = true;
-				   this->P12->Visible = true; this->P12->Enabled = true;
-				   this->P13->Visible = true; this->P13->Enabled = true;
-				   this->P14->Visible = true; this->P14->Enabled = true;
-				   this->L2->Visible = true;  this->L2->Enabled = true;
-				   this->R2->Visible = true;  this->R2->Enabled = true;
+			   this->P1->Visible = true;  this->P1->Enabled = true;
+			   this->P2->Visible = true;  this->P2->Enabled = true;
+			   this->P3->Visible = true;  this->P3->Enabled = true;
+			   this->P4->Visible = true;  this->P4->Enabled = true;
+			   this->P5->Visible = true;  this->P5->Enabled = true;
+			   this->P6->Visible = true;  this->P6->Enabled = true;
+			   this->P7->Visible = true;  this->P7->Enabled = true;
+			   this->L1->Visible = true;  this->L1->Enabled = true;
+			   this->R1->Visible = true;  this->R1->Enabled = true;
 
-				   this->P15->Visible = true; this->P15->Enabled = true;
-				   this->P16->Visible = true; this->P16->Enabled = true;
-				   this->P17->Visible = true; this->P17->Enabled = true;
-				   this->P18->Visible = true; this->P18->Enabled = true;
-				   this->P19->Visible = true; this->P19->Enabled = true;
-				   this->P20->Visible = true; this->P20->Enabled = true;
-				   this->P21->Visible = true; this->P21->Enabled = true;
-				   this->L3->Visible = true;  this->L3->Enabled = true;
-				   this->R3->Visible = true;  this->R3->Enabled = true;
+			   this->P8->Visible = true;  this->P8->Enabled = true;
+			   this->P9->Visible = true;  this->P9->Enabled = true;
+			   this->P10->Visible = true; this->P10->Enabled = true;
+			   this->P11->Visible = true; this->P11->Enabled = true;
+			   this->P12->Visible = true; this->P12->Enabled = true;
+			   this->P13->Visible = true; this->P13->Enabled = true;
+			   this->P14->Visible = true; this->P14->Enabled = true;
+			   this->L2->Visible = true;  this->L2->Enabled = true;
+			   this->R2->Visible = true;  this->R2->Enabled = true;
 
-				   this->ActualizarFilaMasVistos();
+			   this->P15->Visible = true; this->P15->Enabled = true;
+			   this->P16->Visible = true; this->P16->Enabled = true;
+			   this->P17->Visible = true; this->P17->Enabled = true;
+			   this->P18->Visible = true; this->P18->Enabled = true;
+			   this->P19->Visible = true; this->P19->Enabled = true;
+			   this->P20->Visible = true; this->P20->Enabled = true;
+			   this->P21->Visible = true; this->P21->Enabled = true;
+			   this->L3->Visible = true;  this->L3->Enabled = true;
+			   this->R3->Visible = true;  this->R3->Enabled = true;
 
-				   mostrarCatalogo = true;
+			   this->ActualizarFilaMasVistos();
 
-				   this->ResumeLayout(false);
-				   this->Refresh();
+			   mostrarCatalogo = true;
+
+			   this->ResumeLayout(false);
+			   this->Refresh();
+		   }
+
+		   void MostrarDetallePelicula(Pelicula* p) {
+			   if (p == nullptr) return;
+
+			   this->peliculaActualEnVista = p;
+
+			   this->TituloPelicula->Text = gcnew String(p->getNombre().c_str());
+			   this->SinopsisP->Text = gcnew String(p->getSinopsis().c_str());
+
+			   int vistas = p->getVistas();
+			   String^ textoVistas;
+
+			   if (vistas >= 1000000) {
+				   textoVistas = (vistas / 1000000.0).ToString("F1") + "M";
+			   }
+			   else if (vistas >= 1000) {
+				   textoVistas = (vistas / 1000.0).ToString("F1") + "K";
+			   }
+			   else {
+				   textoVistas = vistas.ToString();
 			   }
 
-			   void MostrarDetallePelicula(Pelicula* p) {
-				   if (p == nullptr) return;
+			   this->VistasTotalesP->Text = textoVistas;
 
-				   this->peliculaActualEnVista = p;
+			   String^ cadenaCategorias = "";
+			   std::vector<std::string> cats = p->getCategorias();
+			   for (size_t i = 0; i < cats.size(); ++i) {
+				   cadenaCategorias += gcnew String(cats[i].c_str());
+				   if (i < cats.size() - 1) cadenaCategorias += " | ";
+			   }
+			   this->CategoriaP->Text = cadenaCategorias;
 
-				   this->TituloPelicula->Text = gcnew String(p->getNombre().c_str());
-				   this->SinopsisP->Text = gcnew String(p->getSinopsis().c_str());
+			   float nota = p->getCalificacion();
+			   this->CalificacionP->Text = nota.ToString("F1") + " / 5.0";
 
-				   int vistas = p->getVistas();
-				   String^ textoVistas;
+			   if (nota >= 4.5f) {
+				   this->CalificacionP->ForeColor = System::Drawing::Color::LimeGreen;  // Verde brillante (Excelente)
+			   }
+			   else if (nota >= 3.0f) {
+				   this->CalificacionP->ForeColor = System::Drawing::Color::Gold;       // Amarillo/Dorado (Aceptable)
+			   }
+			   else {
+				   this->CalificacionP->ForeColor = System::Drawing::Color::OrangeRed;  // Naranja/Rojo (Baja calificacion)
+			   }
 
-				   if (vistas >= 1000000) {
-					   textoVistas = (vistas / 1000000.0).ToString("F1") + "M";
+			   try {
+				   String^ rutaImg = gcnew String(p->getIdImagen().c_str()) + ".png";
+				   if (System::IO::File::Exists(rutaImg)) {
+					   this->ImgPelicula->Image = System::Drawing::Image::FromFile(rutaImg);
 				   }
-				   else if (vistas >= 1000) {
-					   textoVistas = (vistas / 1000.0).ToString("F1") + "K";
+			   }
+			   catch (Exception^) {
+
+			   }
+
+			   this->VistaPelicula->Visible = true;
+			   this->VistaPelicula->Enabled = true;
+			   this->VistaPelicula->BringToFront();
+		   }
+
+		   void ActualizarFilaMasVistos() {
+			   // Agruparlos para un trabajo mas limpio
+			   cli::array<System::Windows::Forms::Button^>^ botonesFila2 = {
+				   B8, B9, B10, B11, B12, B13, B14
+			   };
+
+			   for (int i = 0; i < 7; ++i) {
+				   Pelicula* p = controlador->ObtenerPeliculaFilaMasVistos(i);
+
+				   if (p != nullptr) {
+					   botonesFila2[i]->Parent->Visible = true;
 				   }
 				   else {
-					   textoVistas = vistas.ToString();
-				   }
-
-				   this->VistasTotalesP->Text = textoVistas;
-
-				   String^ cadenaCategorias = "";
-				   std::vector<std::string> cats = p->getCategorias();
-				   for (size_t i = 0; i < cats.size(); ++i) {
-					   cadenaCategorias += gcnew String(cats[i].c_str());
-					   if (i < cats.size() - 1) cadenaCategorias += " | ";
-				   }
-				   this->CategoriaP->Text = cadenaCategorias;
-
-				   float nota = p->getCalificacion();
-				   this->CalificacionP->Text = nota.ToString("F1") + " / 5.0";
-
-				   if (nota >= 4.5f) {
-					   this->CalificacionP->ForeColor = System::Drawing::Color::LimeGreen;  // Verde brillante (Excelente)
-				   }
-				   else if (nota >= 3.0f) {
-					   this->CalificacionP->ForeColor = System::Drawing::Color::Gold;       // Amarillo/Dorado (Aceptable)
-				   }
-				   else {
-					   this->CalificacionP->ForeColor = System::Drawing::Color::OrangeRed;  // Naranja/Rojo (Baja calificacion)
-				   }
-
-				   try {
-					   String^ rutaImg = gcnew String(p->getIdImagen().c_str()) + ".png";
-					   if (System::IO::File::Exists(rutaImg)) {
-						   this->ImgPelicula->Image = System::Drawing::Image::FromFile(rutaImg);
-					   }
-				   }
-				   catch (Exception^) {
-
-				   }
-
-				   this->VistaPelicula->Visible = true;
-				   this->VistaPelicula->Enabled = true;
-				   this->VistaPelicula->BringToFront();
-			   }
-
-			   void ActualizarFilaMasVistos() {
-				   // Agruparlos para un trabajo mas limpio
-				   cli::array<System::Windows::Forms::Button^>^ botonesFila2 = {
-					   B8, B9, B10, B11, B12, B13, B14
-				   };
-
-				   for (int i = 0; i < 7; ++i) {
-					   Pelicula* p = controlador->ObtenerPeliculaFilaMasVistos(i);
-
-					   if (p != nullptr) {
-						   botonesFila2[i]->Parent->Visible = true;
-					   }
-					   else {
-					   }
 				   }
 			   }
+		   }
 
-		private: System::Void Programa_Load(System::Object^ sender, System::EventArgs^ e) {
-		}
+	private: System::Void Programa_Load(System::Object^ sender, System::EventArgs^ e) {
+	}
 
-		private: System::Void BotonIniciarSesion_Click(System::Object^ sender, System::EventArgs^ e) {
-			String^ id = IDUsuario->Text;
-			String^ clave = ClaveUsuario->Text;
+	private: System::Void BotonIniciarSesion_Click(System::Object^ sender, System::EventArgs^ e) {
+		String^ id = IDUsuario->Text;
+		String^ clave = ClaveUsuario->Text;
 
-			try {
-				if (id->Trim()->Length == 0 || clave->Trim()->Length == 0) {
-					MessageBox::Show("Campos vacios");
-					return;
-				}
-
-				bool accesoConcedido = controlador->autenticarUsuario(id, clave);
-
-				if (accesoConcedido) {
-					this->LimpiarElementosInicio();
-				}
-				else {
-					MessageBox::Show("Credenciales incorrectas");
-				}
+		try {
+			if (id->Trim()->Length == 0 || clave->Trim()->Length == 0) {
+				MessageBox::Show("Campos vacios");
+				return;
 			}
-			catch (Exception^ ex) {
-				MessageBox::Show("Error en el inicio de sesion: " + ex->Message);
+
+			bool accesoConcedido = controlador->autenticarUsuario(id, clave);
+
+			if (accesoConcedido) {
+				this->LimpiarElementosInicio();
+			}
+			else {
+				MessageBox::Show("Credenciales incorrectas");
 			}
 		}
+		catch (Exception^ ex) {
+			MessageBox::Show("Error en el inicio de sesion: " + ex->Message);
+		}
+	}
 
-		private: System::Void BotonRegirtar_Click(System::Object^ sender, System::EventArgs^ e) {
-			String^ id = IDUsuario->Text;
-			String^ clave = ClaveUsuario->Text;
+	private: System::Void BotonRegirtar_Click(System::Object^ sender, System::EventArgs^ e) {
+		String^ id = IDUsuario->Text;
+		String^ clave = ClaveUsuario->Text;
 
-			try {
-				if (id->Trim()->Length == 0 || clave->Trim()->Length == 0) {
-					MessageBox::Show("Campos vacios");
-					return;
-				}
-
-				bool registroExitoso = controlador->agregarUsuario(id, clave);
-
-				if (registroExitoso) {
-					MessageBox::Show("Usuario creado");
-					IDUsuario->Clear();
-					ClaveUsuario->Clear();
-				}
-				else {
-					MessageBox::Show("El ID ya existe o es invalido");
-				}
+		try {
+			if (id->Trim()->Length == 0 || clave->Trim()->Length == 0) {
+				MessageBox::Show("Campos vacios");
+				return;
 			}
-			catch (Exception^ ex) {
-				MessageBox::Show("Error en el registro: " + ex->Message);
+
+			bool registroExitoso = controlador->agregarUsuario(id, clave);
+
+			if (registroExitoso) {
+				MessageBox::Show("Usuario creado");
+				IDUsuario->Clear();
+				ClaveUsuario->Clear();
+			}
+			else {
+				MessageBox::Show("El ID ya existe o es invalido");
 			}
 		}
-
-			   // Manejador del espacio de dibujado principal del sistema
-		private: System::Void Programa_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
-			if (!mostrarCatalogo) return;
-
-			Graphics^ g = e->Graphics;
-
-			try {
-				if (imagenFondoCatalogo != nullptr) {
-					g->DrawImage(imagenFondoCatalogo, this->ClientRectangle);
-
-
-				}
-			}
-			catch (Exception^ ex) {
-			}
+		catch (Exception^ ex) {
+			MessageBox::Show("Error en el registro: " + ex->Message);
 		}
-		private: System::Void SalirVista_Click(System::Object^ sender, System::EventArgs^ e) {
-			this->VistaPelicula->Visible = false;
-			this->VistaPelicula->Enabled = false;
+	}
 
-			this->peliculaActualEnVista = nullptr;
+		   // Manejador del espacio de dibujado principal del sistema
+	private: System::Void Programa_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+		if (!mostrarCatalogo) return;
 
-			this->Refresh();
-		}
+		Graphics^ g = e->Graphics;
 
-	
-	//Vista de Pelicula mas vistos de la segunda fila (aun no completo)
-		private: System::Void B8_Click(System::Object^ sender, System::EventArgs^ e) {
-			Pelicula* p = controlador->ObtenerPeliculaFilaMasVistos(0);
-			if (p != nullptr) {
-				controlador->RegistrarVisualizacion(p);
-				this->MostrarDetallePelicula(p);
+		try {
+			if (imagenFondoCatalogo != nullptr) {
+				g->DrawImage(imagenFondoCatalogo, this->ClientRectangle);
+
+
 			}
 		}
-		private: System::Void B9_Click(System::Object^ sender, System::EventArgs^ e) {
-			Pelicula* p = controlador->ObtenerPeliculaFilaMasVistos(1);
-			if (p != nullptr) {
-				controlador->RegistrarVisualizacion(p);
-				this->MostrarDetallePelicula(p);
-			}
+		catch (Exception^ ex) {
 		}
-		private: System::Void B10_Click(System::Object^ sender, System::EventArgs^ e) {
-			Pelicula* p = controlador->ObtenerPeliculaFilaMasVistos(2);
-			if (p != nullptr) {
-				controlador->RegistrarVisualizacion(p);
-				this->MostrarDetallePelicula(p);
-			}
-		}
-		private: System::Void B11_Click(System::Object^ sender, System::EventArgs^ e) {
-			Pelicula* p = controlador->ObtenerPeliculaFilaMasVistos(3);
-			if (p != nullptr) {
-				controlador->RegistrarVisualizacion(p);
-				this->MostrarDetallePelicula(p);
-			}
-		}
-		private: System::Void B12_Click(System::Object^ sender, System::EventArgs^ e) {
-			Pelicula* p = controlador->ObtenerPeliculaFilaMasVistos(4);
-			if (p != nullptr) {
-				controlador->RegistrarVisualizacion(p);
-				this->MostrarDetallePelicula(p);
-			}
-		}
-		private: System::Void B13_Click(System::Object^ sender, System::EventArgs^ e) {
-			Pelicula* p = controlador->ObtenerPeliculaFilaMasVistos(5);
-			if (p != nullptr) {
-				controlador->RegistrarVisualizacion(p);
-				this->MostrarDetallePelicula(p);
-			}
-		}
-		private: System::Void B14_Click(System::Object^ sender, System::EventArgs^ e) {
-			Pelicula* p = controlador->ObtenerPeliculaFilaMasVistos(6);
-			if (p != nullptr) {
-				controlador->RegistrarVisualizacion(p);
-				this->MostrarDetallePelicula(p);
-			}
-		}
+	}
+	private: System::Void SalirVista_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->VistaPelicula->Visible = false;
+		this->VistaPelicula->Enabled = false;
 
-	// Cambios de pivote segun la direccio
+		this->peliculaActualEnVista = nullptr;
+
+		this->Refresh();
+	}
+
+
+		   //Vista de Pelicula mas vistos de la segunda fila (aun no completo)
+	private: System::Void B8_Click(System::Object^ sender, System::EventArgs^ e) {
+		Pelicula* p = controlador->ObtenerPeliculaFilaMasVistos(0);
+		if (p != nullptr) {
+			controlador->RegistrarVisualizacion(p);
+			this->MostrarDetallePelicula(p);
+		}
+	}
+	private: System::Void B9_Click(System::Object^ sender, System::EventArgs^ e) {
+		Pelicula* p = controlador->ObtenerPeliculaFilaMasVistos(1);
+		if (p != nullptr) {
+			controlador->RegistrarVisualizacion(p);
+			this->MostrarDetallePelicula(p);
+		}
+	}
+	private: System::Void B10_Click(System::Object^ sender, System::EventArgs^ e) {
+		Pelicula* p = controlador->ObtenerPeliculaFilaMasVistos(2);
+		if (p != nullptr) {
+			controlador->RegistrarVisualizacion(p);
+			this->MostrarDetallePelicula(p);
+		}
+	}
+	private: System::Void B11_Click(System::Object^ sender, System::EventArgs^ e) {
+		Pelicula* p = controlador->ObtenerPeliculaFilaMasVistos(3);
+		if (p != nullptr) {
+			controlador->RegistrarVisualizacion(p);
+			this->MostrarDetallePelicula(p);
+		}
+	}
+	private: System::Void B12_Click(System::Object^ sender, System::EventArgs^ e) {
+		Pelicula* p = controlador->ObtenerPeliculaFilaMasVistos(4);
+		if (p != nullptr) {
+			controlador->RegistrarVisualizacion(p);
+			this->MostrarDetallePelicula(p);
+		}
+	}
+	private: System::Void B13_Click(System::Object^ sender, System::EventArgs^ e) {
+		Pelicula* p = controlador->ObtenerPeliculaFilaMasVistos(5);
+		if (p != nullptr) {
+			controlador->RegistrarVisualizacion(p);
+			this->MostrarDetallePelicula(p);
+		}
+	}
+	private: System::Void B14_Click(System::Object^ sender, System::EventArgs^ e) {
+		Pelicula* p = controlador->ObtenerPeliculaFilaMasVistos(6);
+		if (p != nullptr) {
+			controlador->RegistrarVisualizacion(p);
+			this->MostrarDetallePelicula(p);
+		}
+	}
+
+		   // Cambios de pivote segun la direccio
 	private: System::Void R1_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void R2_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1565,5 +1572,5 @@ private: System::Windows::Forms::Button^ SalirVista;
 		controlador->RetrocederCarruselMasVistos();
 		this->ActualizarFilaMasVistos();
 	}
-};
+	};
 }
