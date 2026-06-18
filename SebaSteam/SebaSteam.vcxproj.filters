@@ -83,6 +83,12 @@
     <ClInclude Include="ListaDobleCircular.h">
       <Filter>Header Files\EstructurasNecesarias</Filter>
     </ClInclude>
+    <ClInclude Include="Inicio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuPrincipal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SebaSteam.cpp">
@@ -96,6 +102,12 @@
     </ClCompile>
     <ClCompile Include="pch.cpp">
       <Filter>Source Files\Externos</Filter>
+    </ClCompile>
+    <ClCompile Include="Inicio.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuPrincipal.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
