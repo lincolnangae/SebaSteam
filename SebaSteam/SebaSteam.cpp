@@ -7,8 +7,8 @@ using namespace System::Windows::Forms;
 int main() {
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
-	//SebaSteam::Programa form;
-	//Application::Run(% form);
+	/*SebaSteam::Programa form;
+	Application::Run(% form);*/
 	SebaSteam::Inicio form;
 	Application::Run(% form);
 	return 0;

@@ -173,7 +173,7 @@ namespace SebaSteam {
 			bool accesoConcedido = driver->autenticarUsuario(id, clave);
 			if (accesoConcedido) {
 				//INICIAR NUEVO FORMULARIO DEL FUNCIONAMIENTO PRINCIPAL
-				MenuPrincipal^ menuPrinci = gcnew MenuPrincipal();
+				MenuPrincipal^ menuPrinci = gcnew MenuPrincipal(driver);
 				menuPrinci->StartPosition = System::Windows::Forms::FormStartPosition::Manual;
 				menuPrinci->Location = this->Location;
 				this->Hide();
