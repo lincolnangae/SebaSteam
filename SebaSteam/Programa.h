@@ -1337,7 +1337,7 @@ namespace SebaSteam {
 				   this->CalificacionP->ForeColor = System::Drawing::Color::OrangeRed;  // Naranja/Rojo (Baja calificacion)
 			   }
 			   try {
-				   String^ rutaImg = gcnew String(p->getIdImagen().c_str()) + ".png";
+				   String^ rutaImg = gcnew String(p->getIdImagen().c_str()) + ".jpg";
 				   if (System::IO::File::Exists(rutaImg)) {
 					   this->ImgPelicula->Image = System::Drawing::Image::FromFile(rutaImg);
 				   }
