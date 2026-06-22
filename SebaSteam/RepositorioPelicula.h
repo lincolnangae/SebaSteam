@@ -33,12 +33,14 @@ public:
 		string linea;
 		while (getline(archivo, linea)) {
 			stringstream ss(linea);
-			string id, nombre, idImagen, catsStr, sinopsis;
+			string id, nombre, idImagen, catsStr, sinopsis, idImagenTMP;
+			idImagen = "Imagenes/Peliculas/";
 			if (getline(ss, id, ',') &&
 				getline(ss, nombre, ',') &&
-				getline(ss, idImagen, ',') &&
+				getline(ss, idImagenTMP, ',') &&
 				getline(ss, catsStr, ',') &&
 				getline(ss, sinopsis, ',')) {
+				idImagen += (idImagenTMP + ".jpg");
 				int vistas = 0;
 				float calificacion = 0.0f;
 				int anio = 2026;

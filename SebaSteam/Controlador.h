@@ -57,6 +57,7 @@ public:
             punterosTemporales.push_back(&(*vectorBasePeliculas)[i]);
         }
         if (!punterosTemporales.empty()) {
+            //ordenamiento merge para visitas
             ClaseAlgoritmos::mergeSort(punterosTemporales, 0, punterosTemporales.size() - 1);
         }
 		// Los 15 mas vistos de manera ordenada en la lista doble circular
@@ -107,4 +108,12 @@ public:
         string claveStd = marshal_as<string>(clave);
         return repositorio->registrarUsuario(idStd, claveStd);
     }
+    string printMasVistas(int indx) {
+        if (pivoteMasVistos == nullptr) return "";
+        Nodo<Pelicula*>* curr = pivoteMasVistos;
+        for (int i = 0; i < indx; i++) curr = curr->siguiente;
+        return curr->Dato->getIdImagen();
+
+    }
+
 };

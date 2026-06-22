@@ -16,6 +16,7 @@ namespace SebaSteam {
 		{
 			InitializeComponent();
 			driver = gcnew ControladoraPrincipal();
+			driver->InicializarCatalogoInicio();
 		}
 
 	protected:
@@ -67,7 +68,7 @@ namespace SebaSteam {
 			// 
 			this->IDUser->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei UI", 15, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->IDUser->Location = System::Drawing::Point(94, 495);
+			this->IDUser->Location = System::Drawing::Point(81, 431);
 			this->IDUser->Name = L"IDUser";
 			this->IDUser->Size = System::Drawing::Size(492, 39);
 			this->IDUser->TabIndex = 0;
@@ -79,7 +80,7 @@ namespace SebaSteam {
 			this->Text1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->Text1->ForeColor = System::Drawing::Color::Transparent;
-			this->Text1->Location = System::Drawing::Point(99, 449);
+			this->Text1->Location = System::Drawing::Point(86, 385);
 			this->Text1->Name = L"Text1";
 			this->Text1->Size = System::Drawing::Size(277, 32);
 			this->Text1->TabIndex = 1;
@@ -92,7 +93,7 @@ namespace SebaSteam {
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label1->ForeColor = System::Drawing::Color::Transparent;
-			this->label1->Location = System::Drawing::Point(99, 565);
+			this->label1->Location = System::Drawing::Point(86, 501);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(323, 32);
 			this->label1->TabIndex = 3;
@@ -102,7 +103,7 @@ namespace SebaSteam {
 			// 
 			this->ClaveUsuario->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei UI", 15, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->ClaveUsuario->Location = System::Drawing::Point(94, 611);
+			this->ClaveUsuario->Location = System::Drawing::Point(81, 547);
 			this->ClaveUsuario->Name = L"ClaveUsuario";
 			this->ClaveUsuario->Size = System::Drawing::Size(492, 39);
 			this->ClaveUsuario->TabIndex = 2;
@@ -115,7 +116,7 @@ namespace SebaSteam {
 			this->IniciarS->FlatAppearance->BorderSize = 0;
 			this->IniciarS->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->IniciarS->ForeColor = System::Drawing::Color::Transparent;
-			this->IniciarS->Location = System::Drawing::Point(94, 714);
+			this->IniciarS->Location = System::Drawing::Point(81, 650);
 			this->IniciarS->Name = L"IniciarS";
 			this->IniciarS->Size = System::Drawing::Size(209, 67);
 			this->IniciarS->TabIndex = 4;
@@ -131,7 +132,7 @@ namespace SebaSteam {
 			this->RegistraButton->FlatAppearance->BorderSize = 0;
 			this->RegistraButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->RegistraButton->ForeColor = System::Drawing::Color::Transparent;
-			this->RegistraButton->Location = System::Drawing::Point(377, 714);
+			this->RegistraButton->Location = System::Drawing::Point(364, 650);
 			this->RegistraButton->Name = L"RegistraButton";
 			this->RegistraButton->Size = System::Drawing::Size(209, 67);
 			this->RegistraButton->TabIndex = 5;
@@ -144,7 +145,7 @@ namespace SebaSteam {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ClientSize = System::Drawing::Size(1300, 900);
+			this->ClientSize = System::Drawing::Size(1300, 800);
 			this->ControlBox = false;
 			this->Controls->Add(this->RegistraButton);
 			this->Controls->Add(this->IniciarS);
@@ -156,6 +157,7 @@ namespace SebaSteam {
 			this->Name = L"Inicio";
 			this->ShowIcon = false;
 			this->Text = L"Inicio";
+			this->Load += gcnew System::EventHandler(this, &Inicio::Inicio_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -217,5 +219,7 @@ namespace SebaSteam {
 			MessageBox::Show("Error en el registro: " + ex->Message, "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
 		}
 	}
+private: System::Void Inicio_Load(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }

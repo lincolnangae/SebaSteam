@@ -8,10 +8,6 @@ namespace SebaSteam {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
-
-	/// <summary>
-	/// Resumen de MenuPrincipal
-	/// </summary>
 	public ref class MenuPrincipal : public System::Windows::Forms::Form
 	{
 	public:
@@ -53,7 +49,7 @@ namespace SebaSteam {
 	private: System::Windows::Forms::Panel^ F1_3;
 	private: System::Windows::Forms::Panel^ F1_4;
 	private: System::Windows::Forms::Panel^ F1_5;
-	private: System::Windows::Forms::Panel^ F1_6;
+
 	private: System::Windows::Forms::Panel^ F2_6;
 	private: System::Windows::Forms::Panel^ F2_5;
 	private: System::Windows::Forms::Panel^ F2_4;
@@ -61,7 +57,7 @@ namespace SebaSteam {
 	private: System::Windows::Forms::Panel^ F2_2;
 	private: System::Windows::Forms::Panel^ F2_1;
 	private: System::Windows::Forms::Panel^ F3_6;
-	private: System::Windows::Forms::Panel^ F3_5;
+
 	private: System::Windows::Forms::Panel^ F3_4;
 	private: System::Windows::Forms::Panel^ F3_3;
 	private: System::Windows::Forms::Panel^ F3_2;
@@ -70,14 +66,29 @@ namespace SebaSteam {
 
 	private: System::Windows::Forms::Label^ TxtF3;
 
+	private: System::Windows::Forms::Button^ Boton_F1_1;
+	private: System::Windows::Forms::Button^ Boton_F1_2;
+	private: System::Windows::Forms::Button^ Boton_F1_3;
+	private: System::Windows::Forms::Button^ Boton_F1_4;
+	private: System::Windows::Forms::Button^ Boton_F1_5;
+
+		   //Dos punteros para cambio de pagina de la lista de los mas vistos
+		   int lF1 = 0, rF1 = 5;
+	private: System::Windows::Forms::Button^ B_F3_6;
+
+	private: System::Windows::Forms::Button^ B_F3_4;
+	private: System::Windows::Forms::Button^ B_F3_3;
+	private: System::Windows::Forms::Button^ B_F3_2;
+	private: System::Windows::Forms::Button^ B_F1_1;
+	private: System::Windows::Forms::Button^ Boton_F1_6;
+	private: System::Windows::Forms::Panel^ F1_6;
+	private: System::Windows::Forms::Button^ B_F3_5;
+	private: System::Windows::Forms::Panel^ F3_5;
 
 
 
 
-
-
-
-		System::ComponentModel::Container ^components;
+		   System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -98,11 +109,15 @@ namespace SebaSteam {
 			this->R__3 = (gcnew System::Windows::Forms::Button());
 			this->TxtFila1 = (gcnew System::Windows::Forms::Label());
 			this->F1_1 = (gcnew System::Windows::Forms::Panel());
+			this->Boton_F1_1 = (gcnew System::Windows::Forms::Button());
 			this->F1_2 = (gcnew System::Windows::Forms::Panel());
+			this->Boton_F1_2 = (gcnew System::Windows::Forms::Button());
 			this->F1_3 = (gcnew System::Windows::Forms::Panel());
+			this->Boton_F1_3 = (gcnew System::Windows::Forms::Button());
 			this->F1_4 = (gcnew System::Windows::Forms::Panel());
+			this->Boton_F1_4 = (gcnew System::Windows::Forms::Button());
 			this->F1_5 = (gcnew System::Windows::Forms::Panel());
-			this->F1_6 = (gcnew System::Windows::Forms::Panel());
+			this->Boton_F1_5 = (gcnew System::Windows::Forms::Button());
 			this->F2_6 = (gcnew System::Windows::Forms::Panel());
 			this->F2_5 = (gcnew System::Windows::Forms::Panel());
 			this->F2_4 = (gcnew System::Windows::Forms::Panel());
@@ -110,13 +125,33 @@ namespace SebaSteam {
 			this->F2_2 = (gcnew System::Windows::Forms::Panel());
 			this->F2_1 = (gcnew System::Windows::Forms::Panel());
 			this->F3_6 = (gcnew System::Windows::Forms::Panel());
-			this->F3_5 = (gcnew System::Windows::Forms::Panel());
+			this->B_F3_6 = (gcnew System::Windows::Forms::Button());
 			this->F3_4 = (gcnew System::Windows::Forms::Panel());
+			this->B_F3_4 = (gcnew System::Windows::Forms::Button());
 			this->F3_3 = (gcnew System::Windows::Forms::Panel());
+			this->B_F3_3 = (gcnew System::Windows::Forms::Button());
 			this->F3_2 = (gcnew System::Windows::Forms::Panel());
+			this->B_F3_2 = (gcnew System::Windows::Forms::Button());
 			this->F3_1 = (gcnew System::Windows::Forms::Panel());
+			this->B_F1_1 = (gcnew System::Windows::Forms::Button());
 			this->TxtF2 = (gcnew System::Windows::Forms::Label());
 			this->TxtF3 = (gcnew System::Windows::Forms::Label());
+			this->Boton_F1_6 = (gcnew System::Windows::Forms::Button());
+			this->F1_6 = (gcnew System::Windows::Forms::Panel());
+			this->B_F3_5 = (gcnew System::Windows::Forms::Button());
+			this->F3_5 = (gcnew System::Windows::Forms::Panel());
+			this->F1_1->SuspendLayout();
+			this->F1_2->SuspendLayout();
+			this->F1_3->SuspendLayout();
+			this->F1_4->SuspendLayout();
+			this->F1_5->SuspendLayout();
+			this->F3_6->SuspendLayout();
+			this->F3_4->SuspendLayout();
+			this->F3_3->SuspendLayout();
+			this->F3_2->SuspendLayout();
+			this->F3_1->SuspendLayout();
+			this->F1_6->SuspendLayout();
+			this->F3_5->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// TopVButton
@@ -127,11 +162,11 @@ namespace SebaSteam {
 			this->TopVButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->TopVButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->TopVButton->Location = System::Drawing::Point(720, 19);
+			this->TopVButton->Location = System::Drawing::Point(720, 12);
 			this->TopVButton->Name = L"TopVButton";
-			this->TopVButton->Size = System::Drawing::Size(185, 46);
+			this->TopVButton->Size = System::Drawing::Size(185, 43);
 			this->TopVButton->TabIndex = 0;
-			this->TopVButton->Text = L"TOP VISTOS";
+			this->TopVButton->Text = L"Vistos recientemente";
 			this->TopVButton->UseVisualStyleBackColor = false;
 			// 
 			// MejorCalifButton
@@ -142,9 +177,9 @@ namespace SebaSteam {
 			this->MejorCalifButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->MejorCalifButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->MejorCalifButton->Location = System::Drawing::Point(453, 19);
+			this->MejorCalifButton->Location = System::Drawing::Point(453, 16);
 			this->MejorCalifButton->Name = L"MejorCalifButton";
-			this->MejorCalifButton->Size = System::Drawing::Size(192, 49);
+			this->MejorCalifButton->Size = System::Drawing::Size(192, 39);
 			this->MejorCalifButton->TabIndex = 1;
 			this->MejorCalifButton->Text = L"MEJOR CALIFICADOS";
 			this->MejorCalifButton->UseVisualStyleBackColor = false;
@@ -157,9 +192,9 @@ namespace SebaSteam {
 			this->FiltrarBu->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->FiltrarBu->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->FiltrarBu->Location = System::Drawing::Point(993, 19);
+			this->FiltrarBu->Location = System::Drawing::Point(993, 12);
 			this->FiltrarBu->Name = L"FiltrarBu";
-			this->FiltrarBu->Size = System::Drawing::Size(186, 46);
+			this->FiltrarBu->Size = System::Drawing::Size(186, 56);
 			this->FiltrarBu->TabIndex = 2;
 			this->FiltrarBu->Text = L"A - Z";
 			this->FiltrarBu->UseVisualStyleBackColor = false;
@@ -172,9 +207,9 @@ namespace SebaSteam {
 			this->R_1->FlatAppearance->BorderSize = 0;
 			this->R_1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->R_1->ForeColor = System::Drawing::Color::Transparent;
-			this->R_1->Location = System::Drawing::Point(1241, 200);
+			this->R_1->Location = System::Drawing::Point(1241, 183);
 			this->R_1->Name = L"R_1";
-			this->R_1->Size = System::Drawing::Size(52, 96);
+			this->R_1->Size = System::Drawing::Size(47, 71);
 			this->R_1->TabIndex = 6;
 			this->R_1->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			this->R_1->UseVisualStyleBackColor = false;
@@ -188,9 +223,9 @@ namespace SebaSteam {
 			this->R_2->FlatAppearance->BorderSize = 0;
 			this->R_2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->R_2->ForeColor = System::Drawing::Color::Transparent;
-			this->R_2->Location = System::Drawing::Point(1241, 463);
+			this->R_2->Location = System::Drawing::Point(1241, 420);
 			this->R_2->Name = L"R_2";
-			this->R_2->Size = System::Drawing::Size(52, 96);
+			this->R_2->Size = System::Drawing::Size(52, 71);
 			this->R_2->TabIndex = 7;
 			this->R_2->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			this->R_2->UseVisualStyleBackColor = false;
@@ -204,9 +239,9 @@ namespace SebaSteam {
 			this->L_2->FlatAppearance->BorderSize = 0;
 			this->L_2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->L_2->ForeColor = System::Drawing::Color::Transparent;
-			this->L_2->Location = System::Drawing::Point(12, 463);
+			this->L_2->Location = System::Drawing::Point(9, 420);
 			this->L_2->Name = L"L_2";
-			this->L_2->Size = System::Drawing::Size(52, 96);
+			this->L_2->Size = System::Drawing::Size(55, 71);
 			this->L_2->TabIndex = 10;
 			this->L_2->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			this->L_2->UseVisualStyleBackColor = false;
@@ -220,9 +255,9 @@ namespace SebaSteam {
 			this->L_1->FlatAppearance->BorderSize = 0;
 			this->L_1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->L_1->ForeColor = System::Drawing::Color::Transparent;
-			this->L_1->Location = System::Drawing::Point(12, 200);
+			this->L_1->Location = System::Drawing::Point(12, 183);
 			this->L_1->Name = L"L_1";
-			this->L_1->Size = System::Drawing::Size(52, 96);
+			this->L_1->Size = System::Drawing::Size(52, 83);
 			this->L_1->TabIndex = 11;
 			this->L_1->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			this->L_1->UseVisualStyleBackColor = false;
@@ -236,9 +271,9 @@ namespace SebaSteam {
 			this->L_3->FlatAppearance->BorderSize = 0;
 			this->L_3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->L_3->ForeColor = System::Drawing::Color::Transparent;
-			this->L_3->Location = System::Drawing::Point(12, 738);
+			this->L_3->Location = System::Drawing::Point(9, 661);
 			this->L_3->Name = L"L_3";
-			this->L_3->Size = System::Drawing::Size(52, 96);
+			this->L_3->Size = System::Drawing::Size(55, 77);
 			this->L_3->TabIndex = 13;
 			this->L_3->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			this->L_3->UseVisualStyleBackColor = false;
@@ -252,9 +287,9 @@ namespace SebaSteam {
 			this->R__3->FlatAppearance->BorderSize = 0;
 			this->R__3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->R__3->ForeColor = System::Drawing::Color::Transparent;
-			this->R__3->Location = System::Drawing::Point(1241, 738);
+			this->R__3->Location = System::Drawing::Point(1241, 661);
 			this->R__3->Name = L"R__3";
-			this->R__3->Size = System::Drawing::Size(52, 96);
+			this->R__3->Size = System::Drawing::Size(47, 77);
 			this->R__3->TabIndex = 12;
 			this->R__3->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			this->R__3->UseVisualStyleBackColor = false;
@@ -267,7 +302,7 @@ namespace SebaSteam {
 			this->TxtFila1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->TxtFila1->ForeColor = System::Drawing::Color::Transparent;
-			this->TxtFila1->Location = System::Drawing::Point(7, 130);
+			this->TxtFila1->Location = System::Drawing::Point(7, 113);
 			this->TxtFila1->Name = L"TxtFila1";
 			this->TxtFila1->Size = System::Drawing::Size(270, 25);
 			this->TxtFila1->TabIndex = 14;
@@ -275,73 +310,140 @@ namespace SebaSteam {
 			// 
 			// F1_1
 			// 
-			this->F1_1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"F1_1.BackgroundImage")));
-			this->F1_1->Location = System::Drawing::Point(79, 158);
+			this->F1_1->Controls->Add(this->Boton_F1_1);
+			this->F1_1->Location = System::Drawing::Point(79, 141);
 			this->F1_1->Name = L"F1_1";
-			this->F1_1->Size = System::Drawing::Size(170, 170);
+			this->F1_1->Size = System::Drawing::Size(170, 145);
 			this->F1_1->TabIndex = 15;
+			// 
+			// Boton_F1_1
+			// 
+			this->Boton_F1_1->BackColor = System::Drawing::Color::Transparent;
+			this->Boton_F1_1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->Boton_F1_1->FlatAppearance->BorderSize = 0;
+			this->Boton_F1_1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->Boton_F1_1->ForeColor = System::Drawing::Color::Transparent;
+			this->Boton_F1_1->Location = System::Drawing::Point(0, 0);
+			this->Boton_F1_1->Name = L"Boton_F1_1";
+			this->Boton_F1_1->Size = System::Drawing::Size(170, 145);
+			this->Boton_F1_1->TabIndex = 5;
+			this->Boton_F1_1->TextAlign = System::Drawing::ContentAlignment::TopCenter;
+			this->Boton_F1_1->UseVisualStyleBackColor = false;
 			// 
 			// F1_2
 			// 
-			this->F1_2->Location = System::Drawing::Point(274, 158);
+			this->F1_2->Controls->Add(this->Boton_F1_2);
+			this->F1_2->Location = System::Drawing::Point(274, 141);
 			this->F1_2->Name = L"F1_2";
-			this->F1_2->Size = System::Drawing::Size(170, 170);
+			this->F1_2->Size = System::Drawing::Size(179, 145);
 			this->F1_2->TabIndex = 16;
+			// 
+			// Boton_F1_2
+			// 
+			this->Boton_F1_2->BackColor = System::Drawing::Color::Transparent;
+			this->Boton_F1_2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->Boton_F1_2->FlatAppearance->BorderSize = 0;
+			this->Boton_F1_2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->Boton_F1_2->ForeColor = System::Drawing::Color::Transparent;
+			this->Boton_F1_2->Location = System::Drawing::Point(-3, -3);
+			this->Boton_F1_2->Name = L"Boton_F1_2";
+			this->Boton_F1_2->Size = System::Drawing::Size(182, 148);
+			this->Boton_F1_2->TabIndex = 6;
+			this->Boton_F1_2->TextAlign = System::Drawing::ContentAlignment::TopCenter;
+			this->Boton_F1_2->UseVisualStyleBackColor = false;
 			// 
 			// F1_3
 			// 
-			this->F1_3->Location = System::Drawing::Point(475, 158);
+			this->F1_3->Controls->Add(this->Boton_F1_3);
+			this->F1_3->Location = System::Drawing::Point(475, 141);
 			this->F1_3->Name = L"F1_3";
-			this->F1_3->Size = System::Drawing::Size(170, 170);
+			this->F1_3->Size = System::Drawing::Size(170, 145);
 			this->F1_3->TabIndex = 17;
+			// 
+			// Boton_F1_3
+			// 
+			this->Boton_F1_3->BackColor = System::Drawing::Color::Transparent;
+			this->Boton_F1_3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->Boton_F1_3->FlatAppearance->BorderSize = 0;
+			this->Boton_F1_3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->Boton_F1_3->ForeColor = System::Drawing::Color::Transparent;
+			this->Boton_F1_3->Location = System::Drawing::Point(0, 0);
+			this->Boton_F1_3->Name = L"Boton_F1_3";
+			this->Boton_F1_3->Size = System::Drawing::Size(170, 145);
+			this->Boton_F1_3->TabIndex = 7;
+			this->Boton_F1_3->TextAlign = System::Drawing::ContentAlignment::TopCenter;
+			this->Boton_F1_3->UseVisualStyleBackColor = false;
 			// 
 			// F1_4
 			// 
-			this->F1_4->Location = System::Drawing::Point(673, 158);
+			this->F1_4->Controls->Add(this->Boton_F1_4);
+			this->F1_4->Location = System::Drawing::Point(673, 141);
 			this->F1_4->Name = L"F1_4";
-			this->F1_4->Size = System::Drawing::Size(170, 170);
+			this->F1_4->Size = System::Drawing::Size(170, 145);
 			this->F1_4->TabIndex = 18;
+			// 
+			// Boton_F1_4
+			// 
+			this->Boton_F1_4->BackColor = System::Drawing::Color::Transparent;
+			this->Boton_F1_4->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->Boton_F1_4->FlatAppearance->BorderSize = 0;
+			this->Boton_F1_4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->Boton_F1_4->ForeColor = System::Drawing::Color::Transparent;
+			this->Boton_F1_4->Location = System::Drawing::Point(0, 0);
+			this->Boton_F1_4->Name = L"Boton_F1_4";
+			this->Boton_F1_4->Size = System::Drawing::Size(167, 145);
+			this->Boton_F1_4->TabIndex = 8;
+			this->Boton_F1_4->TextAlign = System::Drawing::ContentAlignment::TopCenter;
+			this->Boton_F1_4->UseVisualStyleBackColor = false;
 			// 
 			// F1_5
 			// 
-			this->F1_5->Location = System::Drawing::Point(868, 158);
+			this->F1_5->Controls->Add(this->Boton_F1_5);
+			this->F1_5->Location = System::Drawing::Point(868, 141);
 			this->F1_5->Name = L"F1_5";
-			this->F1_5->Size = System::Drawing::Size(170, 170);
+			this->F1_5->Size = System::Drawing::Size(170, 145);
 			this->F1_5->TabIndex = 19;
 			// 
-			// F1_6
+			// Boton_F1_5
 			// 
-			this->F1_6->Location = System::Drawing::Point(1060, 158);
-			this->F1_6->Name = L"F1_6";
-			this->F1_6->Size = System::Drawing::Size(170, 170);
-			this->F1_6->TabIndex = 20;
+			this->Boton_F1_5->BackColor = System::Drawing::Color::Transparent;
+			this->Boton_F1_5->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->Boton_F1_5->FlatAppearance->BorderSize = 0;
+			this->Boton_F1_5->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->Boton_F1_5->ForeColor = System::Drawing::Color::Transparent;
+			this->Boton_F1_5->Location = System::Drawing::Point(0, 0);
+			this->Boton_F1_5->Name = L"Boton_F1_5";
+			this->Boton_F1_5->Size = System::Drawing::Size(170, 145);
+			this->Boton_F1_5->TabIndex = 9;
+			this->Boton_F1_5->TextAlign = System::Drawing::ContentAlignment::TopCenter;
+			this->Boton_F1_5->UseVisualStyleBackColor = false;
 			// 
 			// F2_6
 			// 
-			this->F2_6->Location = System::Drawing::Point(1060, 426);
+			this->F2_6->Location = System::Drawing::Point(1057, 383);
 			this->F2_6->Name = L"F2_6";
-			this->F2_6->Size = System::Drawing::Size(170, 170);
+			this->F2_6->Size = System::Drawing::Size(170, 150);
 			this->F2_6->TabIndex = 26;
 			// 
 			// F2_5
 			// 
-			this->F2_5->Location = System::Drawing::Point(868, 426);
+			this->F2_5->Location = System::Drawing::Point(865, 383);
 			this->F2_5->Name = L"F2_5";
-			this->F2_5->Size = System::Drawing::Size(170, 170);
+			this->F2_5->Size = System::Drawing::Size(160, 150);
 			this->F2_5->TabIndex = 25;
 			// 
 			// F2_4
 			// 
-			this->F2_4->Location = System::Drawing::Point(673, 426);
+			this->F2_4->Location = System::Drawing::Point(670, 383);
 			this->F2_4->Name = L"F2_4";
-			this->F2_4->Size = System::Drawing::Size(170, 170);
+			this->F2_4->Size = System::Drawing::Size(162, 150);
 			this->F2_4->TabIndex = 24;
 			// 
 			// F2_3
 			// 
-			this->F2_3->Location = System::Drawing::Point(475, 426);
+			this->F2_3->Location = System::Drawing::Point(472, 383);
 			this->F2_3->Name = L"F2_3";
-			this->F2_3->Size = System::Drawing::Size(170, 170);
+			this->F2_3->Size = System::Drawing::Size(173, 150);
 			this->F2_3->TabIndex = 23;
 			// 
 			// F2_2
@@ -349,59 +451,132 @@ namespace SebaSteam {
 			this->F2_2->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
 			this->F2_2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
 			this->F2_2->CausesValidation = false;
-			this->F2_2->Location = System::Drawing::Point(274, 426);
+			this->F2_2->Location = System::Drawing::Point(271, 383);
 			this->F2_2->Name = L"F2_2";
-			this->F2_2->Size = System::Drawing::Size(170, 170);
+			this->F2_2->Size = System::Drawing::Size(173, 150);
 			this->F2_2->TabIndex = 22;
 			// 
 			// F2_1
 			// 
-			this->F2_1->Location = System::Drawing::Point(79, 426);
+			this->F2_1->Location = System::Drawing::Point(76, 383);
 			this->F2_1->Name = L"F2_1";
-			this->F2_1->Size = System::Drawing::Size(170, 170);
+			this->F2_1->Size = System::Drawing::Size(173, 150);
 			this->F2_1->TabIndex = 21;
 			// 
 			// F3_6
 			// 
-			this->F3_6->Location = System::Drawing::Point(1060, 697);
+			this->F3_6->Controls->Add(this->B_F3_6);
+			this->F3_6->Location = System::Drawing::Point(1057, 620);
 			this->F3_6->Name = L"F3_6";
-			this->F3_6->Size = System::Drawing::Size(170, 170);
+			this->F3_6->Size = System::Drawing::Size(170, 151);
 			this->F3_6->TabIndex = 32;
 			// 
-			// F3_5
+			// B_F3_6
 			// 
-			this->F3_5->Location = System::Drawing::Point(868, 697);
-			this->F3_5->Name = L"F3_5";
-			this->F3_5->Size = System::Drawing::Size(170, 170);
-			this->F3_5->TabIndex = 31;
+			this->B_F3_6->BackColor = System::Drawing::Color::Transparent;
+			this->B_F3_6->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"B_F3_6.BackgroundImage")));
+			this->B_F3_6->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->B_F3_6->FlatAppearance->BorderSize = 0;
+			this->B_F3_6->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->B_F3_6->ForeColor = System::Drawing::Color::Transparent;
+			this->B_F3_6->Location = System::Drawing::Point(0, 0);
+			this->B_F3_6->Name = L"B_F3_6";
+			this->B_F3_6->Size = System::Drawing::Size(170, 151);
+			this->B_F3_6->TabIndex = 39;
+			this->B_F3_6->TextAlign = System::Drawing::ContentAlignment::TopCenter;
+			this->B_F3_6->UseVisualStyleBackColor = false;
 			// 
 			// F3_4
 			// 
-			this->F3_4->Location = System::Drawing::Point(673, 697);
+			this->F3_4->Controls->Add(this->B_F3_4);
+			this->F3_4->Location = System::Drawing::Point(670, 620);
 			this->F3_4->Name = L"F3_4";
-			this->F3_4->Size = System::Drawing::Size(170, 170);
+			this->F3_4->Size = System::Drawing::Size(162, 151);
 			this->F3_4->TabIndex = 30;
+			// 
+			// B_F3_4
+			// 
+			this->B_F3_4->BackColor = System::Drawing::Color::Transparent;
+			this->B_F3_4->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"B_F3_4.BackgroundImage")));
+			this->B_F3_4->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->B_F3_4->FlatAppearance->BorderSize = 0;
+			this->B_F3_4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->B_F3_4->ForeColor = System::Drawing::Color::Transparent;
+			this->B_F3_4->Location = System::Drawing::Point(0, 0);
+			this->B_F3_4->Name = L"B_F3_4";
+			this->B_F3_4->Size = System::Drawing::Size(162, 151);
+			this->B_F3_4->TabIndex = 38;
+			this->B_F3_4->TextAlign = System::Drawing::ContentAlignment::TopCenter;
+			this->B_F3_4->UseVisualStyleBackColor = false;
 			// 
 			// F3_3
 			// 
-			this->F3_3->Location = System::Drawing::Point(475, 697);
+			this->F3_3->Controls->Add(this->B_F3_3);
+			this->F3_3->Location = System::Drawing::Point(472, 620);
 			this->F3_3->Name = L"F3_3";
-			this->F3_3->Size = System::Drawing::Size(170, 170);
+			this->F3_3->Size = System::Drawing::Size(173, 151);
 			this->F3_3->TabIndex = 29;
+			// 
+			// B_F3_3
+			// 
+			this->B_F3_3->BackColor = System::Drawing::Color::Transparent;
+			this->B_F3_3->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"B_F3_3.BackgroundImage")));
+			this->B_F3_3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->B_F3_3->FlatAppearance->BorderSize = 0;
+			this->B_F3_3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->B_F3_3->ForeColor = System::Drawing::Color::Transparent;
+			this->B_F3_3->Location = System::Drawing::Point(0, 0);
+			this->B_F3_3->Name = L"B_F3_3";
+			this->B_F3_3->Size = System::Drawing::Size(173, 151);
+			this->B_F3_3->TabIndex = 37;
+			this->B_F3_3->TextAlign = System::Drawing::ContentAlignment::TopCenter;
+			this->B_F3_3->UseVisualStyleBackColor = false;
 			// 
 			// F3_2
 			// 
-			this->F3_2->Location = System::Drawing::Point(274, 697);
+			this->F3_2->Controls->Add(this->B_F3_2);
+			this->F3_2->Location = System::Drawing::Point(271, 620);
 			this->F3_2->Name = L"F3_2";
-			this->F3_2->Size = System::Drawing::Size(170, 170);
+			this->F3_2->Size = System::Drawing::Size(173, 151);
 			this->F3_2->TabIndex = 28;
+			// 
+			// B_F3_2
+			// 
+			this->B_F3_2->BackColor = System::Drawing::Color::Transparent;
+			this->B_F3_2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"B_F3_2.BackgroundImage")));
+			this->B_F3_2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->B_F3_2->FlatAppearance->BorderSize = 0;
+			this->B_F3_2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->B_F3_2->ForeColor = System::Drawing::Color::Transparent;
+			this->B_F3_2->Location = System::Drawing::Point(0, 0);
+			this->B_F3_2->Name = L"B_F3_2";
+			this->B_F3_2->Size = System::Drawing::Size(173, 151);
+			this->B_F3_2->TabIndex = 36;
+			this->B_F3_2->TextAlign = System::Drawing::ContentAlignment::TopCenter;
+			this->B_F3_2->UseVisualStyleBackColor = false;
 			// 
 			// F3_1
 			// 
-			this->F3_1->Location = System::Drawing::Point(79, 697);
+			this->F3_1->Controls->Add(this->B_F1_1);
+			this->F3_1->Location = System::Drawing::Point(76, 620);
 			this->F3_1->Name = L"F3_1";
-			this->F3_1->Size = System::Drawing::Size(170, 170);
+			this->F3_1->Size = System::Drawing::Size(173, 151);
 			this->F3_1->TabIndex = 27;
+			// 
+			// B_F1_1
+			// 
+			this->B_F1_1->BackColor = System::Drawing::Color::Transparent;
+			this->B_F1_1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"B_F1_1.BackgroundImage")));
+			this->B_F1_1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->B_F1_1->FlatAppearance->BorderSize = 0;
+			this->B_F1_1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->B_F1_1->ForeColor = System::Drawing::Color::Transparent;
+			this->B_F1_1->Location = System::Drawing::Point(0, 0);
+			this->B_F1_1->Name = L"B_F1_1";
+			this->B_F1_1->Size = System::Drawing::Size(173, 151);
+			this->B_F1_1->TabIndex = 35;
+			this->B_F1_1->TextAlign = System::Drawing::ContentAlignment::TopCenter;
+			this->B_F1_1->UseVisualStyleBackColor = false;
 			// 
 			// TxtF2
 			// 
@@ -410,11 +585,11 @@ namespace SebaSteam {
 			this->TxtF2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->TxtF2->ForeColor = System::Drawing::Color::Transparent;
-			this->TxtF2->Location = System::Drawing::Point(7, 398);
+			this->TxtF2->Location = System::Drawing::Point(4, 355);
 			this->TxtF2->Name = L"TxtF2";
-			this->TxtF2->Size = System::Drawing::Size(293, 25);
+			this->TxtF2->Size = System::Drawing::Size(168, 25);
 			this->TxtF2->TabIndex = 33;
-			this->TxtF2->Text = L"Reproducidos recientemente:";
+			this->TxtF2->Text = L"Recomendados:";
 			// 
 			// TxtF3
 			// 
@@ -423,18 +598,63 @@ namespace SebaSteam {
 			this->TxtF3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->TxtF3->ForeColor = System::Drawing::Color::Transparent;
-			this->TxtF3->Location = System::Drawing::Point(7, 669);
+			this->TxtF3->Location = System::Drawing::Point(4, 592);
 			this->TxtF3->Name = L"TxtF3";
-			this->TxtF3->Size = System::Drawing::Size(168, 25);
+			this->TxtF3->Size = System::Drawing::Size(165, 25);
 			this->TxtF3->TabIndex = 34;
-			this->TxtF3->Text = L"Recomendados:";
+			this->TxtF3->Text = L"Top mas vistos:";
+			// 
+			// Boton_F1_6
+			// 
+			this->Boton_F1_6->BackColor = System::Drawing::Color::Transparent;
+			this->Boton_F1_6->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->Boton_F1_6->FlatAppearance->BorderSize = 0;
+			this->Boton_F1_6->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->Boton_F1_6->ForeColor = System::Drawing::Color::Transparent;
+			this->Boton_F1_6->Location = System::Drawing::Point(0, 0);
+			this->Boton_F1_6->Name = L"Boton_F1_6";
+			this->Boton_F1_6->Size = System::Drawing::Size(167, 145);
+			this->Boton_F1_6->TabIndex = 35;
+			this->Boton_F1_6->TextAlign = System::Drawing::ContentAlignment::TopCenter;
+			this->Boton_F1_6->UseVisualStyleBackColor = false;
+			// 
+			// F1_6
+			// 
+			this->F1_6->Controls->Add(this->Boton_F1_6);
+			this->F1_6->Location = System::Drawing::Point(1060, 141);
+			this->F1_6->Name = L"F1_6";
+			this->F1_6->Size = System::Drawing::Size(167, 145);
+			this->F1_6->TabIndex = 20;
+			// 
+			// B_F3_5
+			// 
+			this->B_F3_5->BackColor = System::Drawing::Color::Transparent;
+			this->B_F3_5->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"B_F3_5.BackgroundImage")));
+			this->B_F3_5->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->B_F3_5->FlatAppearance->BorderSize = 0;
+			this->B_F3_5->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->B_F3_5->ForeColor = System::Drawing::Color::Transparent;
+			this->B_F3_5->Location = System::Drawing::Point(0, 0);
+			this->B_F3_5->Name = L"B_F3_5";
+			this->B_F3_5->Size = System::Drawing::Size(160, 151);
+			this->B_F3_5->TabIndex = 39;
+			this->B_F3_5->TextAlign = System::Drawing::ContentAlignment::TopCenter;
+			this->B_F3_5->UseVisualStyleBackColor = false;
+			// 
+			// F3_5
+			// 
+			this->F3_5->Controls->Add(this->B_F3_5);
+			this->F3_5->Location = System::Drawing::Point(865, 620);
+			this->F3_5->Name = L"F3_5";
+			this->F3_5->Size = System::Drawing::Size(160, 151);
+			this->F3_5->TabIndex = 31;
 			// 
 			// MenuPrincipal
 			// 
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ClientSize = System::Drawing::Size(1300, 900);
+			this->ClientSize = System::Drawing::Size(1300, 800);
 			this->ControlBox = false;
 			this->Controls->Add(this->TxtF3);
 			this->Controls->Add(this->TxtF2);
@@ -468,31 +688,90 @@ namespace SebaSteam {
 			this->Controls->Add(this->TopVButton);
 			this->DoubleBuffered = true;
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
+			this->MinimizeBox = false;
 			this->Name = L"MenuPrincipal";
 			this->Text = L"MenuPrincipal";
+			this->TopMost = true;
 			this->Load += gcnew System::EventHandler(this, &MenuPrincipal::MenuPrincipal_Load);
+			this->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &MenuPrincipal::MenuPrincipal_Paint);
+			this->F1_1->ResumeLayout(false);
+			this->F1_2->ResumeLayout(false);
+			this->F1_3->ResumeLayout(false);
+			this->F1_4->ResumeLayout(false);
+			this->F1_5->ResumeLayout(false);
+			this->F3_6->ResumeLayout(false);
+			this->F3_4->ResumeLayout(false);
+			this->F3_3->ResumeLayout(false);
+			this->F3_2->ResumeLayout(false);
+			this->F3_1->ResumeLayout(false);
+			this->F1_6->ResumeLayout(false);
+			this->F3_5->ResumeLayout(false);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
 	private: 
+	void LoadTopVistos() {
+		int ind = 0;
+		for (int i = lF1; i <= rF1; i++) {
+			String^ ruta = marshal_as<String^>(driver->printMasVistas(i));
+			switch (ind) {
+			case 0: B_F1_1->BackgroundImage = Image::FromFile(ruta);
+				break;
+			case 1:
+				B_F3_2->BackgroundImage = Image::FromFile(ruta);
+				break;
+			case 2:
+				B_F3_3->BackgroundImage = Image::FromFile(ruta);
+				break;
+			case 3:
+				B_F3_4->BackgroundImage = Image::FromFile(ruta);
+				break;
+			case 4:
+				B_F3_5->BackgroundImage = Image::FromFile(ruta);
+				break;
+			case 5:
+				B_F3_6->BackgroundImage = Image::FromFile(ruta);
+				break;
+			}
+			ind++;
+		}
+	}
 	System::Void MenuPrincipal_Load(System::Object^ sender, System::EventArgs^ e) {
+		
 	}
 	//BOTONES IZQUIERDOS
 	System::Void L_1_Click(System::Object^ sender, System::EventArgs^ e) {
+		
 	}
 	System::Void L_2_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 	System::Void L_3_Click(System::Object^ sender, System::EventArgs^ e) {
+		if (lF1 - 1 > 0) {
+			rF1--; lF1--;
+			this->LoadTopVistos();
+		}
 	}
 	//Botones Derechos
 	System::Void R_1_Click(System::Object^ sender, System::EventArgs^ e) {
+		
 	}
 	System::Void R_2_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 	System::Void R__3_Click(System::Object^ sender, System::EventArgs^ e) {
+		if (rF1 + 1 < 100) { // Asegurarse de que no exceda el límite
+			rF1++; lF1++;
+			this->LoadTopVistos();
+		}
 	}
 	
+	System::Void MenuPrincipal_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+		if (driver == nullptr) this->Close();
+		this->LoadTopVistos();
+		//Peliculas Recomendadas
+		
+
+	}
 };
 }
