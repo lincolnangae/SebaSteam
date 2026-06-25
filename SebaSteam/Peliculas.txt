@@ -97,3 +97,4 @@
 97,Malditos Vecinos,img97,Comedia,Una pareja con un bebe recien nacido entra en una guerra de bromas destructivas cuando una ruidosa fraternidad universitaria se muda al lado
 98,Que Paso Ayer,img98,Comedia,Tres amigos despiertan de una despedida de soltero en Las Vegas sin recordar nada de la noche anterior perdiendo por completo al novio
 99,Supercool,img99,Comedia,Dos adolescentes dependientes intentan comprar alcohol para una fiesta de graduacion de la secundaria viviendo una noche desastrosa de peripecias
+100,Titanes del Pacifico,img100,Accion|Aventura|Drama,Dos pilotos de robots gigantes deben unirse para luchar contra monstruos que emergen del fondo del oceano y amenazan la humanidad
