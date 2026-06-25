@@ -6,6 +6,7 @@ namespace SebaSteam {
 	using namespace System::Collections;
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
+	using namespace System::Media;
 	using namespace System::Drawing;
 	public ref class Programa : public System::Windows::Forms::Form
 	{
@@ -16,9 +17,46 @@ namespace SebaSteam {
 			controlador = gcnew ControladoraPrincipal();
 			this->DoubleBuffered = true;
 			mostrarCatalogo = false;
-			imagenFondoCatalogo = System::Drawing::Image::FromFile("Imagenes/Menus/MenuPrincipal.png");
+			imagenFondoCatalogo = System::Drawing::Image::FromFile("MenuPrincipal.png");
+			RegistrarSonidoBotones(this);
 			this->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Programa::Programa_Paint);
+
 		}
+
+		// Metodos para reproducir sonido al hacer click en botones
+	private:
+		// Evento que se vinculara a un objeto boton para reproducir un sonido al hacer click
+		System::Void ReproducirSonidoClick(System::Object^ sender, System::EventArgs^ e)
+		{
+			try
+			{
+				SoundPlayer^ reproductor = gcnew SoundPlayer("click.wav");
+				reproductor->Play();
+			} catch(Exception^)
+			{
+				// En caso de error
+			}
+		}
+
+		// Buscar todos los botones dentro de un contenedor y registrar el evento del sonido
+		void RegistrarSonidoBotones(System::Windows::Forms::Control^ contenedor)
+		{
+			for each(System::Windows::Forms::Control ^ control in contenedor->Controls)
+			{
+				// Si el control actual es un Boton, le enlazamos el evento del sonido
+				if(dynamic_cast<System::Windows::Forms::Button^>(control) != nullptr)
+				{
+					control->Click += gcnew System::EventHandler(this, &Programa::ReproducirSonidoClick);
+				}
+
+				// Si el control tiene hijos, busca botones adentro de ellos
+				if(control->HasChildren)
+				{
+					RegistrarSonidoBotones(control);
+				}
+			}
+		}
+
 	protected:
 		~Programa()
 		{
@@ -96,6 +134,9 @@ namespace SebaSteam {
 	private: System::Windows::Forms::Button^ SalirVista;
 		   Pelicula* peliculaActualEnVista;
 		   bool mostrarCatalogo;
+
+
+
 #pragma region Windows Form Designer generated code
 		   void InitializeComponent(void)
 		   {
@@ -1301,6 +1342,7 @@ namespace SebaSteam {
 			   this->ResumeLayout(false);
 			   this->Refresh();
 		   }
+
 		   void MostrarDetallePelicula(Pelicula* p) {
 			   if (p == nullptr) return;
 			   this->peliculaActualEnVista = p;
@@ -1337,7 +1379,7 @@ namespace SebaSteam {
 				   this->CalificacionP->ForeColor = System::Drawing::Color::OrangeRed;  // Naranja/Rojo (Baja calificacion)
 			   }
 			   try {
-				   String^ rutaImg = gcnew String(p->getIdImagen().c_str()) + ".jpg";
+				   String^ rutaImg = gcnew String(p->getIdImagen().c_str());
 				   if (System::IO::File::Exists(rutaImg)) {
 					   this->ImgPelicula->Image = System::Drawing::Image::FromFile(rutaImg);
 				   }
@@ -1348,6 +1390,7 @@ namespace SebaSteam {
 			   this->VistaPelicula->Enabled = true;
 			   this->VistaPelicula->BringToFront();
 		   }
+
 		   void ActualizarFilaMasVistos() {
 			   // Agruparlos para un trabajo mas limpio
 			   cli::array<System::Windows::Forms::Button^>^ botonesFila2 = {
@@ -1359,11 +1402,15 @@ namespace SebaSteam {
 					   botonesFila2[i]->Parent->Visible = true;
 				   }
 				   else {
+					   botonesFila2[i]->Text = "Vacio";
 				   }
 			   }
 		   }
+
+
 	private: System::Void Programa_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
+
 	private: System::Void BotonIniciarSesion_Click(System::Object^ sender, System::EventArgs^ e) {
 		String^ id = IDUsuario->Text;
 		String^ clave = ClaveUsuario->Text;
@@ -1384,6 +1431,7 @@ namespace SebaSteam {
 			MessageBox::Show("Error en el inicio de sesion: " + ex->Message);
 		}
 	}
+
 	private: System::Void BotonRegirtar_Click(System::Object^ sender, System::EventArgs^ e) {
 		String^ id = IDUsuario->Text;
 		String^ clave = ClaveUsuario->Text;
@@ -1418,6 +1466,7 @@ namespace SebaSteam {
 		catch (Exception^ ex) {
 		}
 	}
+
 	private: System::Void SalirVista_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->VistaPelicula->Visible = false;
 		this->VistaPelicula->Enabled = false;
@@ -1432,6 +1481,7 @@ namespace SebaSteam {
 			this->MostrarDetallePelicula(p);
 		}
 	}
+
 	private: System::Void B9_Click(System::Object^ sender, System::EventArgs^ e) {
 		Pelicula* p = controlador->ObtenerPeliculaFilaMasVistos(1);
 		if (p != nullptr) {
@@ -1439,6 +1489,7 @@ namespace SebaSteam {
 			this->MostrarDetallePelicula(p);
 		}
 	}
+
 	private: System::Void B10_Click(System::Object^ sender, System::EventArgs^ e) {
 		Pelicula* p = controlador->ObtenerPeliculaFilaMasVistos(2);
 		if (p != nullptr) {
@@ -1446,6 +1497,7 @@ namespace SebaSteam {
 			this->MostrarDetallePelicula(p);
 		}
 	}
+
 	private: System::Void B11_Click(System::Object^ sender, System::EventArgs^ e) {
 		Pelicula* p = controlador->ObtenerPeliculaFilaMasVistos(3);
 		if (p != nullptr) {
@@ -1453,6 +1505,7 @@ namespace SebaSteam {
 			this->MostrarDetallePelicula(p);
 		}
 	}
+
 	private: System::Void B12_Click(System::Object^ sender, System::EventArgs^ e) {
 		Pelicula* p = controlador->ObtenerPeliculaFilaMasVistos(4);
 		if (p != nullptr) {
@@ -1460,6 +1513,7 @@ namespace SebaSteam {
 			this->MostrarDetallePelicula(p);
 		}
 	}
+
 	private: System::Void B13_Click(System::Object^ sender, System::EventArgs^ e) {
 		Pelicula* p = controlador->ObtenerPeliculaFilaMasVistos(5);
 		if (p != nullptr) {
@@ -1467,6 +1521,7 @@ namespace SebaSteam {
 			this->MostrarDetallePelicula(p);
 		}
 	}
+
 	private: System::Void B14_Click(System::Object^ sender, System::EventArgs^ e) {
 		Pelicula* p = controlador->ObtenerPeliculaFilaMasVistos(6);
 		if (p != nullptr) {
@@ -1477,15 +1532,20 @@ namespace SebaSteam {
 		   // Cambios de pivote segun la direccio
 	private: System::Void R1_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
+
 	private: System::Void R2_Click(System::Object^ sender, System::EventArgs^ e) {
 		controlador->AvanzarCarruselMasVistos();
 		this->ActualizarFilaMasVistos();
 	}
+
 	private: System::Void L1_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
-	private: System::Void L2_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	private: System::Void L2_Click(System::Object^ sender, System::EventArgs^ e)
+	{
 		controlador->RetrocederCarruselMasVistos();
 		this->ActualizarFilaMasVistos();
 	}
-	};
+
+};
 }
