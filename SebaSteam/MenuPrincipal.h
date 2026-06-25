@@ -10,6 +10,7 @@ namespace SebaSteam
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace System::Media;
 
 	public ref class MenuPrincipal : public System::Windows::Forms::Form
 	{
@@ -19,6 +20,7 @@ namespace SebaSteam
 		{
 			InitializeComponent();
 			driver = driverHeredado;
+			RegistrarSonidoBotones(this);
 			this->DoubleBuffered = true;
 		}
 
@@ -82,8 +84,35 @@ namespace SebaSteam
 	private: System::Windows::Forms::Label^ TxtF3;
 	private: System::ComponentModel::Container^ components;
 
+	private:
+		System::Void ReproducirSonidoClick(System::Object^ sender, System::EventArgs^ e)
+		{
+			try
+			{
+				SoundPlayer^ reproductor = gcnew SoundPlayer("Sonidos/click.wav");
+				reproductor->Play();
+			} catch(Exception^ ex)
+			{
+				MessageBox::Show("Falla de sonido: " + ex->Message, "Depuración");
+			}
+		}
 
-#pragma region Windows Form Designer generated code
+		void RegistrarSonidoBotones(System::Windows::Forms::Control^ contenedor)
+		{
+			for each(System::Windows::Forms::Control ^ control in contenedor->Controls)
+			{
+				if(dynamic_cast<System::Windows::Forms::Button^>(control) != nullptr)
+				{
+					control->Click += gcnew System::EventHandler(this, &MenuPrincipal::ReproducirSonidoClick);
+				}
+				if(control->HasChildren)
+				{
+					RegistrarSonidoBotones(control);
+				}
+			}
+		}
+
+#pragma region
 		   void InitializeComponent(void)
 		   {
 			   System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MenuPrincipal::typeid));
@@ -700,6 +729,9 @@ namespace SebaSteam
 
 		   }
 #pragma endregion
+
+
+
 
 	private:
 		void LoadTopVistos()
