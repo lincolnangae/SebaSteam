@@ -239,9 +239,10 @@ namespace SebaSteam {
 			   this->BotonIniciarSesion->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				   static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)));
 			   this->BotonIniciarSesion->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			   this->BotonIniciarSesion->Location = System::Drawing::Point(43, 550);
+			   this->BotonIniciarSesion->Location = System::Drawing::Point(57, 677);
+			   this->BotonIniciarSesion->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->BotonIniciarSesion->Name = L"BotonIniciarSesion";
-			   this->BotonIniciarSesion->Size = System::Drawing::Size(212, 60);
+			   this->BotonIniciarSesion->Size = System::Drawing::Size(283, 74);
 			   this->BotonIniciarSesion->TabIndex = 2;
 			   this->BotonIniciarSesion->Text = L"txt";
 			   this->BotonIniciarSesion->UseVisualStyleBackColor = false;
@@ -258,9 +259,10 @@ namespace SebaSteam {
 			   this->BotonRegirtar->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				   static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)));
 			   this->BotonRegirtar->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			   this->BotonRegirtar->Location = System::Drawing::Point(298, 550);
+			   this->BotonRegirtar->Location = System::Drawing::Point(397, 677);
+			   this->BotonRegirtar->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->BotonRegirtar->Name = L"BotonRegirtar";
-			   this->BotonRegirtar->Size = System::Drawing::Size(212, 60);
+			   this->BotonRegirtar->Size = System::Drawing::Size(283, 74);
 			   this->BotonRegirtar->TabIndex = 3;
 			   this->BotonRegirtar->UseVisualStyleBackColor = false;
 			   this->BotonRegirtar->Click += gcnew System::EventHandler(this, &Programa::BotonRegirtar_Click);
@@ -273,9 +275,10 @@ namespace SebaSteam {
 			   this->IDUsuario->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei UI", 15, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
 			   this->IDUsuario->ForeColor = System::Drawing::SystemColors::WindowText;
-			   this->IDUsuario->Location = System::Drawing::Point(135, 378);
+			   this->IDUsuario->Location = System::Drawing::Point(180, 465);
+			   this->IDUsuario->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->IDUsuario->Name = L"IDUsuario";
-			   this->IDUsuario->Size = System::Drawing::Size(263, 26);
+			   this->IDUsuario->Size = System::Drawing::Size(351, 32);
 			   this->IDUsuario->TabIndex = 4;
 			   this->IDUsuario->Text = L"Poner Usuario";
 			   this->IDUsuario->WordWrap = false;
@@ -288,9 +291,10 @@ namespace SebaSteam {
 			   this->ClaveUsuario->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei UI", 15, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
 			   this->ClaveUsuario->ForeColor = System::Drawing::SystemColors::WindowText;
-			   this->ClaveUsuario->Location = System::Drawing::Point(135, 444);
+			   this->ClaveUsuario->Location = System::Drawing::Point(180, 546);
+			   this->ClaveUsuario->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->ClaveUsuario->Name = L"ClaveUsuario";
-			   this->ClaveUsuario->Size = System::Drawing::Size(263, 26);
+			   this->ClaveUsuario->Size = System::Drawing::Size(351, 32);
 			   this->ClaveUsuario->TabIndex = 5;
 			   this->ClaveUsuario->Text = L"Poner Clave";
 			   this->ClaveUsuario->WordWrap = false;
@@ -303,9 +307,10 @@ namespace SebaSteam {
 			   this->P7->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			   this->P7->Controls->Add(this->B7);
 			   this->P7->Enabled = false;
-			   this->P7->Location = System::Drawing::Point(1033, 112);
+			   this->P7->Location = System::Drawing::Point(1377, 138);
+			   this->P7->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->P7->Name = L"P7";
-			   this->P7->Size = System::Drawing::Size(136, 167);
+			   this->P7->Size = System::Drawing::Size(180, 205);
 			   this->P7->TabIndex = 11;
 			   this->P7->Visible = false;
 			   // 
@@ -320,9 +325,10 @@ namespace SebaSteam {
 			   this->B7->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			   this->B7->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 8, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
-			   this->B7->Location = System::Drawing::Point(3, 14);
+			   this->B7->Location = System::Drawing::Point(4, 17);
+			   this->B7->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->B7->Name = L"B7";
-			   this->B7->Size = System::Drawing::Size(126, 139);
+			   this->B7->Size = System::Drawing::Size(168, 171);
 			   this->B7->TabIndex = 0;
 			   this->B7->UseVisualStyleBackColor = false;
 			   // 
@@ -334,9 +340,10 @@ namespace SebaSteam {
 			   this->P2->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			   this->P2->Controls->Add(this->B2);
 			   this->P2->Enabled = false;
-			   this->P2->Location = System::Drawing::Point(213, 112);
+			   this->P2->Location = System::Drawing::Point(284, 138);
+			   this->P2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->P2->Name = L"P2";
-			   this->P2->Size = System::Drawing::Size(136, 167);
+			   this->P2->Size = System::Drawing::Size(180, 205);
 			   this->P2->TabIndex = 12;
 			   this->P2->Visible = false;
 			   // 
@@ -351,9 +358,10 @@ namespace SebaSteam {
 			   this->B2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			   this->B2->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 8, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
-			   this->B2->Location = System::Drawing::Point(3, 14);
+			   this->B2->Location = System::Drawing::Point(4, 17);
+			   this->B2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->B2->Name = L"B2";
-			   this->B2->Size = System::Drawing::Size(126, 139);
+			   this->B2->Size = System::Drawing::Size(168, 171);
 			   this->B2->TabIndex = 0;
 			   this->B2->UseVisualStyleBackColor = false;
 			   // 
@@ -365,9 +373,10 @@ namespace SebaSteam {
 			   this->P1->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			   this->P1->Controls->Add(this->B1);
 			   this->P1->Enabled = false;
-			   this->P1->Location = System::Drawing::Point(52, 112);
+			   this->P1->Location = System::Drawing::Point(69, 138);
+			   this->P1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->P1->Name = L"P1";
-			   this->P1->Size = System::Drawing::Size(136, 167);
+			   this->P1->Size = System::Drawing::Size(180, 205);
 			   this->P1->TabIndex = 12;
 			   this->P1->Visible = false;
 			   // 
@@ -382,9 +391,10 @@ namespace SebaSteam {
 			   this->B1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			   this->B1->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 8, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
-			   this->B1->Location = System::Drawing::Point(3, 14);
+			   this->B1->Location = System::Drawing::Point(4, 17);
+			   this->B1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->B1->Name = L"B1";
-			   this->B1->Size = System::Drawing::Size(126, 139);
+			   this->B1->Size = System::Drawing::Size(168, 171);
 			   this->B1->TabIndex = 0;
 			   this->B1->UseVisualStyleBackColor = false;
 			   // 
@@ -396,9 +406,10 @@ namespace SebaSteam {
 			   this->P3->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			   this->P3->Controls->Add(this->B3);
 			   this->P3->Enabled = false;
-			   this->P3->Location = System::Drawing::Point(374, 112);
+			   this->P3->Location = System::Drawing::Point(499, 138);
+			   this->P3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->P3->Name = L"P3";
-			   this->P3->Size = System::Drawing::Size(136, 167);
+			   this->P3->Size = System::Drawing::Size(180, 205);
 			   this->P3->TabIndex = 13;
 			   this->P3->Visible = false;
 			   // 
@@ -413,9 +424,10 @@ namespace SebaSteam {
 			   this->B3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			   this->B3->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 8, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
-			   this->B3->Location = System::Drawing::Point(3, 14);
+			   this->B3->Location = System::Drawing::Point(4, 17);
+			   this->B3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->B3->Name = L"B3";
-			   this->B3->Size = System::Drawing::Size(126, 139);
+			   this->B3->Size = System::Drawing::Size(168, 171);
 			   this->B3->TabIndex = 0;
 			   this->B3->UseVisualStyleBackColor = false;
 			   // 
@@ -427,9 +439,10 @@ namespace SebaSteam {
 			   this->P4->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			   this->P4->Controls->Add(this->B4);
 			   this->P4->Enabled = false;
-			   this->P4->Location = System::Drawing::Point(538, 112);
+			   this->P4->Location = System::Drawing::Point(717, 138);
+			   this->P4->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->P4->Name = L"P4";
-			   this->P4->Size = System::Drawing::Size(136, 167);
+			   this->P4->Size = System::Drawing::Size(180, 205);
 			   this->P4->TabIndex = 14;
 			   this->P4->Visible = false;
 			   // 
@@ -444,9 +457,10 @@ namespace SebaSteam {
 			   this->B4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			   this->B4->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 8, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
-			   this->B4->Location = System::Drawing::Point(3, 14);
+			   this->B4->Location = System::Drawing::Point(4, 17);
+			   this->B4->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->B4->Name = L"B4";
-			   this->B4->Size = System::Drawing::Size(126, 139);
+			   this->B4->Size = System::Drawing::Size(168, 171);
 			   this->B4->TabIndex = 0;
 			   this->B4->UseVisualStyleBackColor = false;
 			   // 
@@ -458,9 +472,10 @@ namespace SebaSteam {
 			   this->P5->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			   this->P5->Controls->Add(this->B5);
 			   this->P5->Enabled = false;
-			   this->P5->Location = System::Drawing::Point(697, 112);
+			   this->P5->Location = System::Drawing::Point(929, 138);
+			   this->P5->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->P5->Name = L"P5";
-			   this->P5->Size = System::Drawing::Size(136, 167);
+			   this->P5->Size = System::Drawing::Size(180, 205);
 			   this->P5->TabIndex = 15;
 			   this->P5->Visible = false;
 			   // 
@@ -475,9 +490,10 @@ namespace SebaSteam {
 			   this->B5->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			   this->B5->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 8, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
-			   this->B5->Location = System::Drawing::Point(3, 14);
+			   this->B5->Location = System::Drawing::Point(4, 17);
+			   this->B5->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->B5->Name = L"B5";
-			   this->B5->Size = System::Drawing::Size(126, 139);
+			   this->B5->Size = System::Drawing::Size(168, 171);
 			   this->B5->TabIndex = 0;
 			   this->B5->UseVisualStyleBackColor = false;
 			   // 
@@ -489,9 +505,10 @@ namespace SebaSteam {
 			   this->P6->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			   this->P6->Controls->Add(this->B6);
 			   this->P6->Enabled = false;
-			   this->P6->Location = System::Drawing::Point(863, 112);
+			   this->P6->Location = System::Drawing::Point(1151, 138);
+			   this->P6->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->P6->Name = L"P6";
-			   this->P6->Size = System::Drawing::Size(136, 167);
+			   this->P6->Size = System::Drawing::Size(180, 205);
 			   this->P6->TabIndex = 16;
 			   this->P6->Visible = false;
 			   // 
@@ -506,9 +523,10 @@ namespace SebaSteam {
 			   this->B6->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			   this->B6->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 8, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
-			   this->B6->Location = System::Drawing::Point(3, 14);
+			   this->B6->Location = System::Drawing::Point(4, 17);
+			   this->B6->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->B6->Name = L"B6";
-			   this->B6->Size = System::Drawing::Size(126, 139);
+			   this->B6->Size = System::Drawing::Size(168, 171);
 			   this->B6->TabIndex = 0;
 			   this->B6->UseVisualStyleBackColor = false;
 			   // 
@@ -520,9 +538,10 @@ namespace SebaSteam {
 			   this->P13->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			   this->P13->Controls->Add(this->B13);
 			   this->P13->Enabled = false;
-			   this->P13->Location = System::Drawing::Point(863, 344);
+			   this->P13->Location = System::Drawing::Point(1151, 423);
+			   this->P13->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->P13->Name = L"P13";
-			   this->P13->Size = System::Drawing::Size(136, 167);
+			   this->P13->Size = System::Drawing::Size(180, 205);
 			   this->P13->TabIndex = 23;
 			   this->P13->Visible = false;
 			   // 
@@ -537,9 +556,10 @@ namespace SebaSteam {
 			   this->B13->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			   this->B13->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 8, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
-			   this->B13->Location = System::Drawing::Point(3, 14);
+			   this->B13->Location = System::Drawing::Point(4, 17);
+			   this->B13->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->B13->Name = L"B13";
-			   this->B13->Size = System::Drawing::Size(126, 139);
+			   this->B13->Size = System::Drawing::Size(168, 171);
 			   this->B13->TabIndex = 0;
 			   this->B13->UseVisualStyleBackColor = false;
 			   this->B13->Click += gcnew System::EventHandler(this, &Programa::B13_Click);
@@ -552,9 +572,10 @@ namespace SebaSteam {
 			   this->P12->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			   this->P12->Controls->Add(this->B12);
 			   this->P12->Enabled = false;
-			   this->P12->Location = System::Drawing::Point(697, 344);
+			   this->P12->Location = System::Drawing::Point(929, 423);
+			   this->P12->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->P12->Name = L"P12";
-			   this->P12->Size = System::Drawing::Size(136, 167);
+			   this->P12->Size = System::Drawing::Size(180, 205);
 			   this->P12->TabIndex = 22;
 			   this->P12->Visible = false;
 			   // 
@@ -569,9 +590,10 @@ namespace SebaSteam {
 			   this->B12->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			   this->B12->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 8, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
-			   this->B12->Location = System::Drawing::Point(3, 14);
+			   this->B12->Location = System::Drawing::Point(4, 17);
+			   this->B12->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->B12->Name = L"B12";
-			   this->B12->Size = System::Drawing::Size(126, 139);
+			   this->B12->Size = System::Drawing::Size(168, 171);
 			   this->B12->TabIndex = 0;
 			   this->B12->UseVisualStyleBackColor = false;
 			   this->B12->Click += gcnew System::EventHandler(this, &Programa::B12_Click);
@@ -584,9 +606,10 @@ namespace SebaSteam {
 			   this->P11->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			   this->P11->Controls->Add(this->B11);
 			   this->P11->Enabled = false;
-			   this->P11->Location = System::Drawing::Point(538, 344);
+			   this->P11->Location = System::Drawing::Point(717, 423);
+			   this->P11->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->P11->Name = L"P11";
-			   this->P11->Size = System::Drawing::Size(136, 167);
+			   this->P11->Size = System::Drawing::Size(180, 205);
 			   this->P11->TabIndex = 21;
 			   this->P11->Visible = false;
 			   // 
@@ -601,9 +624,10 @@ namespace SebaSteam {
 			   this->B11->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			   this->B11->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 8, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
-			   this->B11->Location = System::Drawing::Point(3, 14);
+			   this->B11->Location = System::Drawing::Point(4, 17);
+			   this->B11->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->B11->Name = L"B11";
-			   this->B11->Size = System::Drawing::Size(126, 139);
+			   this->B11->Size = System::Drawing::Size(168, 171);
 			   this->B11->TabIndex = 0;
 			   this->B11->UseVisualStyleBackColor = false;
 			   this->B11->Click += gcnew System::EventHandler(this, &Programa::B11_Click);
@@ -616,9 +640,10 @@ namespace SebaSteam {
 			   this->P10->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			   this->P10->Controls->Add(this->B10);
 			   this->P10->Enabled = false;
-			   this->P10->Location = System::Drawing::Point(374, 344);
+			   this->P10->Location = System::Drawing::Point(499, 423);
+			   this->P10->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->P10->Name = L"P10";
-			   this->P10->Size = System::Drawing::Size(136, 167);
+			   this->P10->Size = System::Drawing::Size(180, 205);
 			   this->P10->TabIndex = 20;
 			   this->P10->Visible = false;
 			   // 
@@ -633,9 +658,10 @@ namespace SebaSteam {
 			   this->B10->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			   this->B10->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 8, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
-			   this->B10->Location = System::Drawing::Point(3, 14);
+			   this->B10->Location = System::Drawing::Point(4, 17);
+			   this->B10->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->B10->Name = L"B10";
-			   this->B10->Size = System::Drawing::Size(126, 139);
+			   this->B10->Size = System::Drawing::Size(168, 171);
 			   this->B10->TabIndex = 0;
 			   this->B10->UseVisualStyleBackColor = false;
 			   this->B10->Click += gcnew System::EventHandler(this, &Programa::B10_Click);
@@ -648,9 +674,10 @@ namespace SebaSteam {
 			   this->P9->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			   this->P9->Controls->Add(this->B9);
 			   this->P9->Enabled = false;
-			   this->P9->Location = System::Drawing::Point(213, 344);
+			   this->P9->Location = System::Drawing::Point(284, 423);
+			   this->P9->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->P9->Name = L"P9";
-			   this->P9->Size = System::Drawing::Size(136, 167);
+			   this->P9->Size = System::Drawing::Size(180, 205);
 			   this->P9->TabIndex = 18;
 			   this->P9->Visible = false;
 			   // 
@@ -665,9 +692,10 @@ namespace SebaSteam {
 			   this->B9->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			   this->B9->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 8, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
-			   this->B9->Location = System::Drawing::Point(3, 14);
+			   this->B9->Location = System::Drawing::Point(4, 17);
+			   this->B9->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->B9->Name = L"B9";
-			   this->B9->Size = System::Drawing::Size(126, 139);
+			   this->B9->Size = System::Drawing::Size(168, 171);
 			   this->B9->TabIndex = 0;
 			   this->B9->UseVisualStyleBackColor = false;
 			   this->B9->Click += gcnew System::EventHandler(this, &Programa::B9_Click);
@@ -680,9 +708,10 @@ namespace SebaSteam {
 			   this->P14->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			   this->P14->Controls->Add(this->B14);
 			   this->P14->Enabled = false;
-			   this->P14->Location = System::Drawing::Point(1033, 344);
+			   this->P14->Location = System::Drawing::Point(1377, 423);
+			   this->P14->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->P14->Name = L"P14";
-			   this->P14->Size = System::Drawing::Size(136, 167);
+			   this->P14->Size = System::Drawing::Size(180, 205);
 			   this->P14->TabIndex = 17;
 			   this->P14->Visible = false;
 			   // 
@@ -697,9 +726,10 @@ namespace SebaSteam {
 			   this->B14->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			   this->B14->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 8, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
-			   this->B14->Location = System::Drawing::Point(3, 14);
+			   this->B14->Location = System::Drawing::Point(4, 17);
+			   this->B14->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->B14->Name = L"B14";
-			   this->B14->Size = System::Drawing::Size(126, 139);
+			   this->B14->Size = System::Drawing::Size(168, 171);
 			   this->B14->TabIndex = 0;
 			   this->B14->UseVisualStyleBackColor = false;
 			   this->B14->Click += gcnew System::EventHandler(this, &Programa::B14_Click);
@@ -715,9 +745,10 @@ namespace SebaSteam {
 			   this->B8->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			   this->B8->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 8, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
-			   this->B8->Location = System::Drawing::Point(3, 14);
+			   this->B8->Location = System::Drawing::Point(4, 17);
+			   this->B8->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->B8->Name = L"B8";
-			   this->B8->Size = System::Drawing::Size(126, 139);
+			   this->B8->Size = System::Drawing::Size(168, 171);
 			   this->B8->TabIndex = 0;
 			   this->B8->UseVisualStyleBackColor = false;
 			   this->B8->Click += gcnew System::EventHandler(this, &Programa::B8_Click);
@@ -730,9 +761,10 @@ namespace SebaSteam {
 			   this->P8->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			   this->P8->Controls->Add(this->B8);
 			   this->P8->Enabled = false;
-			   this->P8->Location = System::Drawing::Point(52, 344);
+			   this->P8->Location = System::Drawing::Point(69, 423);
+			   this->P8->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->P8->Name = L"P8";
-			   this->P8->Size = System::Drawing::Size(136, 167);
+			   this->P8->Size = System::Drawing::Size(180, 205);
 			   this->P8->TabIndex = 19;
 			   this->P8->Visible = false;
 			   // 
@@ -744,9 +776,10 @@ namespace SebaSteam {
 			   this->P20->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			   this->P20->Controls->Add(this->B20);
 			   this->P20->Enabled = false;
-			   this->P20->Location = System::Drawing::Point(868, 569);
+			   this->P20->Location = System::Drawing::Point(1157, 700);
+			   this->P20->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->P20->Name = L"P20";
-			   this->P20->Size = System::Drawing::Size(136, 167);
+			   this->P20->Size = System::Drawing::Size(180, 205);
 			   this->P20->TabIndex = 23;
 			   this->P20->Visible = false;
 			   // 
@@ -761,9 +794,10 @@ namespace SebaSteam {
 			   this->B20->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			   this->B20->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 8, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
-			   this->B20->Location = System::Drawing::Point(3, 14);
+			   this->B20->Location = System::Drawing::Point(4, 17);
+			   this->B20->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->B20->Name = L"B20";
-			   this->B20->Size = System::Drawing::Size(126, 139);
+			   this->B20->Size = System::Drawing::Size(168, 171);
 			   this->B20->TabIndex = 0;
 			   this->B20->UseVisualStyleBackColor = false;
 			   // 
@@ -775,9 +809,10 @@ namespace SebaSteam {
 			   this->P19->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			   this->P19->Controls->Add(this->B19);
 			   this->P19->Enabled = false;
-			   this->P19->Location = System::Drawing::Point(702, 569);
+			   this->P19->Location = System::Drawing::Point(936, 700);
+			   this->P19->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->P19->Name = L"P19";
-			   this->P19->Size = System::Drawing::Size(136, 167);
+			   this->P19->Size = System::Drawing::Size(180, 205);
 			   this->P19->TabIndex = 22;
 			   this->P19->Visible = false;
 			   // 
@@ -792,9 +827,10 @@ namespace SebaSteam {
 			   this->B19->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			   this->B19->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 8, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
-			   this->B19->Location = System::Drawing::Point(3, 14);
+			   this->B19->Location = System::Drawing::Point(4, 17);
+			   this->B19->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->B19->Name = L"B19";
-			   this->B19->Size = System::Drawing::Size(126, 139);
+			   this->B19->Size = System::Drawing::Size(168, 171);
 			   this->B19->TabIndex = 0;
 			   this->B19->UseVisualStyleBackColor = false;
 			   // 
@@ -806,9 +842,10 @@ namespace SebaSteam {
 			   this->P18->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			   this->P18->Controls->Add(this->B18);
 			   this->P18->Enabled = false;
-			   this->P18->Location = System::Drawing::Point(543, 569);
+			   this->P18->Location = System::Drawing::Point(724, 700);
+			   this->P18->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->P18->Name = L"P18";
-			   this->P18->Size = System::Drawing::Size(136, 167);
+			   this->P18->Size = System::Drawing::Size(180, 205);
 			   this->P18->TabIndex = 21;
 			   this->P18->Visible = false;
 			   // 
@@ -823,9 +860,10 @@ namespace SebaSteam {
 			   this->B18->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			   this->B18->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 8, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
-			   this->B18->Location = System::Drawing::Point(3, 14);
+			   this->B18->Location = System::Drawing::Point(4, 17);
+			   this->B18->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->B18->Name = L"B18";
-			   this->B18->Size = System::Drawing::Size(126, 139);
+			   this->B18->Size = System::Drawing::Size(168, 171);
 			   this->B18->TabIndex = 0;
 			   this->B18->UseVisualStyleBackColor = false;
 			   // 
@@ -837,9 +875,10 @@ namespace SebaSteam {
 			   this->P17->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			   this->P17->Controls->Add(this->B17);
 			   this->P17->Enabled = false;
-			   this->P17->Location = System::Drawing::Point(379, 569);
+			   this->P17->Location = System::Drawing::Point(505, 700);
+			   this->P17->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->P17->Name = L"P17";
-			   this->P17->Size = System::Drawing::Size(136, 167);
+			   this->P17->Size = System::Drawing::Size(180, 205);
 			   this->P17->TabIndex = 20;
 			   this->P17->Visible = false;
 			   // 
@@ -854,9 +893,10 @@ namespace SebaSteam {
 			   this->B17->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			   this->B17->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 8, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
-			   this->B17->Location = System::Drawing::Point(3, 14);
+			   this->B17->Location = System::Drawing::Point(4, 17);
+			   this->B17->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->B17->Name = L"B17";
-			   this->B17->Size = System::Drawing::Size(126, 139);
+			   this->B17->Size = System::Drawing::Size(168, 171);
 			   this->B17->TabIndex = 0;
 			   this->B17->UseVisualStyleBackColor = false;
 			   // 
@@ -868,9 +908,10 @@ namespace SebaSteam {
 			   this->P16->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			   this->P16->Controls->Add(this->B16);
 			   this->P16->Enabled = false;
-			   this->P16->Location = System::Drawing::Point(218, 569);
+			   this->P16->Location = System::Drawing::Point(291, 700);
+			   this->P16->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->P16->Name = L"P16";
-			   this->P16->Size = System::Drawing::Size(136, 167);
+			   this->P16->Size = System::Drawing::Size(180, 205);
 			   this->P16->TabIndex = 18;
 			   this->P16->Visible = false;
 			   // 
@@ -885,9 +926,10 @@ namespace SebaSteam {
 			   this->B16->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			   this->B16->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 8, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
-			   this->B16->Location = System::Drawing::Point(3, 14);
+			   this->B16->Location = System::Drawing::Point(4, 17);
+			   this->B16->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->B16->Name = L"B16";
-			   this->B16->Size = System::Drawing::Size(126, 139);
+			   this->B16->Size = System::Drawing::Size(168, 171);
 			   this->B16->TabIndex = 0;
 			   this->B16->UseVisualStyleBackColor = false;
 			   // 
@@ -899,9 +941,10 @@ namespace SebaSteam {
 			   this->P21->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			   this->P21->Controls->Add(this->B21);
 			   this->P21->Enabled = false;
-			   this->P21->Location = System::Drawing::Point(1038, 569);
+			   this->P21->Location = System::Drawing::Point(1384, 700);
+			   this->P21->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->P21->Name = L"P21";
-			   this->P21->Size = System::Drawing::Size(136, 167);
+			   this->P21->Size = System::Drawing::Size(180, 205);
 			   this->P21->TabIndex = 17;
 			   this->P21->Visible = false;
 			   // 
@@ -916,9 +959,10 @@ namespace SebaSteam {
 			   this->B21->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			   this->B21->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 8, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
-			   this->B21->Location = System::Drawing::Point(3, 14);
+			   this->B21->Location = System::Drawing::Point(4, 17);
+			   this->B21->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->B21->Name = L"B21";
-			   this->B21->Size = System::Drawing::Size(126, 139);
+			   this->B21->Size = System::Drawing::Size(168, 171);
 			   this->B21->TabIndex = 0;
 			   this->B21->UseVisualStyleBackColor = false;
 			   // 
@@ -933,9 +977,10 @@ namespace SebaSteam {
 			   this->B15->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			   this->B15->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 8, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
-			   this->B15->Location = System::Drawing::Point(3, 14);
+			   this->B15->Location = System::Drawing::Point(4, 17);
+			   this->B15->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->B15->Name = L"B15";
-			   this->B15->Size = System::Drawing::Size(126, 139);
+			   this->B15->Size = System::Drawing::Size(168, 171);
 			   this->B15->TabIndex = 0;
 			   this->B15->UseVisualStyleBackColor = false;
 			   // 
@@ -947,9 +992,10 @@ namespace SebaSteam {
 			   this->P15->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			   this->P15->Controls->Add(this->B15);
 			   this->P15->Enabled = false;
-			   this->P15->Location = System::Drawing::Point(57, 569);
+			   this->P15->Location = System::Drawing::Point(76, 700);
+			   this->P15->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->P15->Name = L"P15";
-			   this->P15->Size = System::Drawing::Size(136, 167);
+			   this->P15->Size = System::Drawing::Size(180, 205);
 			   this->P15->TabIndex = 19;
 			   this->P15->Visible = false;
 			   // 
@@ -964,9 +1010,10 @@ namespace SebaSteam {
 				   static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)));
 			   this->R1->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Black;
 			   this->R1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			   this->R1->Location = System::Drawing::Point(1184, 154);
+			   this->R1->Location = System::Drawing::Point(1579, 190);
+			   this->R1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->R1->Name = L"R1";
-			   this->R1->Size = System::Drawing::Size(38, 85);
+			   this->R1->Size = System::Drawing::Size(51, 105);
 			   this->R1->TabIndex = 24;
 			   this->R1->UseVisualStyleBackColor = false;
 			   this->R1->Visible = false;
@@ -983,9 +1030,10 @@ namespace SebaSteam {
 				   static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)));
 			   this->R2->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Black;
 			   this->R2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			   this->R2->Location = System::Drawing::Point(1184, 383);
+			   this->R2->Location = System::Drawing::Point(1579, 471);
+			   this->R2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->R2->Name = L"R2";
-			   this->R2->Size = System::Drawing::Size(38, 85);
+			   this->R2->Size = System::Drawing::Size(51, 105);
 			   this->R2->TabIndex = 25;
 			   this->R2->UseVisualStyleBackColor = false;
 			   this->R2->Visible = false;
@@ -1002,9 +1050,10 @@ namespace SebaSteam {
 				   static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)));
 			   this->R3->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Black;
 			   this->R3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			   this->R3->Location = System::Drawing::Point(1184, 610);
+			   this->R3->Location = System::Drawing::Point(1579, 751);
+			   this->R3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->R3->Name = L"R3";
-			   this->R3->Size = System::Drawing::Size(38, 85);
+			   this->R3->Size = System::Drawing::Size(51, 105);
 			   this->R3->TabIndex = 26;
 			   this->R3->UseVisualStyleBackColor = false;
 			   this->R3->Visible = false;
@@ -1021,9 +1070,10 @@ namespace SebaSteam {
 				   static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)));
 			   this->L1->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Black;
 			   this->L1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			   this->L1->Location = System::Drawing::Point(8, 154);
+			   this->L1->Location = System::Drawing::Point(11, 190);
+			   this->L1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->L1->Name = L"L1";
-			   this->L1->Size = System::Drawing::Size(38, 85);
+			   this->L1->Size = System::Drawing::Size(51, 105);
 			   this->L1->TabIndex = 27;
 			   this->L1->UseVisualStyleBackColor = false;
 			   this->L1->Visible = false;
@@ -1041,9 +1091,10 @@ namespace SebaSteam {
 				   static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)));
 			   this->L2->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Black;
 			   this->L2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			   this->L2->Location = System::Drawing::Point(3, 383);
+			   this->L2->Location = System::Drawing::Point(4, 471);
+			   this->L2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->L2->Name = L"L2";
-			   this->L2->Size = System::Drawing::Size(38, 85);
+			   this->L2->Size = System::Drawing::Size(51, 105);
 			   this->L2->TabIndex = 28;
 			   this->L2->UseVisualStyleBackColor = false;
 			   this->L2->Visible = false;
@@ -1061,9 +1112,10 @@ namespace SebaSteam {
 				   static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)));
 			   this->L3->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Black;
 			   this->L3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			   this->L3->Location = System::Drawing::Point(8, 616);
+			   this->L3->Location = System::Drawing::Point(11, 758);
+			   this->L3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->L3->Name = L"L3";
-			   this->L3->Size = System::Drawing::Size(38, 85);
+			   this->L3->Size = System::Drawing::Size(51, 105);
 			   this->L3->TabIndex = 29;
 			   this->L3->UseVisualStyleBackColor = false;
 			   this->L3->Visible = false;
@@ -1076,9 +1128,10 @@ namespace SebaSteam {
 			   this->TopPCalificadas->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			   this->TopPCalificadas->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
-			   this->TopPCalificadas->Location = System::Drawing::Point(449, 21);
+			   this->TopPCalificadas->Location = System::Drawing::Point(599, 26);
+			   this->TopPCalificadas->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->TopPCalificadas->Name = L"TopPCalificadas";
-			   this->TopPCalificadas->Size = System::Drawing::Size(142, 29);
+			   this->TopPCalificadas->Size = System::Drawing::Size(189, 36);
 			   this->TopPCalificadas->TabIndex = 31;
 			   this->TopPCalificadas->Text = L"MEJOR CALIFICADOS";
 			   this->TopPCalificadas->UseVisualStyleBackColor = false;
@@ -1092,9 +1145,10 @@ namespace SebaSteam {
 			   this->TopPVistas->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			   this->TopPVistas->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
-			   this->TopPVistas->Location = System::Drawing::Point(697, 21);
+			   this->TopPVistas->Location = System::Drawing::Point(929, 26);
+			   this->TopPVistas->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->TopPVistas->Name = L"TopPVistas";
-			   this->TopPVistas->Size = System::Drawing::Size(142, 29);
+			   this->TopPVistas->Size = System::Drawing::Size(189, 36);
 			   this->TopPVistas->TabIndex = 32;
 			   this->TopPVistas->Text = L"TOP VISTOS";
 			   this->TopPVistas->UseVisualStyleBackColor = false;
@@ -1108,9 +1162,10 @@ namespace SebaSteam {
 			   this->TopAlfabetico->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			   this->TopAlfabetico->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
-			   this->TopAlfabetico->Location = System::Drawing::Point(961, 21);
+			   this->TopAlfabetico->Location = System::Drawing::Point(1281, 26);
+			   this->TopAlfabetico->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->TopAlfabetico->Name = L"TopAlfabetico";
-			   this->TopAlfabetico->Size = System::Drawing::Size(142, 29);
+			   this->TopAlfabetico->Size = System::Drawing::Size(189, 36);
 			   this->TopAlfabetico->TabIndex = 33;
 			   this->TopAlfabetico->Text = L"A - Z";
 			   this->TopAlfabetico->UseVisualStyleBackColor = false;
@@ -1129,9 +1184,10 @@ namespace SebaSteam {
 			   this->VistaPelicula->Controls->Add(this->ImgPelicula);
 			   this->VistaPelicula->Controls->Add(this->TituloPelicula);
 			   this->VistaPelicula->Enabled = false;
-			   this->VistaPelicula->Location = System::Drawing::Point(3, 2);
+			   this->VistaPelicula->Location = System::Drawing::Point(4, 2);
+			   this->VistaPelicula->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->VistaPelicula->Name = L"VistaPelicula";
-			   this->VistaPelicula->Size = System::Drawing::Size(1232, 762);
+			   this->VistaPelicula->Size = System::Drawing::Size(1643, 938);
 			   this->VistaPelicula->TabIndex = 34;
 			   this->VistaPelicula->Visible = false;
 			   // 
@@ -1143,9 +1199,10 @@ namespace SebaSteam {
 			   this->SalirVista->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Black;
 			   this->SalirVista->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Black;
 			   this->SalirVista->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			   this->SalirVista->Location = System::Drawing::Point(9, 3);
+			   this->SalirVista->Location = System::Drawing::Point(12, 4);
+			   this->SalirVista->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->SalirVista->Name = L"SalirVista";
-			   this->SalirVista->Size = System::Drawing::Size(171, 59);
+			   this->SalirVista->Size = System::Drawing::Size(228, 73);
 			   this->SalirVista->TabIndex = 6;
 			   this->SalirVista->UseVisualStyleBackColor = true;
 			   this->SalirVista->Click += gcnew System::EventHandler(this, &Programa::SalirVista_Click);
@@ -1155,9 +1212,10 @@ namespace SebaSteam {
 			   this->CalificacionP->Font = (gcnew System::Drawing::Font(L"MS Reference Specialty", 21, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
 			   this->CalificacionP->ForeColor = System::Drawing::Color::Green;
-			   this->CalificacionP->Location = System::Drawing::Point(186, 456);
+			   this->CalificacionP->Location = System::Drawing::Point(248, 561);
+			   this->CalificacionP->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			   this->CalificacionP->Name = L"CalificacionP";
-			   this->CalificacionP->Size = System::Drawing::Size(146, 36);
+			   this->CalificacionP->Size = System::Drawing::Size(195, 44);
 			   this->CalificacionP->TabIndex = 5;
 			   this->CalificacionP->Text = L"8,89 ";
 			   this->CalificacionP->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -1167,9 +1225,10 @@ namespace SebaSteam {
 			   this->VistasTotalesP->Font = (gcnew System::Drawing::Font(L"MS Reference Specialty", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
 			   this->VistasTotalesP->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			   this->VistasTotalesP->Location = System::Drawing::Point(466, 419);
+			   this->VistasTotalesP->Location = System::Drawing::Point(621, 516);
+			   this->VistasTotalesP->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			   this->VistasTotalesP->Name = L"VistasTotalesP";
-			   this->VistasTotalesP->Size = System::Drawing::Size(146, 31);
+			   this->VistasTotalesP->Size = System::Drawing::Size(195, 38);
 			   this->VistasTotalesP->TabIndex = 4;
 			   this->VistasTotalesP->Text = L"1.5K";
 			   this->VistasTotalesP->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -1179,9 +1238,10 @@ namespace SebaSteam {
 			   this->SinopsisP->Font = (gcnew System::Drawing::Font(L"MS Reference Specialty", 13, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
 			   this->SinopsisP->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			   this->SinopsisP->Location = System::Drawing::Point(466, 247);
+			   this->SinopsisP->Location = System::Drawing::Point(621, 304);
+			   this->SinopsisP->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			   this->SinopsisP->Name = L"SinopsisP";
-			   this->SinopsisP->Size = System::Drawing::Size(510, 138);
+			   this->SinopsisP->Size = System::Drawing::Size(680, 170);
 			   this->SinopsisP->TabIndex = 3;
 			   this->SinopsisP->Text = L"Titulo de Pelicula Default Titulo de Pelicula Default Titulo de Pelicula Default "
 				   L"Titulo de Pelicula Default Titulo de Pelicula Default";
@@ -1193,9 +1253,10 @@ namespace SebaSteam {
 			   this->CategoriaP->Font = (gcnew System::Drawing::Font(L"MS Reference Specialty", 21, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
 			   this->CategoriaP->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			   this->CategoriaP->Location = System::Drawing::Point(444, 157);
+			   this->CategoriaP->Location = System::Drawing::Point(592, 193);
+			   this->CategoriaP->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			   this->CategoriaP->Name = L"CategoriaP";
-			   this->CategoriaP->Size = System::Drawing::Size(510, 55);
+			   this->CategoriaP->Size = System::Drawing::Size(680, 68);
 			   this->CategoriaP->TabIndex = 2;
 			   this->CategoriaP->Text = L"Accion , Drama";
 			   this->CategoriaP->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -1204,9 +1265,10 @@ namespace SebaSteam {
 			   // 
 			   this->ImgPelicula->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"ImgPelicula.BackgroundImage")));
 			   this->ImgPelicula->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			   this->ImgPelicula->Location = System::Drawing::Point(145, 170);
+			   this->ImgPelicula->Location = System::Drawing::Point(193, 209);
+			   this->ImgPelicula->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->ImgPelicula->Name = L"ImgPelicula";
-			   this->ImgPelicula->Size = System::Drawing::Size(220, 257);
+			   this->ImgPelicula->Size = System::Drawing::Size(293, 316);
 			   this->ImgPelicula->TabIndex = 1;
 			   this->ImgPelicula->TabStop = false;
 			   // 
@@ -1215,21 +1277,22 @@ namespace SebaSteam {
 			   this->TituloPelicula->Font = (gcnew System::Drawing::Font(L"MS Reference Specialty", 15, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
 			   this->TituloPelicula->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			   this->TituloPelicula->Location = System::Drawing::Point(364, 44);
+			   this->TituloPelicula->Location = System::Drawing::Point(485, 54);
+			   this->TituloPelicula->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			   this->TituloPelicula->Name = L"TituloPelicula";
-			   this->TituloPelicula->Size = System::Drawing::Size(510, 55);
+			   this->TituloPelicula->Size = System::Drawing::Size(680, 68);
 			   this->TituloPelicula->TabIndex = 0;
 			   this->TituloPelicula->Text = L"Titulo de Pelicula Default";
 			   this->TituloPelicula->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			   // 
 			   // Programa
 			   // 
-			   this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			   this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			   this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			   this->BackColor = System::Drawing::Color::DarkOrange;
 			   this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			   this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			   this->ClientSize = System::Drawing::Size(1234, 761);
+			   this->ClientSize = System::Drawing::Size(1645, 937);
 			   this->Controls->Add(this->VistaPelicula);
 			   this->Controls->Add(this->TopAlfabetico);
 			   this->Controls->Add(this->TopPVistas);
@@ -1266,6 +1329,7 @@ namespace SebaSteam {
 			   this->Controls->Add(this->BotonRegirtar);
 			   this->Controls->Add(this->BotonIniciarSesion);
 			   this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
+			   this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->Name = L"Programa";
 			   this->Text = L"Programa";
 			   this->Load += gcnew System::EventHandler(this, &Programa::Programa_Load);
@@ -1294,6 +1358,7 @@ namespace SebaSteam {
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->ImgPelicula))->EndInit();
 			   this->ResumeLayout(false);
 			   this->PerformLayout();
+
 		   }
 #pragma endregion
 		   void LimpiarElementosInicio() {

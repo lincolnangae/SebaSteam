@@ -245,6 +245,7 @@ namespace SebaSteam
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"SebaSteam - Selecci\xf3n de Perfil";
 			this->Load += gcnew System::EventHandler(this, &SeleccionPerfil::SeleccionPerfil_Load);
+			this->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &SeleccionPerfil::SeleccionPerfil_Paint);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 		}
@@ -482,6 +483,13 @@ namespace SebaSteam
 
 		System::Void SeleccionPerfil_Load(System::Object^ sender, System::EventArgs^ e)
 		{
+		}
+
+		// Marco blanco para diferenciar la ventana del escritorio
+		System::Void SeleccionPerfil_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e)
+		{
+			Pen^ borde = gcnew Pen(Color::White, 4);
+			e->Graphics->DrawRectangle(borde, 2, 2, this->ClientSize.Width - 4, this->ClientSize.Height - 4);
 		}
 	};
 }

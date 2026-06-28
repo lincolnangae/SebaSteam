@@ -1,5 +1,6 @@
 ﻿#pragma once
 #include "Controlador.h"
+#include "VistaPelicula.h"
 
 namespace SebaSteam
 {
@@ -95,7 +96,7 @@ namespace SebaSteam
 			}
 			catch (Exception^ ex)
 			{
-				MessageBox::Show("Falla de sonido: " + ex->Message, "Depuracion");
+				MessageBox::Show("Falla de sonido: " + ex->Message, "Depuraci�n");
 			}
 		}
 
@@ -168,7 +169,6 @@ namespace SebaSteam
 			this->F1_6 = (gcnew System::Windows::Forms::Panel());
 			this->B_F3_5 = (gcnew System::Windows::Forms::Button());
 			this->F3_5 = (gcnew System::Windows::Forms::Panel());
-			this->btnCerrarCatalogo = (gcnew System::Windows::Forms::Button());
 			this->F1_1->SuspendLayout();
 			this->F1_2->SuspendLayout();
 			this->F1_3->SuspendLayout();
@@ -678,25 +678,6 @@ namespace SebaSteam
 			this->F3_5->Size = System::Drawing::Size(160, 151);
 			this->F3_5->TabIndex = 31;
 			// 
-			// btnCerrarCatalogo
-			// 
-			this->btnCerrarCatalogo->BackColor = System::Drawing::Color::Transparent;
-			this->btnCerrarCatalogo->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->btnCerrarCatalogo->FlatAppearance->BorderSize = 0;
-			this->btnCerrarCatalogo->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(229)),
-				static_cast<System::Int32>(static_cast<System::Byte>(9)), static_cast<System::Int32>(static_cast<System::Byte>(20)));
-			this->btnCerrarCatalogo->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->btnCerrarCatalogo->Font = (gcnew System::Drawing::Font(L"Segoe UI", 14, System::Drawing::FontStyle::Bold));
-			this->btnCerrarCatalogo->ForeColor = System::Drawing::Color::White;
-			this->btnCerrarCatalogo->Location = System::Drawing::Point(1245, 15);
-			this->btnCerrarCatalogo->Name = L"btnCerrarCatalogo";
-			this->btnCerrarCatalogo->Size = System::Drawing::Size(40, 40);
-			this->btnCerrarCatalogo->TabIndex = 35;
-			this->btnCerrarCatalogo->TabStop = false;
-			this->btnCerrarCatalogo->Text = L"X";
-			this->btnCerrarCatalogo->UseVisualStyleBackColor = false;
-			this->btnCerrarCatalogo->Click += gcnew System::EventHandler(this, &MenuPrincipal::btnCerrarCatalogo_Click);
-			// 
 			// MenuPrincipal
 			// 
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
@@ -734,6 +715,27 @@ namespace SebaSteam
 			this->Controls->Add(this->FiltrarBu);
 			this->Controls->Add(this->MejorCalifButton);
 			this->Controls->Add(this->TopVButton);
+			//
+			// btnCerrarCatalogo (boton "X" propio: el formulario no tiene barra de titulo)
+			// Al cerrar el catalogo se vuelve a la pantalla de Seleccion de Perfil
+			// (ver AbrirMenuPrincipal en SeleccionPerfil.h), no se cierra toda la app.
+			//
+			this->btnCerrarCatalogo = gcnew System::Windows::Forms::Button();
+			this->btnCerrarCatalogo->BackColor = System::Drawing::Color::Transparent;
+			this->btnCerrarCatalogo->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnCerrarCatalogo->FlatAppearance->BorderSize = 0;
+			this->btnCerrarCatalogo->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(229, 9, 20);
+			this->btnCerrarCatalogo->Font = (gcnew System::Drawing::Font(L"Segoe UI", 14, System::Drawing::FontStyle::Bold));
+			this->btnCerrarCatalogo->ForeColor = System::Drawing::Color::White;
+			this->btnCerrarCatalogo->Location = System::Drawing::Point(1300 - 55, 15);
+			this->btnCerrarCatalogo->Name = L"btnCerrarCatalogo";
+			this->btnCerrarCatalogo->Size = System::Drawing::Size(40, 40);
+			this->btnCerrarCatalogo->TabStop = false;
+			this->btnCerrarCatalogo->Text = L"X";
+			this->btnCerrarCatalogo->UseVisualStyleBackColor = false;
+			this->btnCerrarCatalogo->Cursor = System::Windows::Forms::Cursors::Hand;
+			// Nota: no se asigna Anchor (el formulario no se puede redimensionar)
+			this->btnCerrarCatalogo->Click += gcnew System::EventHandler(this, &MenuPrincipal::btnCerrarCatalogo_Click);
 			this->Controls->Add(this->btnCerrarCatalogo);
 			this->DoubleBuffered = true;
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
@@ -781,6 +783,10 @@ namespace SebaSteam
 
 				if (p != nullptr)
 				{
+					botonesTopVistos[i]->Tag = System::IntPtr(p);
+					botonesTopVistos[i]->Click -= gcnew System::EventHandler(this, &MenuPrincipal::AbrirVistaPelicula);
+					botonesTopVistos[i]->Click += gcnew System::EventHandler(this, &MenuPrincipal::AbrirVistaPelicula);
+
 					// El repositorio ya guarda la ruta como "Imagenes/Peliculas/img1.jpg"
 					String^ ruta = gcnew String(p->getIdImagen().c_str());
 					try
@@ -798,6 +804,17 @@ namespace SebaSteam
 			}
 		}
 
+		System::Void AbrirVistaPelicula(System::Object^ sender, System::EventArgs^ e)
+		{
+			Button^ btn = (Button^)sender;
+			Pelicula* p = (Pelicula*)(void*)((IntPtr)btn->Tag);
+			VistaPelicula^ vista = gcnew VistaPelicula(p);
+
+			this->Hide();
+			vista->ShowDialog();
+			this->Show();
+		}
+
 	private:
 		System::Void MenuPrincipal_Load(System::Object^ sender, System::EventArgs^ e)
 		{
@@ -808,6 +825,9 @@ namespace SebaSteam
 		{
 			if (driver == nullptr) this->Close();
 
+			// Marco blanco para diferenciar la ventana del escritorio
+			Pen^ borde = gcnew Pen(Color::White, 4);
+			e->Graphics->DrawRectangle(borde, 2, 2, this->ClientSize.Width - 4, this->ClientSize.Height - 4);
 		}
 
 	private:
