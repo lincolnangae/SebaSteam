@@ -14,15 +14,7 @@ namespace SebaSteam
 	using namespace System::Drawing;
 	using namespace System::Media;
 	using namespace msclr::interop;
-	// NOTA: a proposito NO se pone "using namespace std;" aqui, porque
-	// choca con el array<T>^ nativo de C++/CLI (std::array tiene el mismo
-	// nombre "array" y el compilador se confunde). Por eso mas abajo se
-	// usa std::string y std::vector calificados con "std::".
 
-	// Pantalla de bienvenida: el usuario elige uno de los 3 perfiles fijos
-	// (en honor a los creadores del proyecto) o crea su propio perfil
-	// escribiendo solo su nombre. Esta es la PRIMERA pantalla que se abre
-	// al iniciar la aplicacion (ver SebaSteam.cpp).
 	public ref class SeleccionPerfil : public System::Windows::Forms::Form
 	{
 	public:

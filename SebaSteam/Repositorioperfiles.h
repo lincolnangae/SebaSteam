@@ -1,15 +1,6 @@
 #pragma once
 #include "Dependencias.h"
-// IMPORTANTE: a proposito NO se pone "using namespace std;" aqui.
-// Este archivo se incluye desde SeleccionPerfil.h, y un "using namespace std;"
-// a nivel global se filtra a TODO archivo que lo incluya despues (incluyendo
-// el bloque "namespace SebaSteam"), chocando con el array<T>^ de C++/CLI.
-// Por eso todo aqui se califica explicitamente con "std::".
 
-// Repositorio simple para los "perfiles" creados por el usuario en la
-// pantalla de Selecci\xf3n de Perfil. A diferencia de RepositorioUsuario,
-// aqu\xed NO se maneja clave: solo un nombre, persistido en un archivo
-// de texto (uno por l\xednea), igual de simple que Usuarios.txt.
 class RepositorioPerfiles {
 private:
     std::string rutaArchivo;
@@ -56,8 +47,6 @@ public:
         return false;
     }
 
-    // Registra un nuevo perfil y lo persiste de inmediato en el archivo.
-    // Si el nombre ya existe simplemente no se duplica (no es un error).
     bool registrarPerfil(const std::string& nombre) {
         if (nombre.empty() || contieneComa(nombre)) {
             return false;
