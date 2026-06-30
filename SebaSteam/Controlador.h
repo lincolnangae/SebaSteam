@@ -3,6 +3,7 @@
 #include "RepositorioPelicula.h"
 #include "ListaDobleCircular.h"
 #include "Algoritmos.h"
+#include <algorithm>
 #include <msclr/marshal_cppstd.h>
 #include <vector>
 using namespace std;
@@ -18,6 +19,12 @@ private:
     ListaDobleCircular<Pelicula*>* listaMasVistos;
     // Puntero que mueve la lista de una categoria
     Nodo<Pelicula*>* pivoteMasVistos;
+    // Recientemente Agregados
+    ListaDobleCircular<Pelicula*>* listaRecientes;
+    Nodo<Pelicula*>* pivoteRecientes;
+    // Recomendados
+    ListaDobleCircular<Pelicula*>* listaRecomendados;
+    Nodo<Pelicula*>* pivoteRecomendados;
 public:
     ControladoraPrincipal() {
         repositorio = new RepositorioUsuario("Usuarios.txt");
@@ -27,6 +34,10 @@ public:
         repoPelicula->cargarDesdeArchivo(vectorBasePeliculas);
         listaMasVistos = new ListaDobleCircular<Pelicula*>();
         pivoteMasVistos = nullptr;
+        listaRecientes = new ListaDobleCircular<Pelicula*>();
+        pivoteRecientes = nullptr;
+        listaRecomendados = new ListaDobleCircular<Pelicula*>();
+        pivoteRecomendados = nullptr;
         InicializarCatalogoInicio();
     }
     ~ControladoraPrincipal() {
@@ -49,6 +60,16 @@ public:
             delete listaMasVistos;
             listaMasVistos = nullptr;
         }
+        if(listaRecientes != nullptr)
+        {
+            delete listaRecientes;
+            listaRecientes = nullptr;
+        }
+        if(listaRecomendados != nullptr)
+        {
+            delete listaRecomendados;
+            listaRecomendados = nullptr;
+        }
     }
     void InicializarCatalogoInicio() {
         // Temporal para copiar los datos
@@ -69,7 +90,36 @@ public:
         if (listaMasVistos->getCabeza() != nullptr) {
             pivoteMasVistos = listaMasVistos->getCabeza();
         }
+
+		// Los 15 recientes agregados de manera ordenada en la lista doble circular
+        int limiteRecientes = vectorBasePeliculas->size() < 15 ? vectorBasePeliculas->size() : 15;
+        for(int i = 0; i < limiteRecientes; ++i)
+        {
+            // Se insertan de atras hacia adelante
+            listaRecientes->insertar(&(*vectorBasePeliculas)[vectorBasePeliculas->size() - 1 - i]);
+        }
+		// El pivote de recientes
+        if(listaRecientes->getCabeza() != nullptr)
+        {
+            pivoteRecientes = listaRecientes->getCabeza();
+        }
+
+		// los 15 recomendados de manera aleatoria en la lista doble circular
+        random_shuffle(punterosTemporales.begin(), punterosTemporales.end());
+        int limiteRecomendados = punterosTemporales.size() < 15 ? punterosTemporales.size() : 15;
+        for(int i = 0; i < limiteRecomendados; ++i)
+        {
+            listaRecomendados->insertar(punterosTemporales[i]);
+        }
+		// El pivote de recomendados
+        if(listaRecomendados->getCabeza() != nullptr)
+        {
+            pivoteRecomendados = listaRecomendados->getCabeza();
+        }
+
     }
+
+
     void AvanzarCarruselMasVistos() {
         if (pivoteMasVistos != nullptr) {
             pivoteMasVistos = pivoteMasVistos->siguiente;
@@ -88,6 +138,41 @@ public:
         }
         return actual->Dato;
     }
+
+    void AvanzarCarruselRecientes()
+    {
+        if(pivoteRecientes != nullptr) pivoteRecientes = pivoteRecientes->siguiente;
+    }
+    void RetrocederCarruselRecientes()
+    {
+        if(pivoteRecientes != nullptr) pivoteRecientes = pivoteRecientes->anterior;
+    }
+    Pelicula* ObtenerPeliculaFilaRecientes(int offset)
+    {
+        if(pivoteRecientes == nullptr) return nullptr;
+        Nodo<Pelicula*>* actual = pivoteRecientes;
+        for(int i = 0; i < offset; ++i) actual = actual->siguiente;
+        return actual->Dato;
+    }
+
+
+    void AvanzarCarruselRecomendados()
+    {
+        if(pivoteRecomendados != nullptr) pivoteRecomendados = pivoteRecomendados->siguiente;
+    }
+    void RetrocederCarruselRecomendados()
+    {
+        if(pivoteRecomendados != nullptr) pivoteRecomendados = pivoteRecomendados->anterior;
+    }
+    Pelicula* ObtenerPeliculaFilaRecomendados(int offset)
+    {
+        if(pivoteRecomendados == nullptr) return nullptr;
+        Nodo<Pelicula*>* actual = pivoteRecomendados;
+        for(int i = 0; i < offset; ++i) actual = actual->siguiente;
+        return actual->Dato;
+    }
+
+
     void RegistrarVisualizacion(Pelicula* p) {
         if (p != nullptr) {
             p->incrementarVistas();

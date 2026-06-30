@@ -153,9 +153,6 @@
     <ClInclude Include="Nodo.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Pelicula.h" />
-    <ClInclude Include="Programa.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
     <ClInclude Include="RepositorioPelicula.h" />
     <ClInclude Include="RepositorioPerfiles.h" />
     <ClInclude Include="RepositorioUsuario.h" />
@@ -179,7 +176,6 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Programa.cpp" />
     <ClCompile Include="SebaSteam.cpp" />
     <ClCompile Include="SeleccionPerfil.cpp" />
     <ClCompile Include="VistaPelicula.cpp" />
@@ -200,9 +196,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Programa.resx">
-      <DependentUpon>Programa.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VistaPelicula.resx">
       <DependentUpon>VistaPelicula.h</DependentUpon>

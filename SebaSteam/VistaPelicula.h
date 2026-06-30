@@ -29,7 +29,9 @@ namespace SebaSteam {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Panel^ panel1;
+	private: System::Windows::Forms::Panel^ MostrarPelicula;
+	protected:
+
 	protected:
 	private: System::Windows::Forms::Button^ SalirVista;
 	private: System::Windows::Forms::Label^ CalificacionP;
@@ -80,7 +82,7 @@ namespace SebaSteam {
 		void InitializeComponent(void)
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(VistaPelicula::typeid));
-			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->MostrarPelicula = (gcnew System::Windows::Forms::Panel());
 			this->SalirVista = (gcnew System::Windows::Forms::Button());
 			this->CalificacionP = (gcnew System::Windows::Forms::Label());
 			this->VistasTotalesP = (gcnew System::Windows::Forms::Label());
@@ -88,27 +90,27 @@ namespace SebaSteam {
 			this->CategoriaP = (gcnew System::Windows::Forms::Label());
 			this->ImgPelicula = (gcnew System::Windows::Forms::PictureBox());
 			this->TituloPelicula = (gcnew System::Windows::Forms::Label());
-			this->panel1->SuspendLayout();
+			this->MostrarPelicula->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->ImgPelicula))->BeginInit();
 			this->SuspendLayout();
 			// 
-			// panel1
+			// MostrarPelicula
 			// 
-			this->panel1->BackColor = System::Drawing::Color::Transparent;
-			this->panel1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"panel1.BackgroundImage")));
-			this->panel1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->panel1->Controls->Add(this->SalirVista);
-			this->panel1->Controls->Add(this->CalificacionP);
-			this->panel1->Controls->Add(this->VistasTotalesP);
-			this->panel1->Controls->Add(this->SinopsisP);
-			this->panel1->Controls->Add(this->CategoriaP);
-			this->panel1->Controls->Add(this->ImgPelicula);
-			this->panel1->Controls->Add(this->TituloPelicula);
-			this->panel1->Location = System::Drawing::Point(2, 1);
-			this->panel1->Margin = System::Windows::Forms::Padding(4);
-			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(1296, 796);
-			this->panel1->TabIndex = 34;
+			this->MostrarPelicula->BackColor = System::Drawing::Color::Transparent;
+			this->MostrarPelicula->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"MostrarPelicula.BackgroundImage")));
+			this->MostrarPelicula->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->MostrarPelicula->Controls->Add(this->SalirVista);
+			this->MostrarPelicula->Controls->Add(this->CalificacionP);
+			this->MostrarPelicula->Controls->Add(this->VistasTotalesP);
+			this->MostrarPelicula->Controls->Add(this->SinopsisP);
+			this->MostrarPelicula->Controls->Add(this->CategoriaP);
+			this->MostrarPelicula->Controls->Add(this->ImgPelicula);
+			this->MostrarPelicula->Controls->Add(this->TituloPelicula);
+			this->MostrarPelicula->Location = System::Drawing::Point(0, 0);
+			this->MostrarPelicula->Margin = System::Windows::Forms::Padding(4);
+			this->MostrarPelicula->Name = L"MostrarPelicula";
+			this->MostrarPelicula->Size = System::Drawing::Size(1296, 796);
+			this->MostrarPelicula->TabIndex = 34;
 			// 
 			// SalirVista
 			// 
@@ -209,13 +211,13 @@ namespace SebaSteam {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
 			this->ClientSize = System::Drawing::Size(1300, 800);
 			this->ControlBox = false;
-			this->Controls->Add(this->panel1);
+			this->Controls->Add(this->MostrarPelicula);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
 			this->Name = L"VistaPelicula";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"VistaPelicula";
 			this->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &VistaPelicula::VistaPelicula_Paint);
-			this->panel1->ResumeLayout(false);
+			this->MostrarPelicula->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->ImgPelicula))->EndInit();
 			this->ResumeLayout(false);
 
@@ -236,5 +238,6 @@ namespace SebaSteam {
 		}
 	private: System::Void TituloPelicula_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
+
 };
 }

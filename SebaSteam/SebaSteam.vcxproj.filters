@@ -41,9 +41,6 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Programa.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="pch.h">
       <Filter>Header Files\Externos</Filter>
     </ClInclude>
@@ -102,9 +99,6 @@
   <ItemGroup>
     <ClCompile Include="SebaSteam.cpp">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Programa.cpp">
-      <Filter>Header Files</Filter>
     </ClCompile>
     <ClCompile Include="AssemblyInfo.cpp">
       <Filter>Source Files\Externos</Filter>
