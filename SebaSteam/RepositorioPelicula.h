@@ -34,17 +34,24 @@ public:
 		while (getline(archivo, linea)) {
 			stringstream ss(linea);
 			string id, nombre, idImagen, catsStr, sinopsis, idImagenTMP;
-			idImagen = "Imagenes/Peliculas/";
+			idImagen = "";
 			if (getline(ss, id, ',') &&
 				getline(ss, nombre, ',') &&
 				getline(ss, idImagenTMP, ',') &&
 				getline(ss, catsStr, ',') &&
 				getline(ss, sinopsis, ',')) {
-				idImagen += (idImagenTMP + ".jpg");
+				idImagen += (idImagenTMP);
 				int vistas = 0;
 				float calificacion = 0.0f;
 				int anio = 2026;
-				DatasetGenerador::inicializarMetricasPelicula(vistas, calificacion, anio);
+				string vtmp, ctmp, atmp;
+				getline(ss, vtmp, ',');
+				getline(ss, ctmp, ',');
+				getline(ss, atmp, ',');
+				Int32::TryParse(gcnew String(vtmp.c_str()), vistas);
+				Single::TryParse(gcnew String(ctmp.c_str()), calificacion);
+				Int32::TryParse(gcnew String(atmp.c_str()), anio);
+				//DatasetGenerador::inicializarMetricasPelicula(vistas, calificacion, anio);
 				vector<string> categorias;
 				stringstream ssCats(catsStr);
 				string cat;

@@ -1,7 +1,7 @@
 ﻿#pragma once
 #include "Controlador.h"
 #include "VistaPelicula.h"
-
+#include"Opciones.h"
 namespace SebaSteam
 {
 
@@ -126,9 +126,6 @@ namespace SebaSteam
 			}
 		}
 
-		// Cierra el catalogo y regresa a la pantalla de Seleccion de Perfil
-		// (SeleccionPerfil::AbrirMenuPrincipal vuelve a mostrarse cuando esta
-		// ventana se cierra, ya que se abrio con ShowDialog()).
 		System::Void btnCerrarCatalogo_Click(System::Object^ sender, System::EventArgs^ e)
 		{
 			this->Close();
@@ -168,16 +165,16 @@ namespace SebaSteam
 			this->F3_4 = (gcnew System::Windows::Forms::Panel());
 			this->B_F3_4 = (gcnew System::Windows::Forms::Button());
 			this->F3_3 = (gcnew System::Windows::Forms::Panel());
+			this->B_F3_3 = (gcnew System::Windows::Forms::Button());
 			this->F3_2 = (gcnew System::Windows::Forms::Panel());
 			this->B_F3_2 = (gcnew System::Windows::Forms::Button());
 			this->F3_1 = (gcnew System::Windows::Forms::Panel());
+			this->B_F3_1 = (gcnew System::Windows::Forms::Button());
 			this->TxtF2 = (gcnew System::Windows::Forms::Label());
 			this->TxtF3 = (gcnew System::Windows::Forms::Label());
 			this->B_F3_5 = (gcnew System::Windows::Forms::Button());
 			this->F3_5 = (gcnew System::Windows::Forms::Panel());
 			this->btnCerrarCatalogo = (gcnew System::Windows::Forms::Button());
-			this->B_F3_3 = (gcnew System::Windows::Forms::Button());
-			this->B_F3_1 = (gcnew System::Windows::Forms::Button());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->B_F2_1 = (gcnew System::Windows::Forms::Button());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
@@ -372,7 +369,7 @@ namespace SebaSteam
 			this->TxtFila1->ForeColor = System::Drawing::Color::Transparent;
 			this->TxtFila1->Location = System::Drawing::Point(7, 113);
 			this->TxtFila1->Name = L"TxtFila1";
-			this->TxtFila1->Size = System::Drawing::Size(226, 20);
+			this->TxtFila1->Size = System::Drawing::Size(270, 25);
 			this->TxtFila1->TabIndex = 14;
 			this->TxtFila1->Text = L"Recientemente agregados:";
 			// 
@@ -430,6 +427,21 @@ namespace SebaSteam
 			this->F3_3->Size = System::Drawing::Size(149, 151);
 			this->F3_3->TabIndex = 29;
 			// 
+			// B_F3_3
+			// 
+			this->B_F3_3->BackColor = System::Drawing::Color::Transparent;
+			this->B_F3_3->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"B_F3_3.BackgroundImage")));
+			this->B_F3_3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->B_F3_3->FlatAppearance->BorderSize = 0;
+			this->B_F3_3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->B_F3_3->ForeColor = System::Drawing::Color::Transparent;
+			this->B_F3_3->Location = System::Drawing::Point(-2, 0);
+			this->B_F3_3->Name = L"B_F3_3";
+			this->B_F3_3->Size = System::Drawing::Size(151, 151);
+			this->B_F3_3->TabIndex = 37;
+			this->B_F3_3->TextAlign = System::Drawing::ContentAlignment::TopCenter;
+			this->B_F3_3->UseVisualStyleBackColor = false;
+			// 
 			// F3_2
 			// 
 			this->F3_2->Controls->Add(this->B_F3_2);
@@ -461,6 +473,21 @@ namespace SebaSteam
 			this->F3_1->Size = System::Drawing::Size(150, 151);
 			this->F3_1->TabIndex = 27;
 			// 
+			// B_F3_1
+			// 
+			this->B_F3_1->BackColor = System::Drawing::Color::Transparent;
+			this->B_F3_1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"B_F3_1.BackgroundImage")));
+			this->B_F3_1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->B_F3_1->FlatAppearance->BorderSize = 0;
+			this->B_F3_1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->B_F3_1->ForeColor = System::Drawing::Color::Transparent;
+			this->B_F3_1->Location = System::Drawing::Point(0, 0);
+			this->B_F3_1->Name = L"B_F3_1";
+			this->B_F3_1->Size = System::Drawing::Size(150, 151);
+			this->B_F3_1->TabIndex = 40;
+			this->B_F3_1->TextAlign = System::Drawing::ContentAlignment::TopCenter;
+			this->B_F3_1->UseVisualStyleBackColor = false;
+			// 
 			// TxtF2
 			// 
 			this->TxtF2->AutoSize = true;
@@ -470,7 +497,7 @@ namespace SebaSteam
 			this->TxtF2->ForeColor = System::Drawing::Color::Transparent;
 			this->TxtF2->Location = System::Drawing::Point(4, 355);
 			this->TxtF2->Name = L"TxtF2";
-			this->TxtF2->Size = System::Drawing::Size(139, 20);
+			this->TxtF2->Size = System::Drawing::Size(168, 25);
 			this->TxtF2->TabIndex = 33;
 			this->TxtF2->Text = L"Recomendados:";
 			// 
@@ -483,7 +510,7 @@ namespace SebaSteam
 			this->TxtF3->ForeColor = System::Drawing::Color::Transparent;
 			this->TxtF3->Location = System::Drawing::Point(4, 592);
 			this->TxtF3->Name = L"TxtF3";
-			this->TxtF3->Size = System::Drawing::Size(133, 20);
+			this->TxtF3->Size = System::Drawing::Size(165, 25);
 			this->TxtF3->TabIndex = 34;
 			this->TxtF3->Text = L"Top mas vistos:";
 			// 
@@ -528,36 +555,6 @@ namespace SebaSteam
 			this->btnCerrarCatalogo->Text = L"X";
 			this->btnCerrarCatalogo->UseVisualStyleBackColor = false;
 			this->btnCerrarCatalogo->Click += gcnew System::EventHandler(this, &MenuPrincipal::btnCerrarCatalogo_Click);
-			// 
-			// B_F3_3
-			// 
-			this->B_F3_3->BackColor = System::Drawing::Color::Transparent;
-			this->B_F3_3->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"B_F3_3.BackgroundImage")));
-			this->B_F3_3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->B_F3_3->FlatAppearance->BorderSize = 0;
-			this->B_F3_3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->B_F3_3->ForeColor = System::Drawing::Color::Transparent;
-			this->B_F3_3->Location = System::Drawing::Point(-2, 0);
-			this->B_F3_3->Name = L"B_F3_3";
-			this->B_F3_3->Size = System::Drawing::Size(151, 151);
-			this->B_F3_3->TabIndex = 37;
-			this->B_F3_3->TextAlign = System::Drawing::ContentAlignment::TopCenter;
-			this->B_F3_3->UseVisualStyleBackColor = false;
-			// 
-			// B_F3_1
-			// 
-			this->B_F3_1->BackColor = System::Drawing::Color::Transparent;
-			this->B_F3_1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"B_F3_1.BackgroundImage")));
-			this->B_F3_1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->B_F3_1->FlatAppearance->BorderSize = 0;
-			this->B_F3_1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->B_F3_1->ForeColor = System::Drawing::Color::Transparent;
-			this->B_F3_1->Location = System::Drawing::Point(0, 0);
-			this->B_F3_1->Name = L"B_F3_1";
-			this->B_F3_1->Size = System::Drawing::Size(150, 151);
-			this->B_F3_1->TabIndex = 40;
-			this->B_F3_1->TextAlign = System::Drawing::ContentAlignment::TopCenter;
-			this->B_F3_1->UseVisualStyleBackColor = false;
 			// 
 			// panel1
 			// 
@@ -834,6 +831,7 @@ namespace SebaSteam
 			this->B_F1_1->TabIndex = 40;
 			this->B_F1_1->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			this->B_F1_1->UseVisualStyleBackColor = false;
+			this->B_F1_1->Click += gcnew System::EventHandler(this, &MenuPrincipal::B_F1_1_Click);
 			// 
 			// MenuPrincipal
 			// 
@@ -875,12 +873,14 @@ namespace SebaSteam
 			this->Controls->Add(this->btnCerrarCatalogo);
 			this->DoubleBuffered = true;
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
+			this->KeyPreview = true;
 			this->MinimizeBox = false;
 			this->Name = L"MenuPrincipal";
 			this->Text = L"MenuPrincipal";
 			this->TopMost = true;
 			this->Load += gcnew System::EventHandler(this, &MenuPrincipal::MenuPrincipal_Load);
 			this->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &MenuPrincipal::MenuPrincipal_Paint);
+			this->KeyUp += gcnew System::Windows::Forms::KeyEventHandler(this, &MenuPrincipal::MenuPrincipal_KeyUp);
 			this->F3_6->ResumeLayout(false);
 			this->F3_4->ResumeLayout(false);
 			this->F3_3->ResumeLayout(false);
@@ -914,7 +914,7 @@ namespace SebaSteam
 			if (driver == nullptr) return;
 
 			cli::array<System::Windows::Forms::Button^>^ botonesTopVistos = {
-				B_F1_1, B_F3_2, B_F3_3, B_F3_4, B_F3_5, B_F3_6
+				B_F3_1, B_F3_2, B_F3_3, B_F3_4, B_F3_5, B_F3_6
 			};
 
 			// Pintamos secuencialmente las 6 peliculas visibles
@@ -1073,5 +1073,22 @@ namespace SebaSteam
 			this->LoadTopVistos();
 		}
 
-	};
+		System::Void MenuPrincipal_KeyUp(System::Object^ sender, System::Windows::Forms::KeyEventArgs^ e) {
+			//Abrir un menu para cerrar sesion
+			if (e->KeyCode == Keys::Escape) {
+				Opciones^ opciones = gcnew Opciones(0, 0);
+				opciones->StartPosition = FormStartPosition::Manual;
+				int posX = this->Location.X + 1100;
+				int posY = this->Location.Y + 0;
+				opciones->Location = System::Drawing::Point(posX, posY);
+				opciones->TopMost = 1;
+				opciones->ShowDialog();
+				if (opciones->getCerroSesion()) this->Close();
+			}
+
+		}
+	System::Void B_F1_1_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	}
+};
 }

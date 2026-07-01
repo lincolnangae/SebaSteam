@@ -40,6 +40,10 @@ namespace SebaSteam {
 	private: System::Windows::Forms::Label^ CategoriaP;
 	private: System::Windows::Forms::PictureBox^ ImgPelicula;
 	private: System::Windows::Forms::Label^ TituloPelicula;
+	private: System::Windows::Forms::Button^ Calificar;
+	private: System::Windows::Forms::Button^ Reproducir;
+	private: System::Windows::Forms::Button^ VerMasTarde;
+
 
 	private:
 		System::ComponentModel::Container^ components;
@@ -48,12 +52,16 @@ namespace SebaSteam {
 		void CargarDatos(Pelicula* peli)
 		{
 			if (peli == nullptr) return;
-
+			peliGuardada = peli;
 			TituloPelicula->Text = marshal_as<String^>(peli->getNombre());
 			SinopsisP->Text = marshal_as<String^>(peli->getSinopsis());
 			CalificacionP->Text = peli->getCalificacion().ToString("0.00");
+			//Colores
+			if (peli->getCalificacion() < 5.0) CalificacionP->ForeColor = Color::Red;
+			else if (peli->getCalificacion() < 7.0) CalificacionP->ForeColor = Color::Orange;
+			else CalificacionP->ForeColor = Color::Green;
 			VistasTotalesP->Text = peli->getVistas().ToString();
-
+			
 			// Las categorias vienen como vector<string>, se unen con coma
 			std::vector<std::string> cats = peli->getCategorias();
 			String^ categorias = "";
@@ -83,6 +91,9 @@ namespace SebaSteam {
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(VistaPelicula::typeid));
 			this->MostrarPelicula = (gcnew System::Windows::Forms::Panel());
+			this->Reproducir = (gcnew System::Windows::Forms::Button());
+			this->VerMasTarde = (gcnew System::Windows::Forms::Button());
+			this->Calificar = (gcnew System::Windows::Forms::Button());
 			this->SalirVista = (gcnew System::Windows::Forms::Button());
 			this->CalificacionP = (gcnew System::Windows::Forms::Label());
 			this->VistasTotalesP = (gcnew System::Windows::Forms::Label());
@@ -99,6 +110,9 @@ namespace SebaSteam {
 			this->MostrarPelicula->BackColor = System::Drawing::Color::Transparent;
 			this->MostrarPelicula->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"MostrarPelicula.BackgroundImage")));
 			this->MostrarPelicula->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->MostrarPelicula->Controls->Add(this->Reproducir);
+			this->MostrarPelicula->Controls->Add(this->VerMasTarde);
+			this->MostrarPelicula->Controls->Add(this->Calificar);
 			this->MostrarPelicula->Controls->Add(this->SalirVista);
 			this->MostrarPelicula->Controls->Add(this->CalificacionP);
 			this->MostrarPelicula->Controls->Add(this->VistasTotalesP);
@@ -111,6 +125,40 @@ namespace SebaSteam {
 			this->MostrarPelicula->Name = L"MostrarPelicula";
 			this->MostrarPelicula->Size = System::Drawing::Size(1296, 796);
 			this->MostrarPelicula->TabIndex = 34;
+			this->MostrarPelicula->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &VistaPelicula::MostrarPelicula_Paint);
+			// 
+			// Reproducir
+			// 
+			this->Reproducir->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Reproducir.BackgroundImage")));
+			this->Reproducir->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->Reproducir->Location = System::Drawing::Point(893, 616);
+			this->Reproducir->Name = L"Reproducir";
+			this->Reproducir->Size = System::Drawing::Size(367, 93);
+			this->Reproducir->TabIndex = 9;
+			this->Reproducir->UseVisualStyleBackColor = true;
+			this->Reproducir->Click += gcnew System::EventHandler(this, &VistaPelicula::Reproducir_Click);
+			// 
+			// VerMasTarde
+			// 
+			this->VerMasTarde->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"VerMasTarde.BackgroundImage")));
+			this->VerMasTarde->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->VerMasTarde->Location = System::Drawing::Point(462, 616);
+			this->VerMasTarde->Name = L"VerMasTarde";
+			this->VerMasTarde->Size = System::Drawing::Size(367, 93);
+			this->VerMasTarde->TabIndex = 8;
+			this->VerMasTarde->UseVisualStyleBackColor = true;
+			this->VerMasTarde->Click += gcnew System::EventHandler(this, &VistaPelicula::VerMasTarde_Click);
+			// 
+			// Calificar
+			// 
+			this->Calificar->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Calificar.BackgroundImage")));
+			this->Calificar->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->Calificar->Location = System::Drawing::Point(27, 616);
+			this->Calificar->Name = L"Calificar";
+			this->Calificar->Size = System::Drawing::Size(367, 93);
+			this->Calificar->TabIndex = 7;
+			this->Calificar->UseVisualStyleBackColor = true;
+			this->Calificar->Click += gcnew System::EventHandler(this, &VistaPelicula::Calificar_Click);
 			// 
 			// SalirVista
 			// 
@@ -153,6 +201,7 @@ namespace SebaSteam {
 			this->VistasTotalesP->TabIndex = 4;
 			this->VistasTotalesP->Text = L"1.5K";
 			this->VistasTotalesP->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->VistasTotalesP->Click += gcnew System::EventHandler(this, &VistaPelicula::VistasTotalesP_Click);
 			// 
 			// SinopsisP
 			// 
@@ -225,6 +274,7 @@ namespace SebaSteam {
 #pragma endregion
 
 	private:
+		Pelicula* peliGuardada;
 		System::Void SalirVista_Click(System::Object^ sender, System::EventArgs^ e)
 		{
 			this->Close();
@@ -239,5 +289,22 @@ namespace SebaSteam {
 	private: System::Void TituloPelicula_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 
+	System::Void MostrarPelicula_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+
+	}
+private: System::Void VistasTotalesP_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+	   //Botones
+	System::Void Calificar_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	}
+	System::Void VerMasTarde_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	}
+	System::Void Reproducir_Click(System::Object^ sender, System::EventArgs^ e) {
+		MessageBox::Show("Funcionalidad de reproducir no implementada en esta versión, si ves esto, agregar imagenes para la reproduccion cmo en next data y cmo hiciste pa q lo botones se vean asi d clean elipticas y no cn mancha blanca cmo ahora", "Reproducir", MessageBoxButtons::OK, MessageBoxIcon::Information);
+		peliGuardada->incrementarVistas();
+		VistasTotalesP->Text = peliGuardada->getVistas().ToString();
+	}
 };
 }

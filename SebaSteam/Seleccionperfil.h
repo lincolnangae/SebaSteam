@@ -439,6 +439,7 @@ namespace SebaSteam
 		// igual que hubiera hecho la "X" nativa de Windows.
 		System::Void btnCerrar_Click(System::Object^ sender, System::EventArgs^ e)
 		{
+			driver->guardarArchivos();
 			this->Close();
 		}
 

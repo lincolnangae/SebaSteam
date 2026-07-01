@@ -200,5 +200,8 @@ public:
         return curr->Dato->getIdImagen();
 
     }
-
+    void guardarArchivos() {
+        if(repoPelicula == nullptr) return;
+		repoPelicula->guardarEnArchivo(*vectorBasePeliculas);
+    }
 };
