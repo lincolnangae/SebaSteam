@@ -121,7 +121,7 @@
   <data name="MostrarPelicula.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABqQAAAQ4CAIAAADgiSp+AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAA/7JJREFUeF7s/Xe0ZVd5povvffY5VXUqR0lVkqpKORGFACGBCAIkIUQwoCphwDhg
+        vAAADrwBlbxySQAA/7JJREFUeF7s/Xe0ZVd5povvffY5VXUqR0lVkqpKORGFACGBCAIkIUQwoCphwDhg
         ghXIOSNyzslgMpKIJhkcsLCR/bvj3k63b9/+3e522/e67U6+tkFIIgitO+aaa60Zvm+uNXc4Z5+z9/OM
         d3xj9kGF+w9bHL08+929HgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -5298,7 +5298,7 @@
   <data name="Reproducir.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABK4AAAFeCAIAAAAjUsCWAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAA/7JJREFUeF7s/QeUXdWRuIu/938TjJwD48FgWuputSKSWhJKZCEkEIgogiSUA8pS
+        vwAADr8BOAVTJAAA/7JJREFUeF7s/QeUXdWRuIu/938TjJwD48FgWuputSKSWhJKZCEkEIgogiSUA8pS
         SwiQyIiMwTiCbTxje2yD7XGOY2N7bA/OBmNyzhIod+6+fW/zX+fss+vUqap97j7h3r63dWrVqrVPus28
         N7OWvt9Xtff/83YWWWSRRRZZZJFFFllkkUUWB1n8P/RGFhUcvb29uBZQ9LqR6+nJ61B33nZfziKLLLLI
         IossssgiC5tQ/4bsLRTUPyl7evLqn5rkX57wj9IsqjcyFKzoUP+XCFzX3d3d2dnV1dlZcP+Ps7W1tb2t
@@ -6771,7 +6771,7 @@
   <data name="VerMasTarde.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABK4AAAFeCAIAAAAjUsCWAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAA/7JJREFUeF7svQe0HNWxqP0/C9uAA+baBiMBCicoIxRRFiAkEEkZhDLKOSGRgxA5
+        vwAADr8BOAVTJAAA/7JJREFUeF7svQe0HNWxqP0/C9uAA+baBiMBCicoIxRRFiAkEEkZhDLKOSGRgxA5
         44DB2cbgbGwc7/UFx+scsY0JJiOQQPHkOMf/6q7u6uqq2nt6unvmzEhTq1at3T3dfbjv3beWvvdV7f3/
         /acc5ShHOcpRjnKUoxzlKEc5ynGYxf/Hb5SjiKOjo4PWDIkON1rb2tr9gDv/cR8uRznKUY5ylKMc5ShH
         OaIE/BuyI5OBf1K2tbXDPzXZvzzxH6XlKN0oo2BRB/y/ROS6lpaWpqbm5qamjPv/OOvq6hrqG9paW9vb
@@ -8311,10 +8311,10 @@
         AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="Calificar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Calificar_boton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABK4AAAFeCAIAAAAjUsCWAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAA/7JJREFUeF7svQeUHdWxqP2/ewEHwNhE5TgiJ5MzJoMCIIkkUBxloSwEQiJKBAds
+        vwAADr8BOAVTJAAA/7JJREFUeF7svQeUHdWxqP2/ewEHwNhE5TgiJ5MzJoMCIIkkUBxloSwEQiJKBAds
         Y/vaYBv7OueMw7UvThcHwAFjcg4SSXnyzJlzhn91V3d1dVXtfTqdM+eMeq9a9e/eZ3cP93/3raXvfVV7
         /3/v5CMf+chHPvKRj3zkIx/5yEc+drDx//GFfNTw6OnpoblERo87Ct3dRX/Ayjvu5nzkIx/5yEc+8pGP
         fOQjyoB/Q/aUSvBPyu7uIvxTk/3LE/9Rmo/6HTkK1vSA/5uIXNfV1dXR0dnZ0VFy/y9nS0tLW2tbd6FQ

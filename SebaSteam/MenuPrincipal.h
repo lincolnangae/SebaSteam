@@ -248,6 +248,7 @@ namespace SebaSteam
 			this->MejorCalifButton->TabIndex = 1;
 			this->MejorCalifButton->Text = L"MEJOR CALIFICADOS";
 			this->MejorCalifButton->UseVisualStyleBackColor = false;
+			this->MejorCalifButton->Click += gcnew System::EventHandler(this, &MenuPrincipal::MejorCalifButton_Click);
 			// 
 			// FiltrarBu
 			// 
@@ -1088,6 +1089,9 @@ namespace SebaSteam
 
 		}
 	System::Void B_F1_1_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	}
+	System::Void MejorCalifButton_Click(System::Object^ sender, System::EventArgs^ e) {
 
 	}
 };

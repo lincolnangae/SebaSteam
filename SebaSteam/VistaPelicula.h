@@ -1,7 +1,7 @@
 #pragma once
 #include "Pelicula.h"
 #include <msclr/marshal_cppstd.h>
-
+#include"Calificar.h"
 namespace SebaSteam {
 
 	using namespace System;
@@ -40,7 +40,9 @@ namespace SebaSteam {
 	private: System::Windows::Forms::Label^ CategoriaP;
 	private: System::Windows::Forms::PictureBox^ ImgPelicula;
 	private: System::Windows::Forms::Label^ TituloPelicula;
-	private: System::Windows::Forms::Button^ Calificar;
+	private: System::Windows::Forms::Button^ Calificar_boton;
+
+
 	private: System::Windows::Forms::Button^ Reproducir;
 	private: System::Windows::Forms::Button^ VerMasTarde;
 
@@ -55,7 +57,7 @@ namespace SebaSteam {
 			peliGuardada = peli;
 			TituloPelicula->Text = marshal_as<String^>(peli->getNombre());
 			SinopsisP->Text = marshal_as<String^>(peli->getSinopsis());
-			CalificacionP->Text = peli->getCalificacion().ToString("0.00");
+			CalificacionP->Text = peli->getCalificacion().ToString("0.0000");
 			//Colores
 			if (peli->getCalificacion() < 5.0) CalificacionP->ForeColor = Color::Red;
 			else if (peli->getCalificacion() < 7.0) CalificacionP->ForeColor = Color::Orange;
@@ -93,7 +95,7 @@ namespace SebaSteam {
 			this->MostrarPelicula = (gcnew System::Windows::Forms::Panel());
 			this->Reproducir = (gcnew System::Windows::Forms::Button());
 			this->VerMasTarde = (gcnew System::Windows::Forms::Button());
-			this->Calificar = (gcnew System::Windows::Forms::Button());
+			this->Calificar_boton = (gcnew System::Windows::Forms::Button());
 			this->SalirVista = (gcnew System::Windows::Forms::Button());
 			this->CalificacionP = (gcnew System::Windows::Forms::Label());
 			this->VistasTotalesP = (gcnew System::Windows::Forms::Label());
@@ -112,7 +114,7 @@ namespace SebaSteam {
 			this->MostrarPelicula->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->MostrarPelicula->Controls->Add(this->Reproducir);
 			this->MostrarPelicula->Controls->Add(this->VerMasTarde);
-			this->MostrarPelicula->Controls->Add(this->Calificar);
+			this->MostrarPelicula->Controls->Add(this->Calificar_boton);
 			this->MostrarPelicula->Controls->Add(this->SalirVista);
 			this->MostrarPelicula->Controls->Add(this->CalificacionP);
 			this->MostrarPelicula->Controls->Add(this->VistasTotalesP);
@@ -149,16 +151,16 @@ namespace SebaSteam {
 			this->VerMasTarde->UseVisualStyleBackColor = true;
 			this->VerMasTarde->Click += gcnew System::EventHandler(this, &VistaPelicula::VerMasTarde_Click);
 			// 
-			// Calificar
+			// Calificar_boton
 			// 
-			this->Calificar->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Calificar.BackgroundImage")));
-			this->Calificar->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->Calificar->Location = System::Drawing::Point(27, 616);
-			this->Calificar->Name = L"Calificar";
-			this->Calificar->Size = System::Drawing::Size(367, 93);
-			this->Calificar->TabIndex = 7;
-			this->Calificar->UseVisualStyleBackColor = true;
-			this->Calificar->Click += gcnew System::EventHandler(this, &VistaPelicula::Calificar_Click);
+			this->Calificar_boton->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Calificar_boton.BackgroundImage")));
+			this->Calificar_boton->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->Calificar_boton->Location = System::Drawing::Point(27, 616);
+			this->Calificar_boton->Name = L"Calificar_boton";
+			this->Calificar_boton->Size = System::Drawing::Size(367, 93);
+			this->Calificar_boton->TabIndex = 7;
+			this->Calificar_boton->UseVisualStyleBackColor = true;
+			this->Calificar_boton->Click += gcnew System::EventHandler(this, &VistaPelicula::Calificar_Click);
 			// 
 			// SalirVista
 			// 
@@ -186,7 +188,7 @@ namespace SebaSteam {
 			this->CalificacionP->Name = L"CalificacionP";
 			this->CalificacionP->Size = System::Drawing::Size(155, 39);
 			this->CalificacionP->TabIndex = 5;
-			this->CalificacionP->Text = L"8,89 ";
+			this->CalificacionP->Text = L"10,0000";
 			this->CalificacionP->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// VistasTotalesP
@@ -296,7 +298,16 @@ private: System::Void VistasTotalesP_Click(System::Object^ sender, System::Event
 }
 	   //Botones
 	System::Void Calificar_Click(System::Object^ sender, System::EventArgs^ e) {
-
+		Calificar^ calif = gcnew Calificar(peliGuardada);
+		calif->StartPosition = FormStartPosition::CenterParent;
+		int posX = this->Location.X + 292;
+		int posY = this->Location.Y + 290;
+		calif->Location = System::Drawing::Point(posX, posY);
+		calif->TopMost = 1;
+		calif->ShowDialog();
+		if (calif->califcado) {
+			CalificacionP->Text = peliGuardada->getCalificacion().ToString("0.0000");
+		}
 	}
 	System::Void VerMasTarde_Click(System::Object^ sender, System::EventArgs^ e) {
 

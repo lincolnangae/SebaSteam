@@ -44,13 +44,16 @@ public:
 				int vistas = 0;
 				float calificacion = 0.0f;
 				int anio = 2026;
-				string vtmp, ctmp, atmp;
+				int califcantes; // Total de personas que calificaron la pelicula
+				string vtmp, ctmp, atmp, tctmp;
 				getline(ss, vtmp, ',');
 				getline(ss, ctmp, ',');
 				getline(ss, atmp, ',');
+				getline(ss, tctmp, ',');
 				Int32::TryParse(gcnew String(vtmp.c_str()), vistas);
 				Single::TryParse(gcnew String(ctmp.c_str()), calificacion);
 				Int32::TryParse(gcnew String(atmp.c_str()), anio);
+				Int32::TryParse(gcnew String(tctmp.c_str()), califcantes);
 				//DatasetGenerador::inicializarMetricasPelicula(vistas, calificacion, anio);
 				vector<string> categorias;
 				stringstream ssCats(catsStr);
@@ -58,7 +61,7 @@ public:
 				while (getline(ssCats, cat, '|')) {
 					categorias.push_back(cat);
 				}
-				Pelicula p(id, nombre, idImagen, categorias, sinopsis, vistas, calificacion, anio);
+				Pelicula p(id, nombre, idImagen, categorias, sinopsis, vistas, calificacion, anio, califcantes);
 				tablaPeliculas->insertar(id, p);
 				if (vecDestino != nullptr) {
 					vecDestino->push_back(p);
@@ -85,7 +88,8 @@ public:
 				<< p.getSinopsis() << ","
 				<< p.getVistas() << ","
 				<< p.getCalificacion() << ","
-				<< p.getAnio() << "\n";
+				<< p.getAnio() << ","
+				<< p.getTotal_Calificaciones() << "\n";
 		}
 		archivo.close();
 	}

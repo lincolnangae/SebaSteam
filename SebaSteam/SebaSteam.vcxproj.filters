@@ -95,6 +95,15 @@
     <ClInclude Include="VistaPelicula.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Opciones.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PaginaPelis.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Calificar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SebaSteam.cpp">
@@ -116,6 +125,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="VistaPelicula.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Opciones.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PaginaPelis.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Calificar.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
